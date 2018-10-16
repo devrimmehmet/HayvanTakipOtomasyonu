@@ -28,20 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnaMenu));
+            this.pnl_topbar = new System.Windows.Forms.Panel();
+            this.pnl_islem = new System.Windows.Forms.Panel();
+            this.btn_musteriler = new System.Windows.Forms.Button();
+            this.btn_anasayfa = new System.Windows.Forms.Button();
+            this.pnl_topbar.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // pnl_topbar
+            // 
+            this.pnl_topbar.BackColor = System.Drawing.Color.Coral;
+            this.pnl_topbar.Controls.Add(this.btn_musteriler);
+            this.pnl_topbar.Controls.Add(this.btn_anasayfa);
+            resources.ApplyResources(this.pnl_topbar, "pnl_topbar");
+            this.pnl_topbar.Name = "pnl_topbar";
+            // 
+            // pnl_islem
+            // 
+            resources.ApplyResources(this.pnl_islem, "pnl_islem");
+            this.pnl_islem.Name = "pnl_islem";
+            // 
+            // btn_musteriler
+            // 
+            this.btn_musteriler.BackgroundImage = global::Hayvan_Takip_Otomasyonu.Properties.Resources.musterilericon;
+            resources.ApplyResources(this.btn_musteriler, "btn_musteriler");
+            this.btn_musteriler.Name = "btn_musteriler";
+            this.btn_musteriler.UseVisualStyleBackColor = true;
+            this.btn_musteriler.Click += new System.EventHandler(this.btn_musteriler_Click);
+            // 
+            // btn_anasayfa
+            // 
+            this.btn_anasayfa.BackgroundImage = global::Hayvan_Takip_Otomasyonu.Properties.Resources.anasayfaicon1;
+            resources.ApplyResources(this.btn_anasayfa, "btn_anasayfa");
+            this.btn_anasayfa.Name = "btn_anasayfa";
+            this.btn_anasayfa.UseVisualStyleBackColor = true;
+            this.btn_anasayfa.Click += new System.EventHandler(this.btn_anasayfa_Click);
             // 
             // AnaMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pnl_islem);
+            this.Controls.Add(this.pnl_topbar);
             this.Name = "AnaMenu";
-            this.Text = "Form1";
+            this.TopMost = true;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.AnaMenu_Load);
+            this.pnl_topbar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel pnl_topbar;
+        private System.Windows.Forms.Button btn_anasayfa;
+        private System.Windows.Forms.Button btn_musteriler;
+        private System.Windows.Forms.Panel pnl_islem;
     }
 }
 

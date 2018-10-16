@@ -65,6 +65,9 @@
   <PropertyGroup>
     <SignManifests>true</SignManifests>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Dosyalar\form.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -91,10 +94,21 @@
     <Compile Include="GirisFormu.Designer.cs">
       <DependentUpon>GirisFormu.cs</DependentUpon>
     </Compile>
+    <Compile Include="HTODataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HTODataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="HTODataSetgiris.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HTODataSetgiris.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MusterilerFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusterilerFormu.Designer.cs">
+      <DependentUpon>MusterilerFormu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -102,8 +116,14 @@
     <EmbeddedResource Include="AnaMenu.resx">
       <DependentUpon>AnaMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AnaMenu.tr-TR.resx">
+      <DependentUpon>AnaMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GirisFormu.resx">
       <DependentUpon>GirisFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusterilerFormu.resx">
+      <DependentUpon>MusterilerFormu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -116,6 +136,17 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Hayvan Takip Otomasyonu_TemporaryKey.pfx" />
+    <None Include="HTODataSet.xsc">
+      <DependentUpon>HTODataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HTODataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HTODataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HTODataSet.xss">
+      <DependentUpon>HTODataSet.xsd</DependentUpon>
+    </None>
     <None Include="HTODataSetgiris.xsc">
       <DependentUpon>HTODataSetgiris.xsd</DependentUpon>
     </None>
@@ -165,6 +196,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>HTO.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\silicon.png" />
+    <None Include="Resources\kaydet.ico" />
+    <None Include="Resources\musterilericon.png" />
+    <None Include="Resources\anasayfaicon1.jpg" />
+    <None Include="Resources\anasayfaicon.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
