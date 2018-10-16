@@ -31,35 +31,35 @@
             this.components = new System.ComponentModel.Container();
             this.lbl_musteriadi = new System.Windows.Forms.Label();
             this.pnl_musteriekle = new System.Windows.Forms.Panel();
-            this.lbl_isletmeno = new System.Windows.Forms.Label();
-            this.lbl_soyadi = new System.Windows.Forms.Label();
-            this.lbl_tel = new System.Windows.Forms.Label();
-            this.lbl_adres = new System.Windows.Forms.Label();
-            this.mskdtb_isletmeno = new System.Windows.Forms.MaskedTextBox();
-            this.tb_adi = new System.Windows.Forms.TextBox();
-            this.tb_soyadi = new System.Windows.Forms.TextBox();
-            this.mskdtb_telefon = new System.Windows.Forms.MaskedTextBox();
-            this.rtb_adres = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btn_kaydet = new System.Windows.Forms.Button();
+            this.tb_id = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.hTODataSetgiris = new Hayvan_Takip_Otomasyonu.HTODataSetgiris();
-            this.hTODataSet = new Hayvan_Takip_Otomasyonu.HTODataSet();
-            this.musterilertblBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.musterilertblTableAdapter = new Hayvan_Takip_Otomasyonu.HTODataSetTableAdapters.musterilertblTableAdapter();
+            this.btn_sil = new System.Windows.Forms.Button();
+            this.btn_kaydet = new System.Windows.Forms.Button();
+            this.rtb_adres = new System.Windows.Forms.RichTextBox();
+            this.mskdtb_telefon = new System.Windows.Forms.MaskedTextBox();
+            this.tb_soyadi = new System.Windows.Forms.TextBox();
+            this.tb_adi = new System.Windows.Forms.TextBox();
+            this.mskdtb_isletmeno = new System.Windows.Forms.MaskedTextBox();
+            this.lbl_adres = new System.Windows.Forms.Label();
+            this.lbl_tel = new System.Windows.Forms.Label();
+            this.lbl_soyadi = new System.Windows.Forms.Label();
+            this.lbl_isletmeno = new System.Windows.Forms.Label();
+            this.dgv_musteriler = new System.Windows.Forms.DataGridView();
             this.ıDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isletmenoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soyadiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adresiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.musterilertblBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hTODataSet = new Hayvan_Takip_Otomasyonu.HTODataSet();
+            this.hTODataSetgiris = new Hayvan_Takip_Otomasyonu.HTODataSetgiris();
+            this.musterilertblTableAdapter = new Hayvan_Takip_Otomasyonu.HTODataSetTableAdapters.musterilertblTableAdapter();
             this.pnl_musteriekle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hTODataSetgiris)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hTODataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_musteriler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.musterilertblBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hTODataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hTODataSetgiris)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_musteriadi
@@ -76,9 +76,9 @@
             // 
             this.pnl_musteriekle.BackColor = System.Drawing.Color.DarkGray;
             this.pnl_musteriekle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnl_musteriekle.Controls.Add(this.textBox1);
+            this.pnl_musteriekle.Controls.Add(this.tb_id);
             this.pnl_musteriekle.Controls.Add(this.label1);
-            this.pnl_musteriekle.Controls.Add(this.button1);
+            this.pnl_musteriekle.Controls.Add(this.btn_sil);
             this.pnl_musteriekle.Controls.Add(this.btn_kaydet);
             this.pnl_musteriekle.Controls.Add(this.rtb_adres);
             this.pnl_musteriekle.Controls.Add(this.mskdtb_telefon);
@@ -96,94 +96,34 @@
             this.pnl_musteriekle.TabIndex = 1;
             this.pnl_musteriekle.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_musteriekle_Paint);
             // 
-            // lbl_isletmeno
+            // tb_id
             // 
-            this.lbl_isletmeno.AutoSize = true;
-            this.lbl_isletmeno.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_isletmeno.Location = new System.Drawing.Point(3, 34);
-            this.lbl_isletmeno.Name = "lbl_isletmeno";
-            this.lbl_isletmeno.Size = new System.Drawing.Size(109, 19);
-            this.lbl_isletmeno.TabIndex = 1;
-            this.lbl_isletmeno.Text = "İşletme No :";
+            this.tb_id.Location = new System.Drawing.Point(115, 7);
+            this.tb_id.Name = "tb_id";
+            this.tb_id.ReadOnly = true;
+            this.tb_id.Size = new System.Drawing.Size(100, 20);
+            this.tb_id.TabIndex = 13;
             // 
-            // lbl_soyadi
+            // label1
             // 
-            this.lbl_soyadi.AutoSize = true;
-            this.lbl_soyadi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_soyadi.Location = new System.Drawing.Point(45, 83);
-            this.lbl_soyadi.Name = "lbl_soyadi";
-            this.lbl_soyadi.Size = new System.Drawing.Size(69, 19);
-            this.lbl_soyadi.TabIndex = 2;
-            this.lbl_soyadi.Text = "Soyad :";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(73, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 19);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "ID :";
             // 
-            // lbl_tel
+            // btn_sil
             // 
-            this.lbl_tel.AutoSize = true;
-            this.lbl_tel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_tel.Location = new System.Drawing.Point(30, 109);
-            this.lbl_tel.Name = "lbl_tel";
-            this.lbl_tel.Size = new System.Drawing.Size(82, 19);
-            this.lbl_tel.TabIndex = 3;
-            this.lbl_tel.Text = "Telefon :";
-            // 
-            // lbl_adres
-            // 
-            this.lbl_adres.AutoSize = true;
-            this.lbl_adres.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_adres.Location = new System.Drawing.Point(19, 137);
-            this.lbl_adres.Name = "lbl_adres";
-            this.lbl_adres.Size = new System.Drawing.Size(67, 19);
-            this.lbl_adres.TabIndex = 4;
-            this.lbl_adres.Text = "Adres :";
-            // 
-            // mskdtb_isletmeno
-            // 
-            this.mskdtb_isletmeno.Location = new System.Drawing.Point(115, 33);
-            this.mskdtb_isletmeno.Mask = "000000000000000";
-            this.mskdtb_isletmeno.Name = "mskdtb_isletmeno";
-            this.mskdtb_isletmeno.Size = new System.Drawing.Size(100, 20);
-            this.mskdtb_isletmeno.TabIndex = 5;
-            // 
-            // tb_adi
-            // 
-            this.tb_adi.Location = new System.Drawing.Point(115, 59);
-            this.tb_adi.Name = "tb_adi";
-            this.tb_adi.Size = new System.Drawing.Size(100, 20);
-            this.tb_adi.TabIndex = 6;
-            // 
-            // tb_soyadi
-            // 
-            this.tb_soyadi.Location = new System.Drawing.Point(115, 85);
-            this.tb_soyadi.Name = "tb_soyadi";
-            this.tb_soyadi.Size = new System.Drawing.Size(100, 20);
-            this.tb_soyadi.TabIndex = 7;
-            // 
-            // mskdtb_telefon
-            // 
-            this.mskdtb_telefon.Location = new System.Drawing.Point(115, 111);
-            this.mskdtb_telefon.Mask = "(999) 000-0000";
-            this.mskdtb_telefon.Name = "mskdtb_telefon";
-            this.mskdtb_telefon.Size = new System.Drawing.Size(100, 20);
-            this.mskdtb_telefon.TabIndex = 8;
-            // 
-            // rtb_adres
-            // 
-            this.rtb_adres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rtb_adres.Location = new System.Drawing.Point(92, 137);
-            this.rtb_adres.Name = "rtb_adres";
-            this.rtb_adres.Size = new System.Drawing.Size(123, 84);
-            this.rtb_adres.TabIndex = 9;
-            this.rtb_adres.Text = "";
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::Hayvan_Takip_Otomasyonu.Properties.Resources.silicon;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(7, 227);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(60, 49);
-            this.button1.TabIndex = 11;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_sil.BackgroundImage = global::Hayvan_Takip_Otomasyonu.Properties.Resources.silicon;
+            this.btn_sil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_sil.Location = new System.Drawing.Point(7, 227);
+            this.btn_sil.Name = "btn_sil";
+            this.btn_sil.Size = new System.Drawing.Size(60, 49);
+            this.btn_sil.TabIndex = 11;
+            this.btn_sil.UseVisualStyleBackColor = true;
+            this.btn_sil.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_kaydet
             // 
@@ -197,59 +137,105 @@
             this.btn_kaydet.UseVisualStyleBackColor = false;
             this.btn_kaydet.Click += new System.EventHandler(this.btn_kaydet_Click);
             // 
-            // label1
+            // rtb_adres
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(73, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 19);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "ID :";
+            this.rtb_adres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rtb_adres.Location = new System.Drawing.Point(92, 137);
+            this.rtb_adres.Name = "rtb_adres";
+            this.rtb_adres.Size = new System.Drawing.Size(123, 84);
+            this.rtb_adres.TabIndex = 9;
+            this.rtb_adres.Text = "";
             // 
-            // textBox1
+            // mskdtb_telefon
             // 
-            this.textBox1.Location = new System.Drawing.Point(115, 7);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 13;
+            this.mskdtb_telefon.Location = new System.Drawing.Point(115, 111);
+            this.mskdtb_telefon.Mask = "(999) 000-0000";
+            this.mskdtb_telefon.Name = "mskdtb_telefon";
+            this.mskdtb_telefon.Size = new System.Drawing.Size(100, 20);
+            this.mskdtb_telefon.TabIndex = 8;
             // 
-            // dataGridView1
+            // tb_soyadi
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tb_soyadi.Location = new System.Drawing.Point(115, 85);
+            this.tb_soyadi.Name = "tb_soyadi";
+            this.tb_soyadi.Size = new System.Drawing.Size(100, 20);
+            this.tb_soyadi.TabIndex = 7;
+            // 
+            // tb_adi
+            // 
+            this.tb_adi.Location = new System.Drawing.Point(115, 59);
+            this.tb_adi.Name = "tb_adi";
+            this.tb_adi.Size = new System.Drawing.Size(100, 20);
+            this.tb_adi.TabIndex = 6;
+            // 
+            // mskdtb_isletmeno
+            // 
+            this.mskdtb_isletmeno.Location = new System.Drawing.Point(115, 33);
+            this.mskdtb_isletmeno.Mask = "000000000000000";
+            this.mskdtb_isletmeno.Name = "mskdtb_isletmeno";
+            this.mskdtb_isletmeno.Size = new System.Drawing.Size(100, 20);
+            this.mskdtb_isletmeno.TabIndex = 5;
+            // 
+            // lbl_adres
+            // 
+            this.lbl_adres.AutoSize = true;
+            this.lbl_adres.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_adres.Location = new System.Drawing.Point(19, 137);
+            this.lbl_adres.Name = "lbl_adres";
+            this.lbl_adres.Size = new System.Drawing.Size(67, 19);
+            this.lbl_adres.TabIndex = 4;
+            this.lbl_adres.Text = "Adres :";
+            // 
+            // lbl_tel
+            // 
+            this.lbl_tel.AutoSize = true;
+            this.lbl_tel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_tel.Location = new System.Drawing.Point(30, 109);
+            this.lbl_tel.Name = "lbl_tel";
+            this.lbl_tel.Size = new System.Drawing.Size(82, 19);
+            this.lbl_tel.TabIndex = 3;
+            this.lbl_tel.Text = "Telefon :";
+            // 
+            // lbl_soyadi
+            // 
+            this.lbl_soyadi.AutoSize = true;
+            this.lbl_soyadi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_soyadi.Location = new System.Drawing.Point(45, 83);
+            this.lbl_soyadi.Name = "lbl_soyadi";
+            this.lbl_soyadi.Size = new System.Drawing.Size(69, 19);
+            this.lbl_soyadi.TabIndex = 2;
+            this.lbl_soyadi.Text = "Soyad :";
+            // 
+            // lbl_isletmeno
+            // 
+            this.lbl_isletmeno.AutoSize = true;
+            this.lbl_isletmeno.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_isletmeno.Location = new System.Drawing.Point(3, 34);
+            this.lbl_isletmeno.Name = "lbl_isletmeno";
+            this.lbl_isletmeno.Size = new System.Drawing.Size(109, 19);
+            this.lbl_isletmeno.TabIndex = 1;
+            this.lbl_isletmeno.Text = "İşletme No :";
+            // 
+            // dgv_musteriler
+            // 
+            this.dgv_musteriler.AutoGenerateColumns = false;
+            this.dgv_musteriler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_musteriler.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ıDDataGridViewTextBoxColumn,
             this.isletmenoDataGridViewTextBoxColumn,
             this.adiDataGridViewTextBoxColumn,
             this.soyadiDataGridViewTextBoxColumn,
             this.telDataGridViewTextBoxColumn,
             this.adresiDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.musterilertblBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(250, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1083, 281);
-            this.dataGridView1.TabIndex = 2;
-            // 
-            // hTODataSetgiris
-            // 
-            this.hTODataSetgiris.DataSetName = "HTODataSetgiris";
-            this.hTODataSetgiris.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // hTODataSet
-            // 
-            this.hTODataSet.DataSetName = "HTODataSet";
-            this.hTODataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // musterilertblBindingSource
-            // 
-            this.musterilertblBindingSource.DataMember = "musterilertbl";
-            this.musterilertblBindingSource.DataSource = this.hTODataSet;
-            // 
-            // musterilertblTableAdapter
-            // 
-            this.musterilertblTableAdapter.ClearBeforeFill = true;
+            this.dgv_musteriler.DataSource = this.musterilertblBindingSource;
+            this.dgv_musteriler.Location = new System.Drawing.Point(250, 12);
+            this.dgv_musteriler.Name = "dgv_musteriler";
+            this.dgv_musteriler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_musteriler.Size = new System.Drawing.Size(1083, 281);
+            this.dgv_musteriler.TabIndex = 2;
+            this.dgv_musteriler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dgv_musteriler.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_musteriler_CellContentClick);
+            this.dgv_musteriler.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgv_musteriler_CellFormatting);
             // 
             // ıDDataGridViewTextBoxColumn
             // 
@@ -297,12 +283,31 @@
             this.adresiDataGridViewTextBoxColumn.Name = "adresiDataGridViewTextBoxColumn";
             this.adresiDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // musterilertblBindingSource
+            // 
+            this.musterilertblBindingSource.DataMember = "musterilertbl";
+            this.musterilertblBindingSource.DataSource = this.hTODataSet;
+            // 
+            // hTODataSet
+            // 
+            this.hTODataSet.DataSetName = "HTODataSet";
+            this.hTODataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // hTODataSetgiris
+            // 
+            this.hTODataSetgiris.DataSetName = "HTODataSetgiris";
+            this.hTODataSetgiris.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // musterilertblTableAdapter
+            // 
+            this.musterilertblTableAdapter.ClearBeforeFill = true;
+            // 
             // MusterilerFormu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1334, 631);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_musteriler);
             this.Controls.Add(this.pnl_musteriekle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MusterilerFormu";
@@ -311,10 +316,10 @@
             this.Load += new System.EventHandler(this.MusterilerFormu_Load);
             this.pnl_musteriekle.ResumeLayout(false);
             this.pnl_musteriekle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hTODataSetgiris)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hTODataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_musteriler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.musterilertblBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hTODataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hTODataSetgiris)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -327,16 +332,16 @@
         private System.Windows.Forms.Label lbl_tel;
         private System.Windows.Forms.Label lbl_soyadi;
         private System.Windows.Forms.Label lbl_isletmeno;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_sil;
         private System.Windows.Forms.Button btn_kaydet;
         private System.Windows.Forms.RichTextBox rtb_adres;
         private System.Windows.Forms.MaskedTextBox mskdtb_telefon;
         private System.Windows.Forms.TextBox tb_soyadi;
         private System.Windows.Forms.TextBox tb_adi;
         private System.Windows.Forms.MaskedTextBox mskdtb_isletmeno;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_id;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_musteriler;
         private HTODataSetgiris hTODataSetgiris;
         private HTODataSet hTODataSet;
         private System.Windows.Forms.BindingSource musterilertblBindingSource;

@@ -24,18 +24,14 @@ namespace Hayvan_Takip_Otomasyonu
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter("Select * From musterilertbl", bgl.baglanti());
             da.Fill(dt);
-            dataGridView1.DataSource = dt;
+            dgv_musteriler.DataSource = dt;
 
         }
 
 
         private void MusterilerFormu_Load(object sender, EventArgs e)
         {
-            // TODO: Bu kod satırı 'hTODataSet.musterilertbl' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
             this.musterilertblTableAdapter.Fill(this.hTODataSet.musterilertbl);
-            // TODO: Bu kod satırı 'hTODataSetgiris.DataTable2' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
-        //    this.dataTable2TableAdapter.Fill(this.hTODataSetgiris.DataTable2);
-
         }
 
         private void pnl_musteriekle_Paint(object sender, PaintEventArgs e)
@@ -65,9 +61,6 @@ namespace Hayvan_Takip_Otomasyonu
 
             {
                 
-               
-                   
-                    {
                         SqlCommand komut = new SqlCommand("insert into musterilertbl (isletmeno,adi,soyadi,adresi,tel) values (@p1,@p2,@p3,@p4,@p5)", bgl.baglanti());
 
                         komut.Parameters.AddWithValue("@p1", mskdtb_isletmeno.Text);
@@ -79,20 +72,57 @@ namespace Hayvan_Takip_Otomasyonu
                         bgl.baglanti().Close();
                         MessageBox.Show("Müşteri Sisteme Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         listele();
-
-
-                    }
-                 
+            
                 }
               
+            }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SqlCommand komutsil = new SqlCommand("Delete From musterilertbl where adi=@p1", bgl.baglanti());
+            komutsil.Parameters.AddWithValue("@p1", tb_adi.Text);
+            komutsil.ExecuteNonQuery();
+            bgl.baglanti().Close();
+            MessageBox.Show("Müşteri Silindi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            listele();
+        }
 
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1 && e.ColumnIndex > -1)
 
+            {
+                                dgv_musteriler.Rows[e.RowIndex].Selected = true;//satır  seçimini true yapıyoruz.
 
+            }
 
+            //seçili satırın bilgilerini alıyoruz.
 
+           // MessageBox.Show(dgv_musteriler.Rows[e.RowIndex].Cells[0].Value.ToString()+  dgv_musteriler.Rows[e.RowIndex].Cells[1].Value.ToString()+dgv_musteriler.Rows[e.RowIndex].Cells[2].Value.ToString());
+            tb_id.Text = dgv_musteriler.Rows[e.RowIndex].Cells[0].Value.ToString();
+            mskdtb_isletmeno.Text= dgv_musteriler.Rows[e.RowIndex].Cells[1].Value.ToString();
+            tb_adi.Text= dgv_musteriler.Rows[e.RowIndex].Cells[2].Value.ToString();
+            tb_soyadi.Text= dgv_musteriler.Rows[e.RowIndex].Cells[3].Value.ToString();
+            mskdtb_telefon.Text = dgv_musteriler.Rows[e.RowIndex].Cells[4].Value.ToString();
+            rtb_adres.Text= dgv_musteriler.Rows[e.RowIndex].Cells[5].Value.ToString();
+         
+        }
+
+        private void dgv_musteriler_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgv_musteriler_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgv_musteriler.Rows[e.RowIndex].Selected)
+
+            {              
+                e.CellStyle.SelectionBackColor= Color.Red;  //seçli  satırın backcolor rengini kırmızı yapıyoruz.
+                e.CellStyle.SelectionForeColor= Color.White; //seçili  satır yazı rengini beyaz yapıyoruz
 
             }
         }
+    }
     }
 

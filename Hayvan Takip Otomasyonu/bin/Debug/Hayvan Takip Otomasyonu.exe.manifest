@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Hayvan Takip Otomasyonu.exe" size="1088448">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Hayvan Takip Otomasyonu.exe" size="1090496">
       <assemblyIdentity name="Hayvan Takip Otomasyonu" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>iQ9l5O2LkQr6XxvByTD+jo6ivae3n/Iw7ibsDsxDt00=</dsig:DigestValue>
+        <dsig:DigestValue>K3/X/pA5L0AZbkZ40ALddkFGqcS24fty2ZkG/vZwmbY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yGcRTODtixH49epNUFp/FxyMKBgKntzalj685IU/enA=</dsig:DigestValue>
+        <dsig:DigestValue>vSX9OF6+9C43UGVRCBA4TIuZBT3y7NJ0e+WqqPNdtGQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
