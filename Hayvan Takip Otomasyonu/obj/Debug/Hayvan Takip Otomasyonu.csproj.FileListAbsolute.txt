@@ -14,4 +14,3 @@ Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.application
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.exe
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.pdb
-Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.csprojAssemblyReference.cache
