@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Hayvan_Takip_Otomasyonu
 {
-    public partial class Form1 : Form
+    public partial class AnaMenu : Form
     {
-        public Form1()
+        public AnaMenu()
         {
             InitializeComponent();
         }
