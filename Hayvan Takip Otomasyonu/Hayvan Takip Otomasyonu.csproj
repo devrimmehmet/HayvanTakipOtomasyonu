@@ -28,7 +28,7 @@
     <PublisherName>Devrim Mehmet Pattabanoğlu</PublisherName>
     <SuiteName>Hayvan Takip Otomasyonu</SuiteName>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -91,8 +91,14 @@
     <Compile Include="GirisFormu.Designer.cs">
       <DependentUpon>GirisFormu.cs</DependentUpon>
     </Compile>
+    <Compile Include="HTODataSetgiris.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HTODataSetgiris.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sqlbaglantisi.cs" />
     <EmbeddedResource Include="AnaMenu.resx">
       <DependentUpon>AnaMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +116,17 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Hayvan Takip Otomasyonu_TemporaryKey.pfx" />
+    <None Include="HTODataSetgiris.xsc">
+      <DependentUpon>HTODataSetgiris.xsd</DependentUpon>
+    </None>
+    <None Include="HTODataSetgiris.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HTODataSetgiris.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HTODataSetgiris.xss">
+      <DependentUpon>HTODataSetgiris.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -121,7 +138,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
@@ -139,6 +158,13 @@
   <ItemGroup>
     <Content Include="Dosyalar\girisformu.png" />
     <Content Include="Dosyalar\form.ico" />
+    <Content Include="Dosyalar\HTO.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dosyalar\HTO_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>HTO.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
