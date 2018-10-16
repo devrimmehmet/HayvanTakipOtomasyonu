@@ -8,3 +8,4 @@ Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.exe
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.pdb
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\obj\Debug\Hayvan_Takip_Otomasyonu.AnaMenu.resources
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\obj\Debug\Hayvan_Takip_Otomasyonu.GirisFormu.resources
