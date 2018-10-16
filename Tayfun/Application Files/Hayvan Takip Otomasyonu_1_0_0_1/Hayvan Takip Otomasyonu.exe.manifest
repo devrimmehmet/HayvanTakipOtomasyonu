@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Hayvan Takip Otomasyonu.exe" version="1.0.0.1" publicKeyToken="73073146fcf3f562" language="tr-TR" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Hayvan Takip Otomasyonu" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Hayvan Takip Otomasyonu.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Bildirim Seçenekleri
+          Windows Kullanıcı Hesabı Denetim düzeyini değiştirmek istiyorsanız 
+          requestedExecutionLevel düğümünü aşağıdakilerden biriyle değiştirin.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+
+         Geriye dönük uyumluluk için Dosya ve Kayıt Defteri Sanallaştırması’nı 
+         kullanmak istiyorsanız requestedExecutionLevel düğümünü silin.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Hayvan Takip Otomasyonu.exe" size="477120">
+      <assemblyIdentity name="Hayvan Takip Otomasyonu" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>7sXKvAJ29qRiEDfSGmot+nn+DB83UDhKgB8aOffBnEY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Dosyalar\form.ico" size="154052">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>mE/hHoJpq5DS6ebCxCalQMbeBAZrUmUuRGidSYathgc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Dosyalar\girisformu.png" size="227132">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>y6UYvJu10NzSCWOeNLX3dbV448qy+VqgPl0zQPfnMC8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Hayvan Takip Otomasyonu.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>rl5/qDc7Jz+tB+BIbOv9iMGPlRe6YJwrjmU09dnlPcs=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=devrimmehmet\DMP" issuerKeyHash="875ac942ca1d340e2239e392a165efb5552e5bcd" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>RcWdlT3aofkEpOZLNsd75QpoVh2APVcUYjX+X9V4IFY=</DigestValue></Reference></SignedInfo><SignatureValue>KRaUv434OWkNGFkPKYKVLO36T80+ZXTPEJ+uhBKucNGuG1cqjc1GsSfFlUjdwt9tB+G63qhUS5cTHsWzHDed9d8OpuudSrZ77zatCdIlsVxu3ZE5ZHJQqFj8bNpirklnrLQu/UWqV64Y0ZmOqSr+ojSOXeR0MwoIgFkjnq5j6b0=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>rOSJF+FHn1+KMkdWQzqadOUwKx/Mx52jR32FNJ6qKVI8rPREwlxm9APPSTQDG4Qb5TDNG4DPVy6USiBGxA2MuI3ptf4X0E/MydvZx0IPA/YBNzDGjvGSuJ/FUW0acZyAbov7TfNdtaYUjSn/unpDymc6A4Zkfw6KZXZryNTs6QM=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="562078d55ffe356214573d801d56680ae57bc7364be6a404f9a1da3d959dc545" Description="" Url=""><as:assemblyIdentity name="Hayvan Takip Otomasyonu.exe" version="1.0.0.1" publicKeyToken="73073146fcf3f562" language="tr-TR" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=devrimmehmet\DMP</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>79cD5bSLWT8ubHg40iNmqse02VTjlDgMHmuSIKRs6+g=</DigestValue></Reference></SignedInfo><SignatureValue>V4c8N+OqJrQGH7yGu+uXw74nUNyOI9AqQB54jZB9clS1DXMEbNERUKNLuQRMvmERb4A7YBCbEau/5hKcZJQxVFgGEjYLgkHofLk92+X9oTidzW+Z25vxy9KgJLCF65rljNt+XTigoSIhbJzNrUCIvKn9534FsSuIuZCRaW2n1v0=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>rOSJF+FHn1+KMkdWQzqadOUwKx/Mx52jR32FNJ6qKVI8rPREwlxm9APPSTQDG4Qb5TDNG4DPVy6USiBGxA2MuI3ptf4X0E/MydvZx0IPA/YBNzDGjvGSuJ/FUW0acZyAbov7TfNdtaYUjSn/unpDymc6A4Zkfw6KZXZryNTs6QM=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB2TCCAUKgAwIBAgIQGc/tC88R3LdKMpuRRmR7JjANBgkqhkiG9w0BAQsFADArMSkwJwYDVQQDHiAAZABlAHYAcgBpAG0AbQBlAGgAbQBlAHQAXABEAE0AUDAeFw0xODEwMTYwMTQ5MzZaFw0xOTEwMTYwNzQ5MzZaMCsxKTAnBgNVBAMeIABkAGUAdgByAGkAbQBtAGUAaABtAGUAdABcAEQATQBQMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCs5IkX4UefX4oyR1ZDOpp05TArH8zHnaNHfYU0nqopUjys9ETCXGb0A89JNAMbhBvlMM0bgM9XLpRKIEbEDYy4jem1/hfQT8zJ29nHQg8D9gE3MMaO8ZK4n8VRbRpxnIBui/tN8121phSNKf+6ekPKZzoDhmR/DopldmvI1OzpAwIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAJyGnC8/Vtqa64DvjqhkBkaFDC99IDpHGH8MafSoA40hrfXjEp85IRyyrClwni9vqe7zMxyTGxdJ4dNKxyyUzmLZerHefGtMTfIbtu1PYSY+iJCvUArZg6VdPpkelR+LCniP9iu4OZfdvdJvhKk/1wbDZTgkGZkuvoU4YQXDUk14</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
