@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnaMenu));
             this.pnl_topbar = new System.Windows.Forms.Panel();
-            this.pnl_islem = new System.Windows.Forms.Panel();
             this.btn_musteriler = new System.Windows.Forms.Button();
             this.btn_anasayfa = new System.Windows.Forms.Button();
+            this.pnl_islem = new System.Windows.Forms.Panel();
             this.pnl_topbar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,11 +43,6 @@
             this.pnl_topbar.Controls.Add(this.btn_anasayfa);
             resources.ApplyResources(this.pnl_topbar, "pnl_topbar");
             this.pnl_topbar.Name = "pnl_topbar";
-            // 
-            // pnl_islem
-            // 
-            resources.ApplyResources(this.pnl_islem, "pnl_islem");
-            this.pnl_islem.Name = "pnl_islem";
             // 
             // btn_musteriler
             // 
@@ -65,6 +60,11 @@
             this.btn_anasayfa.UseVisualStyleBackColor = true;
             this.btn_anasayfa.Click += new System.EventHandler(this.btn_anasayfa_Click);
             // 
+            // pnl_islem
+            // 
+            resources.ApplyResources(this.pnl_islem, "pnl_islem");
+            this.pnl_islem.Name = "pnl_islem";
+            // 
             // AnaMenu
             // 
             resources.ApplyResources(this, "$this");
@@ -74,6 +74,7 @@
             this.Name = "AnaMenu";
             this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AnaMenu_FormClosing);
             this.Load += new System.EventHandler(this.AnaMenu_Load);
             this.pnl_topbar.ResumeLayout(false);
             this.ResumeLayout(false);

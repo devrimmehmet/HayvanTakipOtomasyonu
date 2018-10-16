@@ -29,10 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbl_musteriadi = new System.Windows.Forms.Label();
             this.pnl_musteriekle = new System.Windows.Forms.Panel();
-            this.tb_id = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btn_sil = new System.Windows.Forms.Button();
             this.btn_kaydet = new System.Windows.Forms.Button();
             this.rtb_adres = new System.Windows.Forms.RichTextBox();
@@ -66,7 +65,7 @@
             // 
             this.lbl_musteriadi.AutoSize = true;
             this.lbl_musteriadi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_musteriadi.Location = new System.Drawing.Point(70, 57);
+            this.lbl_musteriadi.Location = new System.Drawing.Point(77, 30);
             this.lbl_musteriadi.Name = "lbl_musteriadi";
             this.lbl_musteriadi.Size = new System.Drawing.Size(42, 19);
             this.lbl_musteriadi.TabIndex = 0;
@@ -76,8 +75,6 @@
             // 
             this.pnl_musteriekle.BackColor = System.Drawing.Color.DarkGray;
             this.pnl_musteriekle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnl_musteriekle.Controls.Add(this.tb_id);
-            this.pnl_musteriekle.Controls.Add(this.label1);
             this.pnl_musteriekle.Controls.Add(this.btn_sil);
             this.pnl_musteriekle.Controls.Add(this.btn_kaydet);
             this.pnl_musteriekle.Controls.Add(this.rtb_adres);
@@ -92,33 +89,15 @@
             this.pnl_musteriekle.Controls.Add(this.lbl_musteriadi);
             this.pnl_musteriekle.Location = new System.Drawing.Point(5, 12);
             this.pnl_musteriekle.Name = "pnl_musteriekle";
-            this.pnl_musteriekle.Size = new System.Drawing.Size(239, 281);
+            this.pnl_musteriekle.Size = new System.Drawing.Size(239, 257);
             this.pnl_musteriekle.TabIndex = 1;
             this.pnl_musteriekle.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_musteriekle_Paint);
-            // 
-            // tb_id
-            // 
-            this.tb_id.Location = new System.Drawing.Point(115, 7);
-            this.tb_id.Name = "tb_id";
-            this.tb_id.ReadOnly = true;
-            this.tb_id.Size = new System.Drawing.Size(100, 20);
-            this.tb_id.TabIndex = 13;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(73, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 19);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "ID :";
             // 
             // btn_sil
             // 
             this.btn_sil.BackgroundImage = global::Hayvan_Takip_Otomasyonu.Properties.Resources.silicon;
             this.btn_sil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_sil.Location = new System.Drawing.Point(7, 227);
+            this.btn_sil.Location = new System.Drawing.Point(14, 200);
             this.btn_sil.Name = "btn_sil";
             this.btn_sil.Size = new System.Drawing.Size(60, 49);
             this.btn_sil.TabIndex = 11;
@@ -130,7 +109,7 @@
             this.btn_kaydet.BackColor = System.Drawing.Color.Transparent;
             this.btn_kaydet.BackgroundImage = global::Hayvan_Takip_Otomasyonu.Properties.Resources.kaydet;
             this.btn_kaydet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_kaydet.Location = new System.Drawing.Point(168, 227);
+            this.btn_kaydet.Location = new System.Drawing.Point(175, 200);
             this.btn_kaydet.Name = "btn_kaydet";
             this.btn_kaydet.Size = new System.Drawing.Size(59, 49);
             this.btn_kaydet.TabIndex = 10;
@@ -140,7 +119,8 @@
             // rtb_adres
             // 
             this.rtb_adres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rtb_adres.Location = new System.Drawing.Point(92, 137);
+            this.rtb_adres.Location = new System.Drawing.Point(99, 110);
+            this.rtb_adres.MaxLength = 500;
             this.rtb_adres.Name = "rtb_adres";
             this.rtb_adres.Size = new System.Drawing.Size(123, 84);
             this.rtb_adres.TabIndex = 9;
@@ -148,7 +128,7 @@
             // 
             // mskdtb_telefon
             // 
-            this.mskdtb_telefon.Location = new System.Drawing.Point(115, 111);
+            this.mskdtb_telefon.Location = new System.Drawing.Point(122, 84);
             this.mskdtb_telefon.Mask = "(999) 000-0000";
             this.mskdtb_telefon.Name = "mskdtb_telefon";
             this.mskdtb_telefon.Size = new System.Drawing.Size(100, 20);
@@ -156,21 +136,23 @@
             // 
             // tb_soyadi
             // 
-            this.tb_soyadi.Location = new System.Drawing.Point(115, 85);
+            this.tb_soyadi.Location = new System.Drawing.Point(122, 58);
+            this.tb_soyadi.MaxLength = 20;
             this.tb_soyadi.Name = "tb_soyadi";
             this.tb_soyadi.Size = new System.Drawing.Size(100, 20);
             this.tb_soyadi.TabIndex = 7;
             // 
             // tb_adi
             // 
-            this.tb_adi.Location = new System.Drawing.Point(115, 59);
+            this.tb_adi.Location = new System.Drawing.Point(122, 32);
+            this.tb_adi.MaxLength = 20;
             this.tb_adi.Name = "tb_adi";
             this.tb_adi.Size = new System.Drawing.Size(100, 20);
             this.tb_adi.TabIndex = 6;
             // 
             // mskdtb_isletmeno
             // 
-            this.mskdtb_isletmeno.Location = new System.Drawing.Point(115, 33);
+            this.mskdtb_isletmeno.Location = new System.Drawing.Point(122, 6);
             this.mskdtb_isletmeno.Mask = "000000000000000";
             this.mskdtb_isletmeno.Name = "mskdtb_isletmeno";
             this.mskdtb_isletmeno.Size = new System.Drawing.Size(100, 20);
@@ -180,7 +162,7 @@
             // 
             this.lbl_adres.AutoSize = true;
             this.lbl_adres.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_adres.Location = new System.Drawing.Point(19, 137);
+            this.lbl_adres.Location = new System.Drawing.Point(26, 110);
             this.lbl_adres.Name = "lbl_adres";
             this.lbl_adres.Size = new System.Drawing.Size(67, 19);
             this.lbl_adres.TabIndex = 4;
@@ -190,7 +172,7 @@
             // 
             this.lbl_tel.AutoSize = true;
             this.lbl_tel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_tel.Location = new System.Drawing.Point(30, 109);
+            this.lbl_tel.Location = new System.Drawing.Point(37, 82);
             this.lbl_tel.Name = "lbl_tel";
             this.lbl_tel.Size = new System.Drawing.Size(82, 19);
             this.lbl_tel.TabIndex = 3;
@@ -200,7 +182,7 @@
             // 
             this.lbl_soyadi.AutoSize = true;
             this.lbl_soyadi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_soyadi.Location = new System.Drawing.Point(45, 83);
+            this.lbl_soyadi.Location = new System.Drawing.Point(52, 56);
             this.lbl_soyadi.Name = "lbl_soyadi";
             this.lbl_soyadi.Size = new System.Drawing.Size(69, 19);
             this.lbl_soyadi.TabIndex = 2;
@@ -210,7 +192,7 @@
             // 
             this.lbl_isletmeno.AutoSize = true;
             this.lbl_isletmeno.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_isletmeno.Location = new System.Drawing.Point(3, 34);
+            this.lbl_isletmeno.Location = new System.Drawing.Point(10, 7);
             this.lbl_isletmeno.Name = "lbl_isletmeno";
             this.lbl_isletmeno.Size = new System.Drawing.Size(109, 19);
             this.lbl_isletmeno.TabIndex = 1;
@@ -218,7 +200,18 @@
             // 
             // dgv_musteriler
             // 
+            this.dgv_musteriler.AllowUserToAddRows = false;
+            this.dgv_musteriler.AllowUserToDeleteRows = false;
+            this.dgv_musteriler.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_musteriler.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_musteriler.AutoGenerateColumns = false;
+            this.dgv_musteriler.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgv_musteriler.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dgv_musteriler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_musteriler.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ıDDataGridViewTextBoxColumn,
@@ -228,14 +221,19 @@
             this.telDataGridViewTextBoxColumn,
             this.adresiDataGridViewTextBoxColumn});
             this.dgv_musteriler.DataSource = this.musterilertblBindingSource;
+            this.dgv_musteriler.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dgv_musteriler.Location = new System.Drawing.Point(250, 12);
             this.dgv_musteriler.Name = "dgv_musteriler";
+            this.dgv_musteriler.ReadOnly = true;
+            this.dgv_musteriler.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgv_musteriler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_musteriler.Size = new System.Drawing.Size(1083, 281);
+            this.dgv_musteriler.Size = new System.Drawing.Size(1083, 257);
             this.dgv_musteriler.TabIndex = 2;
             this.dgv_musteriler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dgv_musteriler.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_musteriler_CellContentClick);
+            this.dgv_musteriler.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_musteriler_CellDoubleClick);
             this.dgv_musteriler.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgv_musteriler_CellFormatting);
+            this.dgv_musteriler.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_musteriler_RowEnter);
             // 
             // ıDDataGridViewTextBoxColumn
             // 
@@ -339,8 +337,6 @@
         private System.Windows.Forms.TextBox tb_soyadi;
         private System.Windows.Forms.TextBox tb_adi;
         private System.Windows.Forms.MaskedTextBox mskdtb_isletmeno;
-        private System.Windows.Forms.TextBox tb_id;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgv_musteriler;
         private HTODataSetgiris hTODataSetgiris;
         private HTODataSet hTODataSet;

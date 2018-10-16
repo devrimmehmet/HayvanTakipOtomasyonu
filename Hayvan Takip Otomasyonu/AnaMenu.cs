@@ -12,7 +12,9 @@ namespace Hayvan_Takip_Otomasyonu
 {
     public partial class AnaMenu : Form
     {
-        public AnaMenu()
+
+      
+    public AnaMenu()
         {
             InitializeComponent();
         }
@@ -43,6 +45,11 @@ namespace Hayvan_Takip_Otomasyonu
             ilkform.Close();
             ilkform.Dock = DockStyle.Fill;
             ilkform.BringToFront();
+        }
+
+        private void AnaMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+         
         }
     }
 }
