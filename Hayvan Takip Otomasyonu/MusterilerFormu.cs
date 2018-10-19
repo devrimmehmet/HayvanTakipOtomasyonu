@@ -234,6 +234,9 @@ namespace Hayvan_Takip_Otomasyonu
 
         private void Btn_guncelle_Click(object sender, EventArgs e)
         {
+        //    if (tb_guncelle_adi.Text==)
+
+
             if (tb_guncelle_adi.Text == "")
             {
                 MessageBox.Show("Lütfen Müşterinin Adını Giriniz !", "Uyarı !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -241,7 +244,7 @@ namespace Hayvan_Takip_Otomasyonu
             else
             {
 
-                bool durum = true;
+              /*  bool durum = true;
 
                 SqlCommand komut1 = new SqlCommand("select *from musterilertbl", bgl.baglanti());
                 SqlDataReader read;
@@ -262,7 +265,7 @@ namespace Hayvan_Takip_Otomasyonu
 
                 if (durum == true)
 
-                {
+                {*/
 
                     SqlCommand komut = new SqlCommand("update musterilertbl set isletmeno=@p1,adi=@p2,soyadi=@p3,adresi=@p4,tel=@p5 where id=@p6", bgl.baglanti());
 
@@ -294,10 +297,18 @@ namespace Hayvan_Takip_Otomasyonu
                     cb_tel.Checked = false;
                     cb_adres.Checked = false;
 
-                }
+             //   }
             }
            
+
+
+
+
             listele();
+
+
+
+
         }
 
         private void cb_arama_TextChanged(object sender, EventArgs e)

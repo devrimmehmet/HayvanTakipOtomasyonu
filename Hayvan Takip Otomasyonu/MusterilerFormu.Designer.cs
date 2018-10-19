@@ -52,10 +52,12 @@
             this.hTODataSetgiris = new Hayvan_Takip_Otomasyonu.HTODataSetgiris();
             this.musterilertblTableAdapter = new Hayvan_Takip_Otomasyonu.HTODataSetTableAdapters.musterilertblTableAdapter();
             this.Gb_musteriekle = new System.Windows.Forms.GroupBox();
+            this.btn_kaydet = new System.Windows.Forms.Button();
             this.Gb_musterisil = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Cb_sil = new System.Windows.Forms.ComboBox();
             this.musterilertblBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.btn_sil = new System.Windows.Forms.Button();
             this.musterilertblBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.hTODataSet1 = new Hayvan_Takip_Otomasyonu.HTODataSet1();
             this.musterilertblBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -78,8 +80,6 @@
             this.tb_guncelle_adi = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.msk_guncelle_isletmeno = new System.Windows.Forms.MaskedTextBox();
-            this.btn_sil = new System.Windows.Forms.Button();
-            this.btn_kaydet = new System.Windows.Forms.Button();
             this.cb_arama = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_musteriler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.musterilertblBindingSource)).BeginInit();
@@ -311,6 +311,18 @@
             this.Gb_musteriekle.TabStop = false;
             this.Gb_musteriekle.Text = "Yeni Müşteri Ekle";
             // 
+            // btn_kaydet
+            // 
+            this.btn_kaydet.BackColor = System.Drawing.Color.Transparent;
+            this.btn_kaydet.BackgroundImage = global::Hayvan_Takip_Otomasyonu.Properties.Resources.kaydet;
+            this.btn_kaydet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_kaydet.Location = new System.Drawing.Point(167, 214);
+            this.btn_kaydet.Name = "btn_kaydet";
+            this.btn_kaydet.Size = new System.Drawing.Size(60, 49);
+            this.btn_kaydet.TabIndex = 10;
+            this.btn_kaydet.UseVisualStyleBackColor = false;
+            this.btn_kaydet.Click += new System.EventHandler(this.btn_kaydet_Click);
+            // 
             // Gb_musterisil
             // 
             this.Gb_musterisil.BackColor = System.Drawing.Color.Red;
@@ -350,6 +362,17 @@
             // 
             this.musterilertblBindingSource2.DataMember = "musterilertbl";
             this.musterilertblBindingSource2.DataSource = this.hTODataSet;
+            // 
+            // btn_sil
+            // 
+            this.btn_sil.BackgroundImage = global::Hayvan_Takip_Otomasyonu.Properties.Resources.silicon;
+            this.btn_sil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_sil.Location = new System.Drawing.Point(193, 13);
+            this.btn_sil.Name = "btn_sil";
+            this.btn_sil.Size = new System.Drawing.Size(42, 35);
+            this.btn_sil.TabIndex = 11;
+            this.btn_sil.UseVisualStyleBackColor = true;
+            this.btn_sil.Click += new System.EventHandler(this.btn_sil_Click);
             // 
             // musterilertblBindingSource3
             // 
@@ -443,6 +466,7 @@
             this.cb_adi.Size = new System.Drawing.Size(15, 14);
             this.cb_adi.TabIndex = 13;
             this.cb_adi.UseVisualStyleBackColor = true;
+            this.cb_adi.Visible = false;
             this.cb_adi.CheckStateChanged += new System.EventHandler(this.cb_adi_CheckStateChanged);
             // 
             // cb_isletmeno
@@ -563,29 +587,6 @@
             this.msk_guncelle_isletmeno.ReadOnly = true;
             this.msk_guncelle_isletmeno.Size = new System.Drawing.Size(93, 20);
             this.msk_guncelle_isletmeno.TabIndex = 5;
-            // 
-            // btn_sil
-            // 
-            this.btn_sil.BackgroundImage = global::Hayvan_Takip_Otomasyonu.Properties.Resources.silicon;
-            this.btn_sil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_sil.Location = new System.Drawing.Point(193, 13);
-            this.btn_sil.Name = "btn_sil";
-            this.btn_sil.Size = new System.Drawing.Size(42, 35);
-            this.btn_sil.TabIndex = 11;
-            this.btn_sil.UseVisualStyleBackColor = true;
-            this.btn_sil.Click += new System.EventHandler(this.btn_sil_Click);
-            // 
-            // btn_kaydet
-            // 
-            this.btn_kaydet.BackColor = System.Drawing.Color.Transparent;
-            this.btn_kaydet.BackgroundImage = global::Hayvan_Takip_Otomasyonu.Properties.Resources.kaydet;
-            this.btn_kaydet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_kaydet.Location = new System.Drawing.Point(167, 214);
-            this.btn_kaydet.Name = "btn_kaydet";
-            this.btn_kaydet.Size = new System.Drawing.Size(60, 49);
-            this.btn_kaydet.TabIndex = 10;
-            this.btn_kaydet.UseVisualStyleBackColor = false;
-            this.btn_kaydet.Click += new System.EventHandler(this.btn_kaydet_Click);
             // 
             // cb_arama
             // 
