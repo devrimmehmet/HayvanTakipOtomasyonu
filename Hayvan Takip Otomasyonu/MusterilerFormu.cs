@@ -22,25 +22,24 @@ namespace Hayvan_Takip_Otomasyonu
         void listele()
         {
             DataTable dt = new DataTable();
+          //  DataView dv = da.Tables[0].DefaultView;
             SqlDataAdapter da = new SqlDataAdapter("Select * From musterilertbl", bgl.baglanti());
             da.Fill(dt);
             dgv_musteriler.DataSource = dt;
 
+
+            SqlCommand komut13 = new SqlCommand("select *from musterilertbl", bgl.baglanti());
+            SqlDataReader read2;
+            read2 = komut13.ExecuteReader();
+            Cb_sil.Items.Clear();
+            cb_arama.Items.Clear();
+            while (read2.Read())
+            {
+                cb_arama.Items.Add(read2["adi"]);
+                Cb_sil.Items.Add(read2["adi"]);
+            }
         }
-
-
-        private void MusterilerFormu_Load(object sender, EventArgs e)
-        {
-            this.musterilertblTableAdapter.Fill(this.hTODataSet.musterilertbl);
-        //    dgv_musteriler.MultiSelect = false;
-        //    dgv_musteriler.ReadOnly = true;
-        }
-
-        private void pnl_musteriekle_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        
         private void btn_kaydet_Click(object sender, EventArgs e)
         {
              
@@ -60,7 +59,7 @@ namespace Hayvan_Takip_Otomasyonu
 
                 while (read.Read())
                 {
-                    listele();
+             
                     if (read["adi"].ToString() == tb_adi.Text)
                     {
 
@@ -69,7 +68,7 @@ namespace Hayvan_Takip_Otomasyonu
                         bgl.baglanti().Close();
                     }
                 }
-                listele();
+            
                 if (durum == true)
 
                 {
@@ -84,61 +83,50 @@ namespace Hayvan_Takip_Otomasyonu
                     komut.ExecuteNonQuery();
                     bgl.baglanti().Close();
                     MessageBox.Show("Müşteri Sisteme Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    listele();
+                  
 
+                    mskdtb_isletmeno.Text = null;
+                    tb_adi.Text = null;
+                    tb_soyadi.Text = null;
+                    rtb_adres.Text = null;
+                    mskdtb_telefon.Text = null;
+                    Cb_sil.Text = null;
+                    cb_arama.Text = null;
+                    tb_guncelle_soyad.Text = null;
+                    tb_guncelle_adi.Text = null;
+                    msk_guncelle_isletmeno.Text = null;
+                    msk_guncelle_tel.Text = null;
+                    rtb_guncelleadres.Text = null;
                 }
             }
+            listele();
             }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            DialogResult cikis = new DialogResult();
-            cikis = MessageBox.Show("Müşteriye ait bilgiler Silinecek Devam Etmek istiyor musun ?", "Uyarı", MessageBoxButtons.YesNo);
-            if (cikis == DialogResult.Yes)
-            {
-                SqlCommand komutsil = new SqlCommand("Delete From musterilertbl where adi=@p1", bgl.baglanti());
-                komutsil.Parameters.AddWithValue("@p1", tb_adi.Text);
-                komutsil.ExecuteNonQuery();
-                bgl.baglanti().Close();
-                MessageBox.Show("Müşteri Silindi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                listele();
-            }
-            if (cikis == DialogResult.No)
-            {
-                MessageBox.Show("İşlem İptal Edildi.");
-                
-            }
-
-           
-        }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           /* dgv_musteriler.MultiSelect = false;
-            dgv_musteriler.ReadOnly = true;
+       
             if (e.RowIndex > -1 && e.ColumnIndex > -1)
 
             {
-                                dgv_musteriler.Rows[e.RowIndex].Selected = true;//satır  seçimini true yapıyoruz.
-
+                dgv_musteriler.Rows[e.RowIndex].Selected = true;//satır  seçimini true yapıyoruz.
+                msk_guncelle_isletmeno.Text = dgv_musteriler.Rows[e.RowIndex].Cells[1].Value.ToString();
+                tb_guncelle_adi.Text = dgv_musteriler.Rows[e.RowIndex].Cells[2].Value.ToString();
+                tb_guncelle_soyad.Text = dgv_musteriler.Rows[e.RowIndex].Cells[3].Value.ToString();
+                msk_guncelle_tel.Text = dgv_musteriler.Rows[e.RowIndex].Cells[4].Value.ToString();
+                rtb_guncelleadres.Text = dgv_musteriler.Rows[e.RowIndex].Cells[5].Value.ToString();
+                Cb_sil.Text= dgv_musteriler.Rows[e.RowIndex].Cells[2].Value.ToString();
+             //   cb_arama.Text = dgv_musteriler.Rows[e.RowIndex].Cells[2].Value.ToString();
+                tb_id.Text = dgv_musteriler.Rows[e.RowIndex].Cells[0].Value.ToString();
             }
-
-            //seçili satırın bilgilerini alıyoruz.
-
-           // MessageBox.Show(dgv_musteriler.Rows[e.RowIndex].Cells[0].Value.ToString()+  dgv_musteriler.Rows[e.RowIndex].Cells[1].Value.ToString()+dgv_musteriler.Rows[e.RowIndex].Cells[2].Value.ToString());
-            tb_id.Text = dgv_musteriler.Rows[e.RowIndex].Cells[0].Value.ToString();
-            mskdtb_isletmeno.Text= dgv_musteriler.Rows[e.RowIndex].Cells[1].Value.ToString();
-            tb_adi.Text= dgv_musteriler.Rows[e.RowIndex].Cells[2].Value.ToString();
-            tb_soyadi.Text= dgv_musteriler.Rows[e.RowIndex].Cells[3].Value.ToString();
-            mskdtb_telefon.Text = dgv_musteriler.Rows[e.RowIndex].Cells[4].Value.ToString();
-            rtb_adres.Text= dgv_musteriler.Rows[e.RowIndex].Cells[5].Value.ToString();
-         */
+            cb_adi.Checked = false;
+            cb_isletmeno.Checked = false;
+            cb_soyadi.Checked = false;
+            cb_tel.Checked = false;
+            cb_adres.Checked = false;
         }
 
-        private void dgv_musteriler_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+      
 
         private void dgv_musteriler_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -150,60 +138,212 @@ namespace Hayvan_Takip_Otomasyonu
 
             }
         }
-      //  int secilensatir;
-        private void dgv_musteriler_RowEnter(object sender, DataGridViewCellEventArgs e)
+    
+      
+
+       
+
+        private void btn_sil_Click(object sender, EventArgs e)
         {
-            /*    secilensatir = Convert.ToInt16(data.Tables["tablo"].Rows[e.RowIndex]["Kimlik"]);
 
-                textBox1.Text = secilensatir.ToString();
-                textBox2.Text = 1ds.Tables["tablo"].Rows[e.RowIndex]["numara"].ToString();
-                textBox3.Text = 1ds.Tables["tablo"].Rows[e.RowIndex]["adı"].ToString();
-                textBox4.Text = 1ds.Tables["tablo"].Rows[e.RowIndex]["soyadı"].ToString();
-                textBox5.Text = 1ds.Tables["tablo"].Rows[e.RowIndex]["vize"].ToString();
-                textBox6.Text = 1ds.Tables["tablo"].Rows[e.RowIndex]["final"].ToString();
-                textBox7.Text = 1ds.Tables["tablo"].Rows[e.RowIndex]["gn"].ToString();
-                */
-        /*    dgv_musteriler.MultiSelect = false;
-            dgv_musteriler.ReadOnly = true;
-            if (e.RowIndex > -1 && e.ColumnIndex > -1)
-
+            if (Cb_sil.Text == "")
             {
-                dgv_musteriler.Rows[e.RowIndex].Selected = true;//satır  seçimini true yapıyoruz.
-
+                MessageBox.Show("Lütfen Silmek istediğiniz müşteriyi seçiniz yada müşterinin adını giriniz !", "Uyarı !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else
+            {
 
-            //seçili satırın bilgilerini alıyoruz.
+                string musteriadi = Cb_sil.Text;
 
-            // MessageBox.Show(dgv_musteriler.Rows[e.RowIndex].Cells[0].Value.ToString()+  dgv_musteriler.Rows[e.RowIndex].Cells[1].Value.ToString()+dgv_musteriler.Rows[e.RowIndex].Cells[2].Value.ToString());
-            tb_id.Text = dgv_musteriler.Rows[e.RowIndex].Cells[0].Value.ToString();
-            mskdtb_isletmeno.Text = dgv_musteriler.Rows[e.RowIndex].Cells[1].Value.ToString();
-            tb_adi.Text = dgv_musteriler.Rows[e.RowIndex].Cells[2].Value.ToString();
-            tb_soyadi.Text = dgv_musteriler.Rows[e.RowIndex].Cells[3].Value.ToString();
-            mskdtb_telefon.Text = dgv_musteriler.Rows[e.RowIndex].Cells[4].Value.ToString();
-            rtb_adres.Text = dgv_musteriler.Rows[e.RowIndex].Cells[5].Value.ToString();*/
+                    DialogResult cikis = new DialogResult();
+                    cikis = MessageBox.Show(musteriadi+" ait bilgiler silinecek devam etmek istiyor musun ?", "Uyarı", MessageBoxButtons.YesNo);
+                    if (cikis == DialogResult.Yes)
+                    {
+                        SqlCommand komutsil = new SqlCommand("Delete From musterilertbl where adi=@p1", bgl.baglanti());
+                        komutsil.Parameters.AddWithValue("@p1", Cb_sil.Text);
+                        komutsil.ExecuteNonQuery();
+                        bgl.baglanti().Close();
+                        MessageBox.Show("Müşteri Silindi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    
+                    }
+                    if (cikis == DialogResult.No)
+                    {
+                        MessageBox.Show("İşlem İptal Edildi.");
+
+                    }
+
+            
+            }
+            mskdtb_isletmeno.Text = null;
+            tb_adi.Text = null;
+            tb_soyadi.Text = null;
+            rtb_adres.Text = null;
+            mskdtb_telefon.Text = null;
+            Cb_sil.Text = null;
+            cb_arama.Text = null;
+            tb_guncelle_soyad.Text = null;
+            tb_guncelle_adi.Text = null;
+            msk_guncelle_isletmeno.Text = null;
+            msk_guncelle_tel.Text = null;
+            rtb_guncelleadres.Text = null;
+            listele();
         }
 
-        private void dgv_musteriler_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void MusterilerFormu_Load_1(object sender, EventArgs e)
         {
-    /*   //  dgv_musteriler.MultiSelect = false;
-        //    dgv_musteriler.ReadOnly = true;
-            if (e.RowIndex > -1 && e.ColumnIndex > -1)
+             this.musterilertblTableAdapter1.Fill(this.hTODataSet1.musterilertbl);
+            cb_adi.Checked = false;
+            cb_isletmeno.Checked = false;
+            cb_soyadi.Checked = false;
+            cb_tel.Checked = false;
+            cb_adres.Checked = false;
+            listele();
 
+        }
+
+
+        private void cb_isletmeno_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (cb_isletmeno.Checked == true) { msk_guncelle_isletmeno.ReadOnly = false; }
+            if (cb_isletmeno.Checked == false) { msk_guncelle_isletmeno.ReadOnly = true; }
+        }
+
+        private void cb_adi_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (cb_adi.Checked == true) { tb_guncelle_adi.ReadOnly = false; }
+            if (cb_adi.Checked == false) { tb_guncelle_adi.ReadOnly = true; }
+        }
+
+        private void cb_soyadi_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (cb_soyadi.Checked == true) { tb_guncelle_soyad.ReadOnly = false; }
+            if (cb_soyadi.Checked == false) { tb_guncelle_soyad.ReadOnly = true; }
+        }
+
+        private void cb_tel_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (cb_tel.Checked == true) { msk_guncelle_tel.ReadOnly = false; }
+            if (cb_tel.Checked == false) { msk_guncelle_tel.ReadOnly = true; }
+        }
+
+        private void cb_adres_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (cb_adres.Checked == true) { rtb_guncelleadres.ReadOnly = false; }
+            if (cb_adres.Checked == false) { rtb_guncelleadres.ReadOnly = true; }
+        }
+
+        private void Btn_guncelle_Click(object sender, EventArgs e)
+        {
+            if (tb_guncelle_adi.Text == "")
             {
-                dgv_musteriler.Rows[e.RowIndex].Selected = true;//satır  seçimini true yapıyoruz.
-
+                MessageBox.Show("Lütfen Müşterinin Adını Giriniz !", "Uyarı !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else
+            {
 
-            //seçili satırın bilgilerini alıyoruz.
+                bool durum = true;
 
-            // MessageBox.Show(dgv_musteriler.Rows[e.RowIndex].Cells[0].Value.ToString()+  dgv_musteriler.Rows[e.RowIndex].Cells[1].Value.ToString()+dgv_musteriler.Rows[e.RowIndex].Cells[2].Value.ToString());
-        //    tb_id.Text = dgv_musteriler.Rows[e.RowIndex].Cells[0].Value.ToString();
-            mskdtb_isletmeno.Text = dgv_musteriler.Rows[e.RowIndex].Cells[1].Value.ToString();
-            tb_adi.Text = dgv_musteriler.Rows[e.RowIndex].Cells[2].Value.ToString();
-            tb_soyadi.Text = dgv_musteriler.Rows[e.RowIndex].Cells[3].Value.ToString();
-            mskdtb_telefon.Text = dgv_musteriler.Rows[e.RowIndex].Cells[4].Value.ToString();
-            rtb_adres.Text = dgv_musteriler.Rows[e.RowIndex].Cells[5].Value.ToString();*/
+                SqlCommand komut1 = new SqlCommand("select *from musterilertbl", bgl.baglanti());
+                SqlDataReader read;
+                read = komut1.ExecuteReader();
+
+
+                while (read.Read())
+                {
+
+                    if (read["adi"].ToString() == tb_guncelle_adi.Text)
+                    {
+
+                        MessageBox.Show("Bu isme ait Müşteri Sistemde Kayıtlı !", "Uyarı !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        durum = false;
+                        bgl.baglanti().Close();
+                    }
+                }
+
+                if (durum == true)
+
+                {
+
+                    SqlCommand komut = new SqlCommand("update musterilertbl set isletmeno=@p1,adi=@p2,soyadi=@p3,adresi=@p4,tel=@p5 where id=@p6", bgl.baglanti());
+
+                    komut.Parameters.AddWithValue("@p1", msk_guncelle_isletmeno.Text);
+                    komut.Parameters.AddWithValue("@p2", tb_guncelle_adi.Text);
+                    komut.Parameters.AddWithValue("@p3", tb_guncelle_soyad.Text);
+                    komut.Parameters.AddWithValue("@p4", rtb_guncelleadres.Text);
+                    komut.Parameters.AddWithValue("@p5", msk_guncelle_tel.Text);
+                    komut.Parameters.AddWithValue("@p6", tb_id.Text);
+                    komut.ExecuteNonQuery();
+                    bgl.baglanti().Close();
+                    MessageBox.Show("Müşteri Bilgileri Güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    mskdtb_isletmeno.Text = null;
+                    tb_adi.Text = null;
+                    tb_soyadi.Text = null;
+                    rtb_adres.Text = null;
+                    mskdtb_telefon.Text = null;
+                    Cb_sil.Text = null;
+                    cb_arama.Text = null;
+                    tb_guncelle_soyad.Text = null;
+                    tb_guncelle_adi.Text = null;
+                    msk_guncelle_isletmeno.Text = null;
+                    msk_guncelle_tel.Text = null;
+                    rtb_guncelleadres.Text = null;
+                    cb_adi.Checked = false;
+                    cb_isletmeno.Checked = false;
+                    cb_soyadi.Checked = false;
+                    cb_tel.Checked = false;
+                    cb_adres.Checked = false;
+
+                }
+            }
+           
+            listele();
+        }
+
+        private void cb_arama_TextChanged(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+          
+            SqlDataAdapter da = new SqlDataAdapter("Select * From musterilertbl", bgl.baglanti());
+            da.Fill(dt);
+            dgv_musteriler.DataSource = dt;
+           
+            DataView dv = dt.DefaultView;
+            dv.RowFilter = "adi Like '" + cb_arama.Text + "%'";
+            dgv_musteriler.DataSource = dv;
+
+
+        }
+      //  AnaMenu hayvanlaragecis = new AnaMenu();
+        public void dgv_musteriler_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+     /*       this.Close();
+            hayvanlaragecis.btn_hayvanlar_Click(sender, e);
+            hayvanlaragecis.pnl_islem.Controls.Clear();
+            HayvanlarFormu ilkform = new HayvanlarFormu();
+            ilkform.TopLevel = false;
+           hayvanlaragecis.pnl_islem.Controls.Add(ilkform);
+            ilkform.Show();
+            ilkform.Dock = DockStyle.Fill;
+            ilkform.BringToFront();
+            MessageBox.Show("de");*/
+            //  this.Close();
+            //    AnaMenu. pnl_islem.Controls.Clear();
+            //   HayvanlarFormu ilkform = new HayvanlarFormu();
+            //    ilkform.TopLevel = false;
+            //   pnl_islem.Controls.Add(ilkform);
+            //  ilkform.Show();
+            //    ilkform.Dock = DockStyle.Fill;
+            //   ilkform.BringToFront();
+
+
+            /*   Form2 f2 = new Form2();
+               private void button2_Click(object sender, EventArgs e)
+               {
+                   f2.button1_Click(sender, e);
+               }*/
         }
     }
     }
+    
 

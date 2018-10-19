@@ -41,7 +41,7 @@ SELECT ID, isletmeno, adi, soyadi, adresi, tel FROM musterilertbl WHERE (ID = SC
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT ID, isletmeno, adi, soyadi, adresi, tel FROM dbo.musterilertbl</CommandText>
+                    <CommandText>SELECT ID, isletmeno, adi, soyadi, adresi, tel FROM musterilertbl</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -88,7 +88,7 @@ SELECT ID, isletmeno, adi, soyadi, adresi, tel FROM musterilertbl WHERE (ID = @I
   <xs:element name="HTODataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="HTODataSet" msprop:Generator_UserDSName="HTODataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="musterilertbl" msprop:Generator_TableClassName="musterilertblDataTable" msprop:Generator_TableVarName="tablemusterilertbl" msprop:Generator_TablePropName="musterilertbl" msprop:Generator_RowDeletingName="musterilertblRowDeleting" msprop:Generator_RowChangingName="musterilertblRowChanging" msprop:Generator_RowEvHandlerName="musterilertblRowChangeEventHandler" msprop:Generator_RowDeletedName="musterilertblRowDeleted" msprop:Generator_UserTableName="musterilertbl" msprop:Generator_RowChangedName="musterilertblRowChanged" msprop:Generator_RowEvArgName="musterilertblRowChangeEvent" msprop:Generator_RowClassName="musterilertblRow">
+        <xs:element name="musterilertbl" msprop:Generator_TableClassName="musterilertblDataTable" msprop:Generator_TableVarName="tablemusterilertbl" msprop:Generator_RowChangedName="musterilertblRowChanged" msprop:Generator_TablePropName="musterilertbl" msprop:Generator_RowDeletingName="musterilertblRowDeleting" msprop:Generator_RowChangingName="musterilertblRowChanging" msprop:Generator_RowEvHandlerName="musterilertblRowChangeEventHandler" msprop:Generator_RowDeletedName="musterilertblRowDeleted" msprop:Generator_RowClassName="musterilertblRow" msprop:Generator_UserTableName="musterilertbl" msprop:Generator_RowEvArgName="musterilertblRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />

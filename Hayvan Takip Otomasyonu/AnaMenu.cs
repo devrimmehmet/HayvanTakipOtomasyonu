@@ -51,5 +51,16 @@ namespace Hayvan_Takip_Otomasyonu
         {
          
         }
+
+        public void btn_hayvanlar_Click(object sender, EventArgs e)
+        {
+            pnl_islem.Controls.Clear();
+            HayvanlarFormu ilkform = new HayvanlarFormu();
+            ilkform.TopLevel = false;
+            pnl_islem.Controls.Add(ilkform);
+            ilkform.Show();
+            ilkform.Dock = DockStyle.Fill;
+            ilkform.BringToFront();
+        }
     }
 }

@@ -28,7 +28,7 @@
     <PublisherName>Devrim Mehmet Pattabanoğlu</PublisherName>
     <SuiteName>Hayvan Takip Otomasyonu</SuiteName>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationRevision>6</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -94,10 +94,24 @@
     <Compile Include="GirisFormu.Designer.cs">
       <DependentUpon>GirisFormu.cs</DependentUpon>
     </Compile>
+    <Compile Include="HayvanlarFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HayvanlarFormu.Designer.cs">
+      <DependentUpon>HayvanlarFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HTODataSet.cs">
+      <DependentUpon>HTODataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="HTODataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HTODataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HTODataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HTODataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="HTODataSetgiris.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -121,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GirisFormu.resx">
       <DependentUpon>GirisFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HayvanlarFormu.resx">
+      <DependentUpon>HayvanlarFormu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MusterilerFormu.resx">
       <DependentUpon>MusterilerFormu.cs</DependentUpon>
@@ -146,6 +163,17 @@
     </None>
     <None Include="HTODataSet.xss">
       <DependentUpon>HTODataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HTODataSet1.xsc">
+      <DependentUpon>HTODataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HTODataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HTODataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HTODataSet1.xss">
+      <DependentUpon>HTODataSet1.xsd</DependentUpon>
     </None>
     <None Include="HTODataSetgiris.xsc">
       <DependentUpon>HTODataSetgiris.xsd</DependentUpon>

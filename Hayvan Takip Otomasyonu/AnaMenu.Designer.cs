@@ -33,12 +33,14 @@
             this.btn_musteriler = new System.Windows.Forms.Button();
             this.btn_anasayfa = new System.Windows.Forms.Button();
             this.pnl_islem = new System.Windows.Forms.Panel();
+            this.btn_hayvanlar = new System.Windows.Forms.Button();
             this.pnl_topbar.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_topbar
             // 
             this.pnl_topbar.BackColor = System.Drawing.Color.Coral;
+            this.pnl_topbar.Controls.Add(this.btn_hayvanlar);
             this.pnl_topbar.Controls.Add(this.btn_musteriler);
             this.pnl_topbar.Controls.Add(this.btn_anasayfa);
             resources.ApplyResources(this.pnl_topbar, "pnl_topbar");
@@ -65,6 +67,14 @@
             resources.ApplyResources(this.pnl_islem, "pnl_islem");
             this.pnl_islem.Name = "pnl_islem";
             // 
+            // btn_hayvanlar
+            // 
+            this.btn_hayvanlar.BackgroundImage = global::Hayvan_Takip_Otomasyonu.Properties.Resources.musterilericon;
+            resources.ApplyResources(this.btn_hayvanlar, "btn_hayvanlar");
+            this.btn_hayvanlar.Name = "btn_hayvanlar";
+            this.btn_hayvanlar.UseVisualStyleBackColor = true;
+            this.btn_hayvanlar.Click += new System.EventHandler(this.btn_hayvanlar_Click);
+            // 
             // AnaMenu
             // 
             resources.ApplyResources(this, "$this");
@@ -86,7 +96,8 @@
         private System.Windows.Forms.Panel pnl_topbar;
         private System.Windows.Forms.Button btn_anasayfa;
         private System.Windows.Forms.Button btn_musteriler;
-        private System.Windows.Forms.Panel pnl_islem;
+        private System.Windows.Forms.Button btn_hayvanlar;
+        public System.Windows.Forms.Panel pnl_islem;
     }
 }
 
