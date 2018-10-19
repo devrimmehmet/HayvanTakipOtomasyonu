@@ -12,9 +12,55 @@ namespace Hayvan_Takip_Otomasyonu
 {
     public partial class AnaMenu : Form
     {
-        public AnaMenu()
+
+      
+    public AnaMenu()
         {
             InitializeComponent();
+        }
+      
+        private void AnaMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_musteriler_Click(object sender, EventArgs e)
+        {
+            pnl_islem.Controls.Clear();
+            MusterilerFormu ilkform = new MusterilerFormu();
+            ilkform.TopLevel = false;
+            pnl_islem.Controls.Add(ilkform);
+            ilkform.Show();
+            ilkform.Dock = DockStyle.Fill;
+            ilkform.BringToFront();
+
+        }
+
+        private void btn_anasayfa_Click(object sender, EventArgs e)
+        {
+            pnl_islem.Controls.Clear();
+            MusterilerFormu ilkform = new MusterilerFormu();
+            ilkform.TopLevel = false;
+            pnl_islem.Controls.Add(ilkform);
+            ilkform.Close();
+            ilkform.Dock = DockStyle.Fill;
+            ilkform.BringToFront();
+        }
+
+        private void AnaMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+         
+        }
+
+        public void btn_hayvanlar_Click(object sender, EventArgs e)
+        {
+            pnl_islem.Controls.Clear();
+            HayvanlarFormu ilkform = new HayvanlarFormu();
+            ilkform.TopLevel = false;
+            pnl_islem.Controls.Add(ilkform);
+            ilkform.Show();
+            ilkform.Dock = DockStyle.Fill;
+            ilkform.BringToFront();
         }
     }
 }
