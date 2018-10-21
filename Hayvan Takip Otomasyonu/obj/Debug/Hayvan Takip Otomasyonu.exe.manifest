@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="Hayvan Takip Otomasyonu.exe" version="1.0.0.13" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
-  <description asmv2:iconFile="Dosyalar\form.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <asmv1:assemblyIdentity name="Hayvan Takip Otomasyonu.exe" version="1.0.0.18" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="Dosyalar\form.ico" asmv2:publisher="Devrim Mehmet Pattabanoğlu" co.v1:suiteName="Hayvan Takip Otomasyonu" asmv2:product="Hayvan Takip Otomasyonu" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
     <assemblyIdentity name="Hayvan Takip Otomasyonu" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="Hayvan Takip Otomasyonu.exe" parameters="" />
   </entryPoint>
+  <co.v1:useManifestForTrust xmlns="urn:schemas-microsoft-com:asm.v1" />
   <trustInfo>
     <security>
       <applicationRequestMinimum>
@@ -43,14 +44,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Hayvan Takip Otomasyonu.exe" size="1114112">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Hayvan Takip Otomasyonu.exe" size="1115072">
       <assemblyIdentity name="Hayvan Takip Otomasyonu" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>SPj/gmsAoavEN3q5Kwz6ZeMQ3JfmL+ZOUVG9VG+Bm9g=</dsig:DigestValue>
+        <dsig:DigestValue>1nI5iawEmsEC8cxGJLwRu6EAQ2to81HsbYIG5qfM6mw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,7 +63,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8kNmqXjirjI+EQWKVhYT2rabOTktsU3MX3W7rr02vCM=</dsig:DigestValue>
+        <dsig:DigestValue>E5IU2EgYNywjZRM2zDDwndq+7VfUnk4M+tGlpQ7l1uU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -109,15 +110,6 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>ZH4dm1TmyaV9Dp9NrOAah3PULBiP4o16Dxj2JZokshA=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Hayvan Takip Otomasyonu.pdb" size="239104">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>1doDylNEhP0/6hxV6pcP6GQAwy1p2cXKFjiqLsDnNAE=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
