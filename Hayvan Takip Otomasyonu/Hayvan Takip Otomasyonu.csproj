@@ -23,14 +23,14 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>false</MapFileExtensions>
-    <UpdateUrl>https://github.com/devrimmehmet/HayvanTakipOtomasyonu/</UpdateUrl>
+    <UpdateUrl>https://github.com/devrimmehmet/HayvanTakipOtomasyonu/Tayfun/</UpdateUrl>
     <TargetCulture>tr-TR</TargetCulture>
     <ProductName>Hayvan Takip Otomasyonu</ProductName>
     <PublisherName>Devrim Mehmet Pattabanoğlu</PublisherName>
     <SuiteName>Hayvan Takip Otomasyonu</SuiteName>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>8</ApplicationRevision>
+    <ApplicationRevision>11</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
