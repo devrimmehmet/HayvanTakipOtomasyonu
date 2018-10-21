@@ -16,19 +16,20 @@
     <PublishUrl>Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Tayfun\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>false</MapFileExtensions>
+    <UpdateUrl>https://github.com/devrimmehmet/HayvanTakipOtomasyonu/</UpdateUrl>
     <TargetCulture>tr-TR</TargetCulture>
     <ProductName>Hayvan Takip Otomasyonu</ProductName>
     <PublisherName>Devrim Mehmet Pattabanoğlu</PublisherName>
     <SuiteName>Hayvan Takip Otomasyonu</SuiteName>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationRevision>8</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
