@@ -1,3 +1,24 @@
+Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\bin\Debug\Dosyalar\HTO.mdf
+Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\bin\Debug\Dosyalar\HTO_log.ldf
+Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\bin\Debug\Hayvan Takip Otomasyonu.exe.config
+Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\bin\Debug\Hayvan Takip Otomasyonu.exe.manifest
+Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\bin\Debug\Hayvan Takip Otomasyonu.application
+Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\bin\Debug\Hayvan Takip Otomasyonu.exe
+Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\bin\Debug\Hayvan Takip Otomasyonu.pdb
+Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\bin\Debug\tr-TR\Hayvan Takip Otomasyonu.resources.dll
+Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\obj\Debug\Hayvan_Takip_Otomasyonu.AnaMenu.resources
+Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\obj\Debug\Hayvan_Takip_Otomasyonu.GirisFormu.resources
+Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\obj\Debug\Hayvan_Takip_Otomasyonu.HayvanlarFormu.resources
+Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\obj\Debug\Hayvan_Takip_Otomasyonu.MusterilerFormu.resources
+Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\obj\Debug\Hayvan_Takip_Otomasyonu.Properties.Resources.resources
+Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\obj\Debug\Hayvan_Takip_Otomasyonu.AnaMenu.tr-TR.resources
+Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.csproj.GenerateResource.cache
+Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.csproj.CoreCompileInputs.cache
+Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\obj\Debug\tr-TR\Hayvan Takip Otomasyonu.resources.dll
+Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.exe.manifest
+Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.application
+Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.exe
+Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.pdb
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Dosyalar\HTO.mdf
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Dosyalar\HTO_log.ldf
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Hayvan Takip Otomasyonu.exe.config
@@ -20,24 +41,3 @@ Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.exe
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.pdb
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.csprojAssemblyReference.cache
-Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\bin\Debug\Dosyalar\HTO.mdf
-Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\bin\Debug\Dosyalar\HTO_log.ldf
-Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\bin\Debug\Hayvan Takip Otomasyonu.exe.config
-Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\bin\Debug\Hayvan Takip Otomasyonu.exe.manifest
-Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\bin\Debug\Hayvan Takip Otomasyonu.application
-Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\bin\Debug\Hayvan Takip Otomasyonu.exe
-Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\bin\Debug\Hayvan Takip Otomasyonu.pdb
-Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\bin\Debug\tr-TR\Hayvan Takip Otomasyonu.resources.dll
-Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\obj\Debug\Hayvan_Takip_Otomasyonu.AnaMenu.resources
-Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\obj\Debug\Hayvan_Takip_Otomasyonu.GirisFormu.resources
-Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\obj\Debug\Hayvan_Takip_Otomasyonu.HayvanlarFormu.resources
-Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\obj\Debug\Hayvan_Takip_Otomasyonu.MusterilerFormu.resources
-Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\obj\Debug\Hayvan_Takip_Otomasyonu.Properties.Resources.resources
-Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\obj\Debug\Hayvan_Takip_Otomasyonu.AnaMenu.tr-TR.resources
-Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.csproj.GenerateResource.cache
-Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.csproj.CoreCompileInputs.cache
-Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\obj\Debug\tr-TR\Hayvan Takip Otomasyonu.resources.dll
-Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.exe.manifest
-Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.application
-Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.exe
-Z:\Çözümleme\HayvanTakipOtomasyonu-devolopper\HayvanTakipOtomasyonu-devolopper\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.pdb
