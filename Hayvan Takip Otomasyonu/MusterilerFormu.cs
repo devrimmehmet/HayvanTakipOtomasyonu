@@ -18,11 +18,12 @@ namespace Hayvan_Takip_Otomasyonu
             InitializeComponent();
         }
 
-        sqlbaglantisi bgl = new sqlbaglantisi();
-        void listele()
+        private sqlbaglantisi bgl = new sqlbaglantisi();
+
+        private void listele()
         {
             DataTable dt = new DataTable();
-          //  DataView dv = da.Tables[0].DefaultView;
+         
             SqlDataAdapter da = new SqlDataAdapter("Select * From musterilertbl", bgl.baglanti());
             da.Fill(dt);
             dgv_musteriler.DataSource = dt;
@@ -116,8 +117,10 @@ namespace Hayvan_Takip_Otomasyonu
                 msk_guncelle_tel.Text = dgv_musteriler.Rows[e.RowIndex].Cells[4].Value.ToString();
                 rtb_guncelleadres.Text = dgv_musteriler.Rows[e.RowIndex].Cells[5].Value.ToString();
                 Cb_sil.Text= dgv_musteriler.Rows[e.RowIndex].Cells[2].Value.ToString();
-             //   cb_arama.Text = dgv_musteriler.Rows[e.RowIndex].Cells[2].Value.ToString();
+           
                 tb_id.Text = dgv_musteriler.Rows[e.RowIndex].Cells[0].Value.ToString();
+                
+             
             }
             cb_adi.Checked = false;
             cb_isletmeno.Checked = false;
@@ -234,7 +237,7 @@ namespace Hayvan_Takip_Otomasyonu
 
         private void Btn_guncelle_Click(object sender, EventArgs e)
         {
-        //    if (tb_guncelle_adi.Text==)
+       
 
 
             if (tb_guncelle_adi.Text == "")
@@ -244,28 +247,7 @@ namespace Hayvan_Takip_Otomasyonu
             else
             {
 
-              /*  bool durum = true;
-
-                SqlCommand komut1 = new SqlCommand("select *from musterilertbl", bgl.baglanti());
-                SqlDataReader read;
-                read = komut1.ExecuteReader();
-
-
-                while (read.Read())
-                {
-
-                    if (read["adi"].ToString() == tb_guncelle_adi.Text)
-                    {
-
-                        MessageBox.Show("Bu isme ait Müşteri Sistemde Kayıtlı !", "Uyarı !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        durum = false;
-                        bgl.baglanti().Close();
-                    }
-                }
-
-                if (durum == true)
-
-                {*/
+          
 
                     SqlCommand komut = new SqlCommand("update musterilertbl set isletmeno=@p1,adi=@p2,soyadi=@p3,adresi=@p4,tel=@p5 where id=@p6", bgl.baglanti());
 
@@ -297,7 +279,7 @@ namespace Hayvan_Takip_Otomasyonu
                     cb_tel.Checked = false;
                     cb_adres.Checked = false;
 
-             //   }
+           
             }
            
 
@@ -325,34 +307,17 @@ namespace Hayvan_Takip_Otomasyonu
 
 
         }
-      //  AnaMenu hayvanlaragecis = new AnaMenu();
+       
+      
+        public AnaMenu f2 = new AnaMenu();
+        public HayvanlarFormu f3 = new HayvanlarFormu();
         public void dgv_musteriler_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-     /*       this.Close();
-            hayvanlaragecis.btn_hayvanlar_Click(sender, e);
-            hayvanlaragecis.pnl_islem.Controls.Clear();
-            HayvanlarFormu ilkform = new HayvanlarFormu();
-            ilkform.TopLevel = false;
-           hayvanlaragecis.pnl_islem.Controls.Add(ilkform);
-            ilkform.Show();
-            ilkform.Dock = DockStyle.Fill;
-            ilkform.BringToFront();
-            MessageBox.Show("de");*/
-            //  this.Close();
-            //    AnaMenu. pnl_islem.Controls.Clear();
-            //   HayvanlarFormu ilkform = new HayvanlarFormu();
-            //    ilkform.TopLevel = false;
-            //   pnl_islem.Controls.Add(ilkform);
-            //  ilkform.Show();
-            //    ilkform.Dock = DockStyle.Fill;
-            //   ilkform.BringToFront();
-
-
-            /*   Form2 f2 = new Form2();
-               private void button2_Click(object sender, EventArgs e)
-               {
-                   f2.button1_Click(sender, e);
-               }*/
+            f2 = (AnaMenu)Application.OpenForms["AnaMenu"];
+            f2.btn_hayvanlar.PerformClick();
+            f3 = (HayvanlarFormu)Application.OpenForms["HayvanlarFormu"];
+            f3.msk_sahibi.Text = tb_guncelle_adi.Text.Trim();
+            
         }
     }
     }

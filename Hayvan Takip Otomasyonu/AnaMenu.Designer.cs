@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnaMenu));
             this.pnl_topbar = new System.Windows.Forms.Panel();
-            this.btn_musteriler = new System.Windows.Forms.Button();
-            this.btn_anasayfa = new System.Windows.Forms.Button();
             this.pnl_islem = new System.Windows.Forms.Panel();
             this.btn_hayvanlar = new System.Windows.Forms.Button();
+            this.btn_musteriler = new System.Windows.Forms.Button();
+            this.btn_anasayfa = new System.Windows.Forms.Button();
             this.pnl_topbar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,6 +45,21 @@
             this.pnl_topbar.Controls.Add(this.btn_anasayfa);
             resources.ApplyResources(this.pnl_topbar, "pnl_topbar");
             this.pnl_topbar.Name = "pnl_topbar";
+            this.pnl_topbar.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_topbar_Paint);
+            // 
+            // pnl_islem
+            // 
+            resources.ApplyResources(this.pnl_islem, "pnl_islem");
+            this.pnl_islem.Name = "pnl_islem";
+            this.pnl_islem.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_islem_Paint);
+            // 
+            // btn_hayvanlar
+            // 
+            this.btn_hayvanlar.BackgroundImage = global::Hayvan_Takip_Otomasyonu.Properties.Resources.hayvanlar1;
+            resources.ApplyResources(this.btn_hayvanlar, "btn_hayvanlar");
+            this.btn_hayvanlar.Name = "btn_hayvanlar";
+            this.btn_hayvanlar.UseVisualStyleBackColor = true;
+            this.btn_hayvanlar.Click += new System.EventHandler(this.btn_hayvanlar_Click);
             // 
             // btn_musteriler
             // 
@@ -61,19 +76,6 @@
             this.btn_anasayfa.Name = "btn_anasayfa";
             this.btn_anasayfa.UseVisualStyleBackColor = true;
             this.btn_anasayfa.Click += new System.EventHandler(this.btn_anasayfa_Click);
-            // 
-            // pnl_islem
-            // 
-            resources.ApplyResources(this.pnl_islem, "pnl_islem");
-            this.pnl_islem.Name = "pnl_islem";
-            // 
-            // btn_hayvanlar
-            // 
-            this.btn_hayvanlar.BackgroundImage = global::Hayvan_Takip_Otomasyonu.Properties.Resources.musterilericon;
-            resources.ApplyResources(this.btn_hayvanlar, "btn_hayvanlar");
-            this.btn_hayvanlar.Name = "btn_hayvanlar";
-            this.btn_hayvanlar.UseVisualStyleBackColor = true;
-            this.btn_hayvanlar.Click += new System.EventHandler(this.btn_hayvanlar_Click);
             // 
             // AnaMenu
             // 
@@ -93,11 +95,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel pnl_topbar;
-        private System.Windows.Forms.Button btn_anasayfa;
-        private System.Windows.Forms.Button btn_musteriler;
-        private System.Windows.Forms.Button btn_hayvanlar;
-        public System.Windows.Forms.Panel pnl_islem;
+        public  System.Windows.Forms.Panel pnl_topbar;
+        public System.Windows.Forms.Button btn_anasayfa;
+        public System.Windows.Forms.Button btn_musteriler;
+        public System.Windows.Forms.Button btn_hayvanlar;
+        public  System.Windows.Forms.Panel pnl_islem;
     }
 }
 

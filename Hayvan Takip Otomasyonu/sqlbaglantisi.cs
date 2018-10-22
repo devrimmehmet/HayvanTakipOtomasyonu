@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 namespace Hayvan_Takip_Otomasyonu
 {
-    class sqlbaglantisi
+    internal class sqlbaglantisi
     {
 
        public SqlConnection baglanti()

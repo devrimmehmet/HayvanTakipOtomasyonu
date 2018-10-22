@@ -13,14 +13,13 @@ namespace Hayvan_Takip_Otomasyonu
 {
     public partial class GirisFormu : Form
     {
-
-        Thread th; // formlar arası geçişte önceki formu kapamak için lazım
+        private Thread th; // formlar arası geçişte önceki formu kapamak için lazım
         private void yeniformac(object obj)
         {
             Application.Run(new AnaMenu());  //yeni forma objesi oluşturma
         }
 
-        sqlbaglantisi baglan = new sqlbaglantisi(); //Sql servere bağlanma
+        private sqlbaglantisi baglan = new sqlbaglantisi(); //Sql servere bağlanma
 
 
         public GirisFormu()

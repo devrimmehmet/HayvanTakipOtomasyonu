@@ -28,37 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.msk_sahibi = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // msk_sahibi
             // 
-            this.button1.Location = new System.Drawing.Point(272, 197);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(178, 197);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(178, 227);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.msk_sahibi.Location = new System.Drawing.Point(12, 12);
+            this.msk_sahibi.Name = "msk_sahibi";
+            this.msk_sahibi.Size = new System.Drawing.Size(100, 20);
+            this.msk_sahibi.TabIndex = 3;
+            this.msk_sahibi.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.msk_sahibi_MaskInputRejected);
             // 
             // HayvanlarFormu
             // 
@@ -66,20 +45,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1334, 631);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.msk_sahibi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HayvanlarFormu";
             this.Text = "HayvanlarFormu";
+            this.Load += new System.EventHandler(this.HayvanlarFormu_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        public System.Windows.Forms.MaskedTextBox msk_sahibi;
     }
 }

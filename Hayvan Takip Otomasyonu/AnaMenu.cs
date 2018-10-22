@@ -18,10 +18,12 @@ namespace Hayvan_Takip_Otomasyonu
         {
             InitializeComponent();
         }
+   
       
         private void AnaMenu_Load(object sender, EventArgs e)
         {
-
+            
+     
         }
 
         private void btn_musteriler_Click(object sender, EventArgs e)
@@ -52,7 +54,7 @@ namespace Hayvan_Takip_Otomasyonu
          
         }
 
-        public void btn_hayvanlar_Click(object sender, EventArgs e)
+        public  void btn_hayvanlar_Click(object sender, EventArgs e)
         {
             pnl_islem.Controls.Clear();
             HayvanlarFormu ilkform = new HayvanlarFormu();
@@ -61,6 +63,16 @@ namespace Hayvan_Takip_Otomasyonu
             ilkform.Show();
             ilkform.Dock = DockStyle.Fill;
             ilkform.BringToFront();
+        }
+
+        private void pnl_islem_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnl_topbar_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

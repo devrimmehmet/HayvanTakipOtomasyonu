@@ -103,6 +103,26 @@ namespace Hayvan_Takip_Otomasyonu.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap hayvanlar {
+            get {
+                object obj = ResourceManager.GetObject("hayvanlar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap hayvanlar1 {
+            get {
+                object obj = ResourceManager.GetObject("hayvanlar1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap kaydet {
             get {
                 object obj = ResourceManager.GetObject("kaydet", resourceCulture);
