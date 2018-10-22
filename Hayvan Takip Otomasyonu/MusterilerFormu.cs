@@ -309,15 +309,18 @@ namespace Hayvan_Takip_Otomasyonu
         }
        
       
-        public AnaMenu f2 = new AnaMenu();
-        public HayvanlarFormu f3 = new HayvanlarFormu();
+        private AnaMenu f5 = new AnaMenu();
+        private HayvanlarFormu f6 = new HayvanlarFormu();
         public void dgv_musteriler_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            f2 = (AnaMenu)Application.OpenForms["AnaMenu"];
-            f2.btn_hayvanlar.PerformClick();
-            f3 = (HayvanlarFormu)Application.OpenForms["HayvanlarFormu"];
-            f3.msk_sahibi.Text = tb_guncelle_adi.Text.Trim();
             
+            f5 = (AnaMenu)Application.OpenForms["AnaMenu"];
+            f5.btn_hayvanlar.PerformClick();
+
+            f6 = (HayvanlarFormu)Application.OpenForms["HayvanlarFormu"];
+       //     f6.cekilenveri = tb_guncelle_adi.Text.Trim();
+            f6.Cb_sahibi.SelectedItem=(tb_guncelle_adi.Text);
+            this.Close();
         }
     }
     }

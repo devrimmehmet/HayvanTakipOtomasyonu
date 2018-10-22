@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Hayvan Takip Otomasyonu.exe" size="1428416">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Hayvan Takip Otomasyonu.exe" size="1447872">
       <assemblyIdentity name="Hayvan Takip Otomasyonu" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>nDDs1FMgIRePHIG7gwYgdRdUTHO9XucXNrNKTz8yS1Y=</dsig:DigestValue>
+        <dsig:DigestValue>5hcBqA4Op+No/0BoSsgPiJw7xUAchPCAg6c0/vGu8+c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>anVU0YiD3RE46FBytK2uYqCxTYUoMDC+8vGJRG7yTA0=</dsig:DigestValue>
+        <dsig:DigestValue>nMEbXVHILfz2UAt101x+Q+alB+mOfnKX1JuJCx7YQtI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -90,7 +90,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>g1a0wqeA/x7cdQn0kp3JBHFoSdTv384t7KbdrhMbWDo=</dsig:DigestValue>
+      <dsig:DigestValue>gi1syawU5vej7v0mh6TPAAYmbkDZ9cyKaQScx9TK1ZE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Dosyalar\HTO_log.ldf" size="8388608" writeableType="applicationData">
@@ -99,7 +99,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Ly/hf2e++XOuyVIduo6qKeHmRbQxGTgkjc9vZJDJrp0=</dsig:DigestValue>
+      <dsig:DigestValue>MFguacZveDgCMowzu/iXpNA5P5ShDygLrzp+6488C/Q=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Hayvan Takip Otomasyonu.exe.config" size="549">
