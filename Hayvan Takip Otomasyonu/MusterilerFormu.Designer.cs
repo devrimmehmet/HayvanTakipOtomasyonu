@@ -29,68 +29,51 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbl_musteriadi = new System.Windows.Forms.Label();
             this.rtb_adres = new System.Windows.Forms.RichTextBox();
             this.mskdtb_telefon = new System.Windows.Forms.MaskedTextBox();
-            this.tb_soyadi = new System.Windows.Forms.TextBox();
             this.tb_adi = new System.Windows.Forms.TextBox();
             this.mskdtb_isletmeno = new System.Windows.Forms.MaskedTextBox();
             this.lbl_adres = new System.Windows.Forms.Label();
             this.lbl_tel = new System.Windows.Forms.Label();
-            this.lbl_soyadi = new System.Windows.Forms.Label();
             this.lbl_isletmeno = new System.Windows.Forms.Label();
             this.dgv_musteriler = new System.Windows.Forms.DataGridView();
-            this.ıDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isletmenoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soyadiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adresiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.musterilertblBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hTODataSet = new Hayvan_Takip_Otomasyonu.HTODataSet();
-            this.hTODataSetgiris = new Hayvan_Takip_Otomasyonu.HTODataSetgiris();
-            this.musterilertblTableAdapter = new Hayvan_Takip_Otomasyonu.HTODataSetTableAdapters.musterilertblTableAdapter();
+            this.tdbDataSet = new Hayvan_Takip_Otomasyonu.tdbDataSet();
             this.Gb_musteriekle = new System.Windows.Forms.GroupBox();
             this.btn_kaydet = new System.Windows.Forms.Button();
             this.Gb_musterisil = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Cb_sil = new System.Windows.Forms.ComboBox();
-            this.musterilertblBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.btn_sil = new System.Windows.Forms.Button();
-            this.musterilertblBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.hTODataSet1 = new Hayvan_Takip_Otomasyonu.HTODataSet1();
-            this.musterilertblBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.musterilertblTableAdapter1 = new Hayvan_Takip_Otomasyonu.HTODataSet1TableAdapters.musterilertblTableAdapter();
             this.Gb_Guncelle = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.tb_id = new System.Windows.Forms.TextBox();
             this.cb_adres = new System.Windows.Forms.CheckBox();
             this.cb_tel = new System.Windows.Forms.CheckBox();
-            this.cb_soyadi = new System.Windows.Forms.CheckBox();
             this.cb_adi = new System.Windows.Forms.CheckBox();
             this.cb_isletmeno = new System.Windows.Forms.CheckBox();
             this.rtb_guncelleadres = new System.Windows.Forms.RichTextBox();
             this.Btn_guncelle = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.msk_guncelle_tel = new System.Windows.Forms.MaskedTextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tb_guncelle_soyad = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tb_guncelle_adi = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.msk_guncelle_isletmeno = new System.Windows.Forms.MaskedTextBox();
             this.cb_arama = new System.Windows.Forms.ComboBox();
+            this.musterilertblTableAdapter = new Hayvan_Takip_Otomasyonu.tdbDataSetTableAdapters.musterilertblTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_musteriler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.musterilertblBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hTODataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hTODataSetgiris)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tdbDataSet)).BeginInit();
             this.Gb_musteriekle.SuspendLayout();
             this.Gb_musterisil.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.musterilertblBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.musterilertblBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hTODataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.musterilertblBindingSource1)).BeginInit();
             this.Gb_Guncelle.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,19 +81,19 @@
             // 
             this.lbl_musteriadi.AutoSize = true;
             this.lbl_musteriadi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_musteriadi.Location = new System.Drawing.Point(82, 44);
+            this.lbl_musteriadi.Location = new System.Drawing.Point(76, 43);
             this.lbl_musteriadi.Name = "lbl_musteriadi";
-            this.lbl_musteriadi.Size = new System.Drawing.Size(42, 19);
+            this.lbl_musteriadi.Size = new System.Drawing.Size(85, 19);
             this.lbl_musteriadi.TabIndex = 0;
-            this.lbl_musteriadi.Text = "Ad :";
+            this.lbl_musteriadi.Text = "Ad Soyad";
             // 
             // rtb_adres
             // 
             this.rtb_adres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rtb_adres.Location = new System.Drawing.Point(79, 127);
-            this.rtb_adres.MaxLength = 500;
+            this.rtb_adres.MaxLength = 100;
             this.rtb_adres.Name = "rtb_adres";
-            this.rtb_adres.Size = new System.Drawing.Size(148, 84);
+            this.rtb_adres.Size = new System.Drawing.Size(148, 81);
             this.rtb_adres.TabIndex = 9;
             this.rtb_adres.Text = "";
             // 
@@ -122,20 +105,12 @@
             this.mskdtb_telefon.Size = new System.Drawing.Size(100, 20);
             this.mskdtb_telefon.TabIndex = 8;
             // 
-            // tb_soyadi
-            // 
-            this.tb_soyadi.Location = new System.Drawing.Point(127, 72);
-            this.tb_soyadi.MaxLength = 20;
-            this.tb_soyadi.Name = "tb_soyadi";
-            this.tb_soyadi.Size = new System.Drawing.Size(100, 20);
-            this.tb_soyadi.TabIndex = 7;
-            // 
             // tb_adi
             // 
-            this.tb_adi.Location = new System.Drawing.Point(127, 46);
-            this.tb_adi.MaxLength = 20;
+            this.tb_adi.Location = new System.Drawing.Point(6, 65);
+            this.tb_adi.MaxLength = 30;
             this.tb_adi.Name = "tb_adi";
-            this.tb_adi.Size = new System.Drawing.Size(100, 20);
+            this.tb_adi.Size = new System.Drawing.Size(229, 20);
             this.tb_adi.TabIndex = 6;
             this.tb_adi.WordWrap = false;
             // 
@@ -167,16 +142,6 @@
             this.lbl_tel.TabIndex = 3;
             this.lbl_tel.Text = "Telefon :";
             // 
-            // lbl_soyadi
-            // 
-            this.lbl_soyadi.AutoSize = true;
-            this.lbl_soyadi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_soyadi.Location = new System.Drawing.Point(57, 70);
-            this.lbl_soyadi.Name = "lbl_soyadi";
-            this.lbl_soyadi.Size = new System.Drawing.Size(69, 19);
-            this.lbl_soyadi.TabIndex = 2;
-            this.lbl_soyadi.Text = "Soyad :";
-            // 
             // lbl_isletmeno
             // 
             this.lbl_isletmeno.AutoSize = true;
@@ -193,102 +158,95 @@
             this.dgv_musteriler.AllowUserToAddRows = false;
             this.dgv_musteriler.AllowUserToDeleteRows = false;
             this.dgv_musteriler.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_musteriler.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_musteriler.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_musteriler.AutoGenerateColumns = false;
             this.dgv_musteriler.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgv_musteriler.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_musteriler.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dgv_musteriler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_musteriler.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ıDDataGridViewTextBoxColumn,
+            this.id,
             this.isletmenoDataGridViewTextBoxColumn,
             this.adiDataGridViewTextBoxColumn,
-            this.soyadiDataGridViewTextBoxColumn,
             this.telDataGridViewTextBoxColumn,
             this.adresiDataGridViewTextBoxColumn});
             this.dgv_musteriler.DataSource = this.musterilertblBindingSource;
             this.dgv_musteriler.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dgv_musteriler.Location = new System.Drawing.Point(250, 33);
+            this.dgv_musteriler.Location = new System.Drawing.Point(250, 23);
             this.dgv_musteriler.MultiSelect = false;
             this.dgv_musteriler.Name = "dgv_musteriler";
             this.dgv_musteriler.ReadOnly = true;
             this.dgv_musteriler.RowHeadersVisible = false;
             this.dgv_musteriler.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dgv_musteriler.Size = new System.Drawing.Size(1081, 594);
+            this.dgv_musteriler.Size = new System.Drawing.Size(1095, 604);
             this.dgv_musteriler.TabIndex = 2;
             this.dgv_musteriler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dgv_musteriler.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_musteriler_CellContentClick);
             this.dgv_musteriler.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_musteriler_CellDoubleClick);
             this.dgv_musteriler.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgv_musteriler_CellFormatting);
             // 
-            // ıDDataGridViewTextBoxColumn
+            // id
             // 
-            this.ıDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.ıDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.ıDDataGridViewTextBoxColumn.Name = "ıDDataGridViewTextBoxColumn";
-            this.ıDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ıDDataGridViewTextBoxColumn.Width = 30;
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
             // 
             // isletmenoDataGridViewTextBoxColumn
             // 
             this.isletmenoDataGridViewTextBoxColumn.DataPropertyName = "isletmeno";
-            this.isletmenoDataGridViewTextBoxColumn.HeaderText = "İŞLETME NO";
+            this.isletmenoDataGridViewTextBoxColumn.HeaderText = "İşletme No";
+            this.isletmenoDataGridViewTextBoxColumn.MinimumWidth = 105;
             this.isletmenoDataGridViewTextBoxColumn.Name = "isletmenoDataGridViewTextBoxColumn";
             this.isletmenoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.isletmenoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.isletmenoDataGridViewTextBoxColumn.Width = 105;
             // 
             // adiDataGridViewTextBoxColumn
             // 
             this.adiDataGridViewTextBoxColumn.DataPropertyName = "adi";
-            this.adiDataGridViewTextBoxColumn.HeaderText = "AD";
+            this.adiDataGridViewTextBoxColumn.HeaderText = "Ad Soyad";
+            this.adiDataGridViewTextBoxColumn.MinimumWidth = 190;
             this.adiDataGridViewTextBoxColumn.Name = "adiDataGridViewTextBoxColumn";
             this.adiDataGridViewTextBoxColumn.ReadOnly = true;
-            this.adiDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // soyadiDataGridViewTextBoxColumn
-            // 
-            this.soyadiDataGridViewTextBoxColumn.DataPropertyName = "soyadi";
-            this.soyadiDataGridViewTextBoxColumn.HeaderText = "SOYAD";
-            this.soyadiDataGridViewTextBoxColumn.Name = "soyadiDataGridViewTextBoxColumn";
-            this.soyadiDataGridViewTextBoxColumn.ReadOnly = true;
-            this.soyadiDataGridViewTextBoxColumn.Width = 120;
+            this.adiDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.adiDataGridViewTextBoxColumn.Width = 190;
             // 
             // telDataGridViewTextBoxColumn
             // 
             this.telDataGridViewTextBoxColumn.DataPropertyName = "tel";
-            this.telDataGridViewTextBoxColumn.HeaderText = "TEL";
+            this.telDataGridViewTextBoxColumn.HeaderText = "Telefon";
+            this.telDataGridViewTextBoxColumn.MinimumWidth = 90;
             this.telDataGridViewTextBoxColumn.Name = "telDataGridViewTextBoxColumn";
             this.telDataGridViewTextBoxColumn.ReadOnly = true;
+            this.telDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.telDataGridViewTextBoxColumn.Width = 90;
             // 
             // adresiDataGridViewTextBoxColumn
             // 
             this.adresiDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.adresiDataGridViewTextBoxColumn.DataPropertyName = "adresi";
             this.adresiDataGridViewTextBoxColumn.HeaderText = "Adres";
+            this.adresiDataGridViewTextBoxColumn.MinimumWidth = 120;
             this.adresiDataGridViewTextBoxColumn.Name = "adresiDataGridViewTextBoxColumn";
             this.adresiDataGridViewTextBoxColumn.ReadOnly = true;
+            this.adresiDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // musterilertblBindingSource
             // 
             this.musterilertblBindingSource.DataMember = "musterilertbl";
-            this.musterilertblBindingSource.DataSource = this.hTODataSet;
+            this.musterilertblBindingSource.DataSource = this.tdbDataSet;
             // 
-            // hTODataSet
+            // tdbDataSet
             // 
-            this.hTODataSet.DataSetName = "HTODataSet";
-            this.hTODataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // hTODataSetgiris
-            // 
-            this.hTODataSetgiris.DataSetName = "HTODataSetgiris";
-            this.hTODataSetgiris.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // musterilertblTableAdapter
-            // 
-            this.musterilertblTableAdapter.ClearBeforeFill = true;
+            this.tdbDataSet.DataSetName = "tdbDataSet";
+            this.tdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Gb_musteriekle
             // 
@@ -298,15 +256,13 @@
             this.Gb_musteriekle.Controls.Add(this.rtb_adres);
             this.Gb_musteriekle.Controls.Add(this.lbl_isletmeno);
             this.Gb_musteriekle.Controls.Add(this.mskdtb_telefon);
-            this.Gb_musteriekle.Controls.Add(this.lbl_soyadi);
-            this.Gb_musteriekle.Controls.Add(this.tb_soyadi);
             this.Gb_musteriekle.Controls.Add(this.lbl_tel);
             this.Gb_musteriekle.Controls.Add(this.tb_adi);
             this.Gb_musteriekle.Controls.Add(this.lbl_adres);
             this.Gb_musteriekle.Controls.Add(this.mskdtb_isletmeno);
-            this.Gb_musteriekle.Location = new System.Drawing.Point(2, 12);
+            this.Gb_musteriekle.Location = new System.Drawing.Point(2, 2);
             this.Gb_musteriekle.Name = "Gb_musteriekle";
-            this.Gb_musteriekle.Size = new System.Drawing.Size(242, 269);
+            this.Gb_musteriekle.Size = new System.Drawing.Size(242, 279);
             this.Gb_musteriekle.TabIndex = 3;
             this.Gb_musteriekle.TabStop = false;
             this.Gb_musteriekle.Text = "Yeni Müşteri Ekle";
@@ -314,11 +270,11 @@
             // btn_kaydet
             // 
             this.btn_kaydet.BackColor = System.Drawing.Color.Transparent;
-            this.btn_kaydet.BackgroundImage = global::Hayvan_Takip_Otomasyonu.Properties.Resources.kaydet;
+            this.btn_kaydet.BackgroundImage = global::Hayvan_Takip_Otomasyonu.Properties.Resources.kaydetbutton;
             this.btn_kaydet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_kaydet.Location = new System.Drawing.Point(167, 214);
+            this.btn_kaydet.Location = new System.Drawing.Point(149, 214);
             this.btn_kaydet.Name = "btn_kaydet";
-            this.btn_kaydet.Size = new System.Drawing.Size(60, 49);
+            this.btn_kaydet.Size = new System.Drawing.Size(78, 49);
             this.btn_kaydet.TabIndex = 10;
             this.btn_kaydet.UseVisualStyleBackColor = false;
             this.btn_kaydet.Click += new System.EventHandler(this.btn_kaydet_Click);
@@ -351,17 +307,11 @@
             // 
             this.Cb_sil.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.Cb_sil.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.Cb_sil.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.musterilertblBindingSource2, "adi", true));
             this.Cb_sil.FormattingEnabled = true;
             this.Cb_sil.Location = new System.Drawing.Point(61, 19);
             this.Cb_sil.Name = "Cb_sil";
             this.Cb_sil.Size = new System.Drawing.Size(121, 21);
             this.Cb_sil.TabIndex = 12;
-            // 
-            // musterilertblBindingSource2
-            // 
-            this.musterilertblBindingSource2.DataMember = "musterilertbl";
-            this.musterilertblBindingSource2.DataSource = this.hTODataSet;
             // 
             // btn_sil
             // 
@@ -374,41 +324,19 @@
             this.btn_sil.UseVisualStyleBackColor = true;
             this.btn_sil.Click += new System.EventHandler(this.btn_sil_Click);
             // 
-            // musterilertblBindingSource3
-            // 
-            this.musterilertblBindingSource3.DataMember = "musterilertbl";
-            this.musterilertblBindingSource3.DataSource = this.hTODataSet1;
-            // 
-            // hTODataSet1
-            // 
-            this.hTODataSet1.DataSetName = "HTODataSet1";
-            this.hTODataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // musterilertblBindingSource1
-            // 
-            this.musterilertblBindingSource1.DataMember = "musterilertbl";
-            this.musterilertblBindingSource1.DataSource = this.hTODataSet;
-            // 
-            // musterilertblTableAdapter1
-            // 
-            this.musterilertblTableAdapter1.ClearBeforeFill = true;
-            // 
             // Gb_Guncelle
             // 
             this.Gb_Guncelle.BackColor = System.Drawing.Color.DarkOrange;
+            this.Gb_Guncelle.Controls.Add(this.label4);
             this.Gb_Guncelle.Controls.Add(this.tb_id);
             this.Gb_Guncelle.Controls.Add(this.cb_adres);
             this.Gb_Guncelle.Controls.Add(this.cb_tel);
-            this.Gb_Guncelle.Controls.Add(this.cb_soyadi);
             this.Gb_Guncelle.Controls.Add(this.cb_adi);
             this.Gb_Guncelle.Controls.Add(this.cb_isletmeno);
             this.Gb_Guncelle.Controls.Add(this.rtb_guncelleadres);
             this.Gb_Guncelle.Controls.Add(this.Btn_guncelle);
-            this.Gb_Guncelle.Controls.Add(this.label2);
             this.Gb_Guncelle.Controls.Add(this.label3);
             this.Gb_Guncelle.Controls.Add(this.msk_guncelle_tel);
-            this.Gb_Guncelle.Controls.Add(this.label4);
-            this.Gb_Guncelle.Controls.Add(this.tb_guncelle_soyad);
             this.Gb_Guncelle.Controls.Add(this.label5);
             this.Gb_Guncelle.Controls.Add(this.tb_guncelle_adi);
             this.Gb_Guncelle.Controls.Add(this.label6);
@@ -419,6 +347,16 @@
             this.Gb_Guncelle.TabIndex = 11;
             this.Gb_Guncelle.TabStop = false;
             this.Gb_Guncelle.Text = "Müşteri Bilgileri Güncelle";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(76, 53);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(85, 19);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Ad Soyad";
             // 
             // tb_id
             // 
@@ -448,20 +386,10 @@
             this.cb_tel.UseVisualStyleBackColor = true;
             this.cb_tel.CheckStateChanged += new System.EventHandler(this.cb_tel_CheckStateChanged);
             // 
-            // cb_soyadi
-            // 
-            this.cb_soyadi.AutoSize = true;
-            this.cb_soyadi.Location = new System.Drawing.Point(220, 82);
-            this.cb_soyadi.Name = "cb_soyadi";
-            this.cb_soyadi.Size = new System.Drawing.Size(15, 14);
-            this.cb_soyadi.TabIndex = 14;
-            this.cb_soyadi.UseVisualStyleBackColor = true;
-            this.cb_soyadi.CheckStateChanged += new System.EventHandler(this.cb_soyadi_CheckStateChanged);
-            // 
             // cb_adi
             // 
             this.cb_adi.AutoSize = true;
-            this.cb_adi.Location = new System.Drawing.Point(220, 56);
+            this.cb_adi.Location = new System.Drawing.Point(167, 58);
             this.cb_adi.Name = "cb_adi";
             this.cb_adi.Size = new System.Drawing.Size(15, 14);
             this.cb_adi.TabIndex = 13;
@@ -502,16 +430,6 @@
             this.Btn_guncelle.UseVisualStyleBackColor = false;
             this.Btn_guncelle.Click += new System.EventHandler(this.Btn_guncelle_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(73, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 19);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Ad :";
-            // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -530,25 +448,6 @@
             this.msk_guncelle_tel.Size = new System.Drawing.Size(84, 20);
             this.msk_guncelle_tel.TabIndex = 8;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(46, 76);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 19);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Soyad :";
-            // 
-            // tb_guncelle_soyad
-            // 
-            this.tb_guncelle_soyad.Location = new System.Drawing.Point(121, 79);
-            this.tb_guncelle_soyad.MaxLength = 20;
-            this.tb_guncelle_soyad.Name = "tb_guncelle_soyad";
-            this.tb_guncelle_soyad.ReadOnly = true;
-            this.tb_guncelle_soyad.Size = new System.Drawing.Size(84, 20);
-            this.tb_guncelle_soyad.TabIndex = 7;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -561,11 +460,11 @@
             // 
             // tb_guncelle_adi
             // 
-            this.tb_guncelle_adi.Location = new System.Drawing.Point(121, 53);
+            this.tb_guncelle_adi.Location = new System.Drawing.Point(6, 75);
             this.tb_guncelle_adi.MaxLength = 20;
             this.tb_guncelle_adi.Name = "tb_guncelle_adi";
             this.tb_guncelle_adi.ReadOnly = true;
-            this.tb_guncelle_adi.Size = new System.Drawing.Size(84, 20);
+            this.tb_guncelle_adi.Size = new System.Drawing.Size(229, 20);
             this.tb_guncelle_adi.TabIndex = 6;
             this.tb_guncelle_adi.WordWrap = false;
             // 
@@ -592,13 +491,16 @@
             // 
             this.cb_arama.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.cb_arama.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cb_arama.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.musterilertblBindingSource2, "adi", true));
             this.cb_arama.FormattingEnabled = true;
-            this.cb_arama.Location = new System.Drawing.Point(382, 6);
+            this.cb_arama.Location = new System.Drawing.Point(354, 2);
             this.cb_arama.Name = "cb_arama";
-            this.cb_arama.Size = new System.Drawing.Size(121, 21);
+            this.cb_arama.Size = new System.Drawing.Size(190, 21);
             this.cb_arama.TabIndex = 13;
             this.cb_arama.TextChanged += new System.EventHandler(this.cb_arama_TextChanged);
+            // 
+            // musterilertblTableAdapter
+            // 
+            this.musterilertblTableAdapter.ClearBeforeFill = true;
             // 
             // MusterilerFormu
             // 
@@ -606,7 +508,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.YellowGreen;
-            this.ClientSize = new System.Drawing.Size(1334, 631);
+            this.ClientSize = new System.Drawing.Size(1350, 631);
             this.Controls.Add(this.cb_arama);
             this.Controls.Add(this.Gb_Guncelle);
             this.Controls.Add(this.Gb_musterisil);
@@ -616,19 +518,15 @@
             this.Name = "MusterilerFormu";
             this.ShowIcon = false;
             this.Text = "MusterilerFrm";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.MusterilerFormu_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_musteriler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.musterilertblBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hTODataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hTODataSetgiris)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tdbDataSet)).EndInit();
             this.Gb_musteriekle.ResumeLayout(false);
             this.Gb_musteriekle.PerformLayout();
             this.Gb_musterisil.ResumeLayout(false);
             this.Gb_musterisil.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.musterilertblBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.musterilertblBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hTODataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.musterilertblBindingSource1)).EndInit();
             this.Gb_Guncelle.ResumeLayout(false);
             this.Gb_Guncelle.PerformLayout();
             this.ResumeLayout(false);
@@ -640,53 +538,41 @@
         private System.Windows.Forms.Label lbl_musteriadi;
         private System.Windows.Forms.Label lbl_adres;
         private System.Windows.Forms.Label lbl_tel;
-        private System.Windows.Forms.Label lbl_soyadi;
         private System.Windows.Forms.Label lbl_isletmeno;
         private System.Windows.Forms.Button btn_sil;
         private System.Windows.Forms.Button btn_kaydet;
         private System.Windows.Forms.RichTextBox rtb_adres;
         private System.Windows.Forms.MaskedTextBox mskdtb_telefon;
-        private System.Windows.Forms.TextBox tb_soyadi;
         private System.Windows.Forms.TextBox tb_adi;
         private System.Windows.Forms.MaskedTextBox mskdtb_isletmeno;
         private System.Windows.Forms.DataGridView dgv_musteriler;
-        private HTODataSetgiris hTODataSetgiris;
-        private HTODataSet hTODataSet;
-        private System.Windows.Forms.BindingSource musterilertblBindingSource;
-        private HTODataSetTableAdapters.musterilertblTableAdapter musterilertblTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ıDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn isletmenoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn adiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn soyadiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn adresiDataGridViewTextBoxColumn;
         private System.Windows.Forms.GroupBox Gb_musteriekle;
         private System.Windows.Forms.GroupBox Gb_musterisil;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox Cb_sil;
-        private System.Windows.Forms.BindingSource musterilertblBindingSource1;
-        private System.Windows.Forms.BindingSource musterilertblBindingSource2;
-        private HTODataSet1 hTODataSet1;
-        private System.Windows.Forms.BindingSource musterilertblBindingSource3;
-        private HTODataSet1TableAdapters.musterilertblTableAdapter musterilertblTableAdapter1;
         private System.Windows.Forms.GroupBox Gb_Guncelle;
         private System.Windows.Forms.Button Btn_guncelle;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MaskedTextBox msk_guncelle_tel;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tb_guncelle_soyad;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tb_guncelle_adi;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.MaskedTextBox msk_guncelle_isletmeno;
         private System.Windows.Forms.RichTextBox rtb_guncelleadres;
-        private System.Windows.Forms.CheckBox cb_soyadi;
         private System.Windows.Forms.CheckBox cb_adi;
         private System.Windows.Forms.CheckBox cb_isletmeno;
         private System.Windows.Forms.CheckBox cb_adres;
         private System.Windows.Forms.CheckBox cb_tel;
         private System.Windows.Forms.TextBox tb_id;
         private System.Windows.Forms.ComboBox cb_arama;
+        private tdbDataSet tdbDataSet;
+        private System.Windows.Forms.BindingSource musterilertblBindingSource;
+        private tdbDataSetTableAdapters.musterilertblTableAdapter musterilertblTableAdapter;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn isletmenoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adresiDataGridViewTextBoxColumn;
     }
 }

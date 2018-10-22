@@ -118,20 +118,74 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btn_raporlar.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="btn_raporlar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btn_raporlar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>284, 5</value>
+  </data>
+  <data name="btn_raporlar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 52</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btn_raporlar.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;btn_raporlar.Name" xml:space="preserve">
+    <value>btn_raporlar</value>
+  </data>
+  <data name="&gt;&gt;btn_raporlar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_raporlar.Parent" xml:space="preserve">
+    <value>pnl_topbar</value>
+  </data>
+  <data name="&gt;&gt;btn_raporlar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btn_islemler.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="btn_islemler.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btn_islemler.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 5</value>
+  </data>
+  <data name="btn_islemler.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 52</value>
+  </data>
+  <data name="btn_islemler.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btn_islemler.Name" xml:space="preserve">
+    <value>btn_islemler</value>
+  </data>
+  <data name="&gt;&gt;btn_islemler.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_islemler.Parent" xml:space="preserve">
+    <value>pnl_topbar</value>
+  </data>
+  <data name="&gt;&gt;btn_islemler.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="btn_hayvanlar.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
   <data name="btn_hayvanlar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btn_hayvanlar.Location" type="System.Drawing.Point, System.Drawing">
     <value>148, 5</value>
   </data>
   <data name="btn_hayvanlar.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 52</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btn_hayvanlar.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
@@ -145,7 +199,7 @@
     <value>pnl_topbar</value>
   </data>
   <data name="&gt;&gt;btn_hayvanlar.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="btn_musteriler.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -172,7 +226,7 @@
     <value>pnl_topbar</value>
   </data>
   <data name="&gt;&gt;btn_musteriler.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="btn_anasayfa.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -202,7 +256,7 @@
     <value>pnl_topbar</value>
   </data>
   <data name="&gt;&gt;btn_anasayfa.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="pnl_topbar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>

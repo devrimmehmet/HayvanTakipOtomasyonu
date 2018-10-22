@@ -19,9 +19,7 @@ namespace Hayvan_Takip_Otomasyonu
             InitializeComponent();
         }
 
-       // public AnaMenu f2 = new AnaMenu();
-        //private MusterilerFormu f10 = new MusterilerFormu();
-        //private HayvanlarFormu f11 = new HayvanlarFormu();
+      
         private void AnaMenu_Load(object sender, EventArgs e)
         {
             
@@ -37,9 +35,7 @@ namespace Hayvan_Takip_Otomasyonu
             ilk1form.Show();
             ilk1form.Dock = DockStyle.Fill;
             ilk1form.BringToFront();
-          //   f5 = (AnaMenu)Application.OpenForms["AnaMenu"];
-          //     f11.Close();
-         //   Close();
+         
 
             
         }
@@ -53,8 +49,7 @@ namespace Hayvan_Takip_Otomasyonu
             ilk2form.Close();
             ilk2form.Dock = DockStyle.Fill;
             ilk2form.BringToFront();
-            //f10.Close();
-            //f11.Close();
+          
         }
 
         private void AnaMenu_FormClosing(object sender, FormClosingEventArgs e)
@@ -71,17 +66,8 @@ namespace Hayvan_Takip_Otomasyonu
             ilk3form.Show();
             ilk3form.Dock = DockStyle.Fill;
             ilk3form.BringToFront();
-            //f10.Close();
+           
         }
 
-        private void pnl_islem_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pnl_topbar_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

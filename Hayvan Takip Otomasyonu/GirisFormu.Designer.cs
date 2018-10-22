@@ -97,7 +97,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackgroundImage = global::Hayvan_Takip_Otomasyonu.Properties.Resources.girisformu;
+            this.BackgroundImage = global::Hayvan_Takip_Otomasyonu.Properties.Resources.girisformu1;
             this.ClientSize = new System.Drawing.Size(384, 261);
             this.ControlBox = false;
             this.Controls.Add(this.btn_girisyap);

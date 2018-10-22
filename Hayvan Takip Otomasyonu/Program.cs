@@ -16,7 +16,7 @@ namespace Hayvan_Takip_Otomasyonu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AnaMenu());
+            Application.Run(new GirisFormu());
         }
     }
 }

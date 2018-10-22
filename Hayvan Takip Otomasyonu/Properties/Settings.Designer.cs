@@ -33,5 +33,15 @@ namespace Hayvan_Takip_Otomasyonu.Properties {
                 return ((string)(this["HTObaglanti"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=tdb;Integrated Security=True")]
+        public string tdbConnectionString {
+            get {
+                return ((string)(this["tdbConnectionString"]));
+            }
+        }
     }
 }

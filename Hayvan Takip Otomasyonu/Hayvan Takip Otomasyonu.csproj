@@ -28,7 +28,7 @@
     <SuiteName>Hayvan Takip Otomasyonu</SuiteName>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>27</ApplicationRevision>
+    <ApplicationRevision>29</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -66,7 +66,7 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Dosyalar\form.ico</ApplicationIcon>
+    <ApplicationIcon>form.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
@@ -109,24 +109,6 @@
     <Compile Include="HayvanlarFormu.Designer.cs">
       <DependentUpon>HayvanlarFormu.cs</DependentUpon>
     </Compile>
-    <Compile Include="HTODataSet.cs">
-      <DependentUpon>HTODataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="HTODataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HTODataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="HTODataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HTODataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="HTODataSetgiris.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HTODataSetgiris.xsd</DependentUpon>
-    </Compile>
     <Compile Include="MusterilerFormu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +118,17 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sqlbaglantisi.cs" />
+    <Compile Include="tdbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tdbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TedavilerFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TedavilerFormu.Designer.cs">
+      <DependentUpon>TedavilerFormu.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AnaMenu.resx">
       <DependentUpon>AnaMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,40 +154,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TedavilerFormu.resx">
+      <DependentUpon>TedavilerFormu.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Hayvan Takip Otomasyonu_TemporaryKey.pfx" />
-    <None Include="HTODataSet.xsc">
-      <DependentUpon>HTODataSet.xsd</DependentUpon>
-    </None>
-    <None Include="HTODataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HTODataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HTODataSet.xss">
-      <DependentUpon>HTODataSet.xsd</DependentUpon>
-    </None>
-    <None Include="HTODataSet1.xsc">
-      <DependentUpon>HTODataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="HTODataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HTODataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HTODataSet1.xss">
-      <DependentUpon>HTODataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="HTODataSetgiris.xsc">
-      <DependentUpon>HTODataSetgiris.xsd</DependentUpon>
-    </None>
-    <None Include="HTODataSetgiris.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HTODataSetgiris.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HTODataSetgiris.xss">
-      <DependentUpon>HTODataSetgiris.xsd</DependentUpon>
-    </None>
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -205,6 +168,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="tdbDataSet.xsc">
+      <DependentUpon>tdbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="tdbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tdbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tdbDataSet.xss">
+      <DependentUpon>tdbDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -248,17 +222,11 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="Dosyalar\girisformu.png" />
-    <Content Include="Dosyalar\form.ico" />
-    <Content Include="Dosyalar\HTO.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Dosyalar\HTO_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>HTO.mdf</DependentUpon>
-    </Content>
+    <None Include="Resources\kaydetbutton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\girisformu.png" />
     <None Include="Resources\hayvanlar.png" />
     <None Include="Resources\hayvanlar.jpg" />
     <None Include="Resources\silicon.png" />
@@ -266,6 +234,17 @@
     <None Include="Resources\musterilericon.png" />
     <None Include="Resources\anasayfaicon1.jpg" />
     <None Include="Resources\anasayfaicon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\islemyap.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\islem.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="form.ico" />
+    <None Include="Resources\raporlar.png" />
+    <None Include="Resources\tedaviicon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
