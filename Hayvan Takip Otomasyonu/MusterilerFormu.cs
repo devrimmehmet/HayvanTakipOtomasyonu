@@ -43,7 +43,7 @@ namespace Hayvan_Takip_Otomasyonu
         
         private void btn_kaydet_Click(object sender, EventArgs e)
         {
-             
+            tb_id.Text = "19231923";
             if (tb_adi.Text == "")
             {
                 MessageBox.Show("Lütfen Müşterinin Adını Giriniz !", "Uyarı !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -126,15 +126,15 @@ namespace Hayvan_Takip_Otomasyonu
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            cb_ilce.Items.Clear();
-            cb_il.Items.Clear();
-            cb_koy.Items.Clear();
-           
+           // cb_ilce.Items.Clear();
+       //     cb_il.Items.Clear();
+       //    cb_koy.Items.Clear();
 
 
-         //   string il="";
-         //   string ilce="";
-        //    string koy="";
+
+             //  string il="";
+            //   string ilce="";
+                string koy="";
             if (e.RowIndex > -1 && e.ColumnIndex > -1)
 
             {
@@ -145,13 +145,19 @@ namespace Hayvan_Takip_Otomasyonu
                 mskd_guncelle_tel2.Text = dgv_musteriler.Rows[e.RowIndex].Cells[4].Value.ToString();
                 cb_guncelle_il.Text = dgv_musteriler.Rows[e.RowIndex].Cells[5].Value.ToString();
                 cb_guncelle_ilce.Text = dgv_musteriler.Rows[e.RowIndex].Cells[6].Value.ToString();
-                cb_guncelle_koy.Text = dgv_musteriler.Rows[e.RowIndex].Cells[7].Value.ToString();
+                koy = dgv_musteriler.Rows[e.RowIndex].Cells[7].Value.ToString();
+                cb_guncelle_koy.Items.Clear();
+                //    cb_guncelle_koy.SelectedIndex = koy;
+                string[] koyversiyon = {koy };
+                    cb_guncelle_koy.Items.AddRange(koyversiyon);
+                cb_guncelle_koy.SelectedIndex = 0;
 
-             
+                
+            //    cb_guncelle_koy.Items.Add =(koy.ToString());
+                //cb_guncelle_koy.DropDownStyle = ComboBoxStyle.DropDownList;
 
-
-
-                Cb_sil.Text= dgv_musteriler.Rows[e.RowIndex].Cells[2].Value.ToString();
+             //   [] koyversiyon=
+                Cb_sil.Text = dgv_musteriler.Rows[e.RowIndex].Cells[2].Value.ToString();
                 tb_id.Text = dgv_musteriler.Rows[e.RowIndex].Cells[0].Value.ToString();
             }
             chck_guncelle_isletmeno.Checked = false;
@@ -162,29 +168,29 @@ namespace Hayvan_Takip_Otomasyonu
             chck_guncelle_ilce.Checked = false;
             chck_guncelle_koy.Checked = false;
 
-          
-                SqlCommand komut = new SqlCommand("Select ilce from ilceler where Sehir=@p1", bgl.baglanti());
-            komut.Parameters.AddWithValue("@p1", cb_il.SelectedIndex + 1);
-            SqlDataReader dr1 = komut.ExecuteReader();
-            while (dr1.Read())
-            {
-                cb_guncelle_ilce.Items.Add(dr1[0]);
-                
-            }
-            if (cb_guncelle_ilce.Text == "Devrekani")
-            {
-                SqlCommand komut1 = new SqlCommand("Select koy from koyler where ilce=@p1", bgl.baglanti());
-                komut1.Parameters.AddWithValue("@p1", 427);
-                SqlDataReader dr12 = komut1.ExecuteReader();
-                while (dr12.Read())
-                {
-                    cb_guncelle_koy.Items.Add(dr12[0]);
+            
+                  SqlCommand komut = new SqlCommand("Select ilce from ilceler where Sehir=@p1", bgl.baglanti());
+              komut.Parameters.AddWithValue("@p1", cb_il.SelectedIndex + 1);
+              SqlDataReader dr1 = komut.ExecuteReader();
+              while (dr1.Read())
+              {
+                  cb_guncelle_ilce.Items.Add(dr1[0]);
 
-                }
+              }
+              if (cb_guncelle_ilce.Text == "Devrekani")
+              {
+                  SqlCommand komut1 = new SqlCommand("Select koy from koyler where ilce=@p1", bgl.baglanti());
+                  komut1.Parameters.AddWithValue("@p1", 427);
+                  SqlDataReader dr12 = komut1.ExecuteReader();
+                  while (dr12.Read())
+                  {
+                      cb_guncelle_koy.Items.Add(dr12[0]);
 
+                  }
+                 
+        
 
-
-            }
+            } 
             bgl.baglanti().Close();
         }
 
@@ -207,7 +213,7 @@ namespace Hayvan_Takip_Otomasyonu
 
         private void btn_sil_Click(object sender, EventArgs e)
         {
-
+            tb_id.Text = "19231923";
             if (Cb_sil.Text == "")
             {
                 MessageBox.Show("Lütfen Silmek istediğiniz müşteriyi seçiniz yada müşterinin adını giriniz !", "Uyarı !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -253,7 +259,7 @@ namespace Hayvan_Takip_Otomasyonu
 
         private void MusterilerFormu_Load_1(object sender, EventArgs e)
         {
-            
+            tb_id.Text = "19231923";
 
 
             // TODO: Bu kod satırı 'tdbDataSet1.musterilertbl' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
@@ -300,7 +306,9 @@ namespace Hayvan_Takip_Otomasyonu
 
         private void Btn_guncelle_Click(object sender, EventArgs e)
         {
-       
+            
+            if (tb_id.Text == "19231923") { MessageBox.Show("Lütfen Müşteri Seçiniz !", "Uyarı !", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            else {
             if (tb_guncelle_adi.Text == "")
             {
                 MessageBox.Show("Lütfen Müşterinin Adını Giriniz !", "Uyarı !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -342,12 +350,12 @@ namespace Hayvan_Takip_Otomasyonu
                 chck_guncelle_il.Checked = false;
                 chck_guncelle_ilce.Checked = false;
                 chck_guncelle_koy.Checked = false;
-
-            }
+                    tb_id.Text = "19231923";
+                }
            
 
             listele();
-            
+            }
         }
 
         private void cb_arama_TextChanged(object sender, EventArgs e)
@@ -374,9 +382,9 @@ namespace Hayvan_Takip_Otomasyonu
             f5 = (AnaMenu)Application.OpenForms["AnaMenu"];
             f5.btn_hayvanlar.PerformClick();
 
-            f6 = (HayvanlarFormu)Application.OpenForms["HayvanlarFormu"];
+        //    f6 = (HayvanlarFormu)Application.OpenForms["HayvanlarFormu"];
        //     f6.cekilenveri = tb_guncelle_adi.Text.Trim();
-            f6.Cb_sahibi.SelectedItem=(tb_guncelle_adi.Text);
+           // f6.Cb_sahibi.SelectedItem=(tb_guncelle_adi.Text);
             
             this.Close();
         }
@@ -553,6 +561,16 @@ namespace Hayvan_Takip_Otomasyonu
             DataView dv = dt.DefaultView;
             dv.RowFilter = "koy Like '" + cb_arama_koy.Text + "%'";
             dgv_musteriler.DataSource = dv;
+        }
+
+        private void cb_guncelle_koy_TextChanged(object sender, EventArgs e)
+        {
+         //   MessageBox.Show("birşey yazamazsın");
+        }
+
+        private void Cb_sil_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
     }

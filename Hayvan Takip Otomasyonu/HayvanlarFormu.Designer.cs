@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Gb_musteriekle = new System.Windows.Forms.GroupBox();
+            this.Gb_musterisil = new System.Windows.Forms.GroupBox();
+            this.cb_silhayvan = new System.Windows.Forms.ComboBox();
             this.btn_sil = new System.Windows.Forms.Button();
             this.cb_ls = new System.Windows.Forms.ComboBox();
             this.dtp_dt = new System.Windows.Forms.DateTimePicker();
@@ -66,6 +68,7 @@
             this.tdbDataSet = new Hayvan_Takip_Otomasyonu.tdbDataSet();
             this.hayvanlartblTableAdapter = new Hayvan_Takip_Otomasyonu.tdbDataSetTableAdapters.hayvanlartblTableAdapter();
             this.Gb_musteriekle.SuspendLayout();
+            this.Gb_musterisil.SuspendLayout();
             this.Gb_Guncelle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_hayvanlar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hayvanlartblBindingSource)).BeginInit();
@@ -75,7 +78,7 @@
             // Gb_musteriekle
             // 
             this.Gb_musteriekle.BackColor = System.Drawing.Color.Goldenrod;
-            this.Gb_musteriekle.Controls.Add(this.btn_sil);
+            this.Gb_musteriekle.Controls.Add(this.Gb_musterisil);
             this.Gb_musteriekle.Controls.Add(this.cb_ls);
             this.Gb_musteriekle.Controls.Add(this.dtp_dt);
             this.Gb_musteriekle.Controls.Add(this.rb_dişi);
@@ -95,13 +98,39 @@
             this.Gb_musteriekle.TabStop = false;
             this.Gb_musteriekle.Text = "Hayvan Ekle";
             // 
+            // Gb_musterisil
+            // 
+            this.Gb_musterisil.BackColor = System.Drawing.Color.Red;
+            this.Gb_musterisil.Controls.Add(this.cb_silhayvan);
+            this.Gb_musterisil.Controls.Add(this.btn_sil);
+            this.Gb_musterisil.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Gb_musterisil.Location = new System.Drawing.Point(1, 427);
+            this.Gb_musterisil.Name = "Gb_musterisil";
+            this.Gb_musterisil.Size = new System.Drawing.Size(269, 115);
+            this.Gb_musterisil.TabIndex = 35;
+            this.Gb_musterisil.TabStop = false;
+            this.Gb_musterisil.Text = "Müşteri Sil";
+            // 
+            // cb_silhayvan
+            // 
+            this.cb_silhayvan.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cb_silhayvan.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cb_silhayvan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_silhayvan.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cb_silhayvan.FormattingEnabled = true;
+            this.cb_silhayvan.Location = new System.Drawing.Point(31, 19);
+            this.cb_silhayvan.Name = "cb_silhayvan";
+            this.cb_silhayvan.Size = new System.Drawing.Size(212, 27);
+            this.cb_silhayvan.TabIndex = 21;
+            this.cb_silhayvan.SelectedIndexChanged += new System.EventHandler(this.cb_silhayvan_SelectedIndexChanged);
+            // 
             // btn_sil
             // 
             this.btn_sil.BackgroundImage = global::Hayvan_Takip_Otomasyonu.Properties.Resources.silicon;
             this.btn_sil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_sil.Location = new System.Drawing.Point(6, 492);
+            this.btn_sil.Location = new System.Drawing.Point(106, 47);
             this.btn_sil.Name = "btn_sil";
-            this.btn_sil.Size = new System.Drawing.Size(56, 49);
+            this.btn_sil.Size = new System.Drawing.Size(74, 62);
             this.btn_sil.TabIndex = 34;
             this.btn_sil.UseVisualStyleBackColor = true;
             this.btn_sil.Click += new System.EventHandler(this.btn_sil_Click);
@@ -225,7 +254,7 @@
             this.btn_kaydet.BackgroundImage = global::Hayvan_Takip_Otomasyonu.Properties.Resources.kaydetbutton;
             this.btn_kaydet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_kaydet.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_kaydet.Location = new System.Drawing.Point(130, 471);
+            this.btn_kaydet.Location = new System.Drawing.Point(134, 268);
             this.btn_kaydet.Name = "btn_kaydet";
             this.btn_kaydet.Size = new System.Drawing.Size(125, 70);
             this.btn_kaydet.TabIndex = 10;
@@ -269,6 +298,7 @@
             // 
             this.Cb_sahibi.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.Cb_sahibi.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.Cb_sahibi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cb_sahibi.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Cb_sahibi.FormattingEnabled = true;
             this.Cb_sahibi.Location = new System.Drawing.Point(10, 42);
@@ -293,12 +323,12 @@
             this.dgv_hayvanlar.AllowUserToAddRows = false;
             this.dgv_hayvanlar.AllowUserToDeleteRows = false;
             this.dgv_hayvanlar.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_hayvanlar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_hayvanlar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_hayvanlar.AutoGenerateColumns = false;
             this.dgv_hayvanlar.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgv_hayvanlar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -486,6 +516,7 @@
             this.Load += new System.EventHandler(this.HayvanlarFormu_Load);
             this.Gb_musteriekle.ResumeLayout(false);
             this.Gb_musteriekle.PerformLayout();
+            this.Gb_musterisil.ResumeLayout(false);
             this.Gb_Guncelle.ResumeLayout(false);
             this.Gb_Guncelle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_hayvanlar)).EndInit();
@@ -531,5 +562,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn durumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn senkronizasyonDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn detay;
+        private System.Windows.Forms.GroupBox Gb_musterisil;
+        public System.Windows.Forms.ComboBox cb_silhayvan;
     }
 }

@@ -17,14 +17,26 @@ namespace Hayvan_Takip_Otomasyonu
         {
             InitializeComponent();
         }
-       
-        
+
+        string silhayvan = "TR";
         private sqlbaglantisi bgl = new sqlbaglantisi();
         string cinsiyetkontrol;
         string cinsiyet;
       //  string sgssonucu;
     //    string bkgsonucu;
     //    int bkgsonucu1;
+    private void guncelle()
+        {
+            DataTable dt = new DataTable();
+
+            SqlDataAdapter da = new SqlDataAdapter("Select * From hayvanlartbl", bgl.baglanti());
+            da.Fill(dt);
+            dgv_hayvanlar.DataSource = dt;
+
+            DataView dv = dt.DefaultView;
+            dv.RowFilter = "sahibi Like '" + Cb_sahibi.Text + "%'";
+            dgv_hayvanlar.DataSource = dv;
+        }
         private void listele()
         {
             DataTable dt = new DataTable();
@@ -32,23 +44,46 @@ namespace Hayvan_Takip_Otomasyonu
             da.Fill(dt);
             dgv_hayvanlar.DataSource = dt;
 
-
-            SqlCommand komut13 = new SqlCommand("select *from musterilertbl", bgl.baglanti());
+            SqlCommand komut13 = new SqlCommand("select *from hayvanlartbl", bgl.baglanti());
             SqlDataReader read2;
             read2 = komut13.ExecuteReader();
-            Cb_sahibi.Items.Clear();
-    
+          //  Cb_sil.Items.Clear();
+            cb_silhayvan.Items.Clear();
             while (read2.Read())
             {
-        
-                Cb_sahibi.Items.Add(read2["adi"]);
+                cb_silhayvan.Items.Add(read2["TR"]);
+           //     Cb_sil.Items.Add(read2["adi"]);
             }
+
+
+
         }
         private void HayvanlarFormu_Load(object sender, EventArgs e)
         {
             //tb_sahibi.ReadOnly = true;
-         
+          if(  Cb_sahibi.Text == "") {
+                dgv_hayvanlar.Visible = false;
+                Gb_musteriekle.Visible = false;
+            }
+            else
+            {
+                dgv_hayvanlar.Visible = true;
+                Gb_musteriekle.Visible = true;
+            }
+            SqlCommand komut13 = new SqlCommand("select *from musterilertbl", bgl.baglanti());
+            SqlDataReader read2;
+            read2 = komut13.ExecuteReader();
+            Cb_sahibi.Items.Clear();
+
+            while (read2.Read())
+            {
+
+                Cb_sahibi.Items.Add(read2["adi"]);
+            }
             listele();
+
+
+            MessageBox.Show(" Lütfen İşlem Yapmak İstediğiniz Müşteriyi Seçiniz.");
             
         }
         
@@ -74,7 +109,21 @@ namespace Hayvan_Takip_Otomasyonu
 
         private void btn_kaydet_Click(object sender, EventArgs e)
         {
+            if (msk_kupeno.MaskCompleted )
 
+
+            { 
+
+
+
+            
+           
+
+
+            if (msk_kupeno.Text == "TR") { MessageBox.Show("Hayvanın Küpe No'su eklenmek zorundadır !", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning); } else
+            {
+                if (Cb_sahibi.Text == "") { MessageBox.Show("Sisteme Sahipsiz Hayvan Girişi Mümkün Değildir. \n \n Lütfen Hayvan Sahibini Seçiniz !", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning); } 
+                else { 
             bool durum = true;
 
             SqlCommand komut1 = new SqlCommand("select *from hayvanlartbl", bgl.baglanti());
@@ -96,7 +145,7 @@ namespace Hayvan_Takip_Otomasyonu
             {
                 
                 //verileri kaydetme
-                if (rb_erkek.Checked == true | rb_dişi.Checked == true)
+                if (rb_erkek.Checked == true || rb_dişi.Checked == true)
                 {
                     if (cinsiyet == "Erkek")
                     {
@@ -114,7 +163,7 @@ namespace Hayvan_Takip_Otomasyonu
                         bgl.baglanti().Close();
                         MessageBox.Show("Hayvan Bilgileri Sisteme Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         listele();
-
+                                guncelle();
 
                     }
                     else
@@ -147,6 +196,7 @@ namespace Hayvan_Takip_Otomasyonu
                         bgl.baglanti().Close();
                         MessageBox.Show("Hayvan Bilgileri Sisteme Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         listele();
+                                guncelle();
 
                     }
                 }
@@ -157,26 +207,33 @@ namespace Hayvan_Takip_Otomasyonu
                 }
             }
         }
-
+        }
+            }
+            else
+            {
+                MessageBox.Show("Hayvan Küpe No Yanlış Girilmiş ! \n \n Lütfen Hayvan Küpe No'yu doğru giriniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+        }
         private void btn_sil_Click(object sender, EventArgs e)
         {
         
 
-            if (msk_kupeno.Text == "")
+            if (cb_silhayvan.Text== "TR" || cb_silhayvan.Text=="")
             {
-                MessageBox.Show("Lütfen Silmek istediğiniz hayvanın Küpe No'sunu giriniz.Yada hayvanı tablodan seçiniz !", "Uyarı !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Lütfen Silmek istediğiniz hayvanı tablodan seçiniz !", "Uyarı !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
 
-                string hayvankupeno = msk_kupeno.Text;
+               
 
                 DialogResult cikis = new DialogResult();
-                cikis = MessageBox.Show(hayvankupeno + " ait bilgiler silinecek devam etmek istiyor musun ?", "Uyarı", MessageBoxButtons.YesNo);
+                cikis = MessageBox.Show(silhayvan + " ait bilgiler silinecek devam etmek istiyor musun ?", "Uyarı", MessageBoxButtons.YesNo);
                 if (cikis == DialogResult.Yes)
                 {
                     SqlCommand komutsil = new SqlCommand("Delete From hayvanlartbl where TR=@p1", bgl.baglanti());
-                    komutsil.Parameters.AddWithValue("@p1", msk_kupeno.Text);
+                    komutsil.Parameters.AddWithValue("@p1", silhayvan);
                     komutsil.ExecuteNonQuery();
                     bgl.baglanti().Close();
                     MessageBox.Show("Hayvan sistemden silindi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -192,6 +249,7 @@ namespace Hayvan_Takip_Otomasyonu
             }
             msk_kupeno.Text = null;
             listele();
+            guncelle();
             
         }
 
@@ -212,6 +270,7 @@ namespace Hayvan_Takip_Otomasyonu
                 //dtp_stt.Text = dgv_hayvanlar.Rows[e.RowIndex].Cells[8].Value.ToString();
           //      dtp_buzagilama.Text = dgv_hayvanlar.Rows[e.RowIndex].Cells[9].Value.ToString();
                 dtp_dt.Text = dgv_hayvanlar.Rows[e.RowIndex].Cells[1].Value.ToString();
+                cb_silhayvan.Text = dgv_hayvanlar.Rows[e.RowIndex].Cells[3].Value.ToString();
                 if (cinsiyetkontrol == "Erkek")
                 {
                     rb_erkek.Checked = true;
@@ -243,6 +302,8 @@ namespace Hayvan_Takip_Otomasyonu
 
         private void Cb_sahibi_SelectedIndexChanged(object sender, EventArgs e)
         {
+            dgv_hayvanlar.Visible = true;
+            Gb_musteriekle.Visible = true;
             DataTable dt = new DataTable();
 
             SqlDataAdapter da = new SqlDataAdapter("Select * From hayvanlartbl", bgl.baglanti());
@@ -260,6 +321,12 @@ namespace Hayvan_Takip_Otomasyonu
         {
       //      if (cbox_sahibi.Checked == true) { tb_sahibi.ReadOnly = false; }
      //       if (cbox_sahibi.Checked == false) { tb_sahibi.ReadOnly = true; }
+        }
+        
+        private void cb_silhayvan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+          silhayvan=  cb_silhayvan.Text;
         }
     }
     }

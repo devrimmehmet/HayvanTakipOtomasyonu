@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbl_adsoyad = new System.Windows.Forms.Label();
             this.mskdtb_telefon = new System.Windows.Forms.MaskedTextBox();
             this.tb_adi = new System.Windows.Forms.TextBox();
@@ -45,6 +45,16 @@
             this.lbl_tel = new System.Windows.Forms.Label();
             this.lbl_isletmeno = new System.Windows.Forms.Label();
             this.dgv_musteriler = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isletmenoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tel2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ilceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.koyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.musterilertblBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tdbDataSet = new Hayvan_Takip_Otomasyonu.tdbDataSet();
             this.Gb_musteriekle = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cb_koy = new System.Windows.Forms.ComboBox();
@@ -85,26 +95,16 @@
             this.tb_guncelle_adi = new System.Windows.Forms.TextBox();
             this.msk_guncelle_isletmeno = new System.Windows.Forms.MaskedTextBox();
             this.cb_arama = new System.Windows.Forms.ComboBox();
-            this.tdbDataSet = new Hayvan_Takip_Otomasyonu.tdbDataSet();
             this.musterilertblTableAdapter = new Hayvan_Takip_Otomasyonu.tdbDataSetTableAdapters.musterilertblTableAdapter();
-            this.musterilertblBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isletmenoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tel2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ilceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.koyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cb_arama_koy = new System.Windows.Forms.ComboBox();
             this.cb_arama_ilce = new System.Windows.Forms.ComboBox();
             this.cb_arama_il = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_musteriler)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.musterilertblBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tdbDataSet)).BeginInit();
             this.Gb_musteriekle.SuspendLayout();
             this.Gb_musterisil.SuspendLayout();
             this.Gb_Guncelle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tdbDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.musterilertblBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_adsoyad
@@ -169,24 +169,24 @@
             this.dgv_musteriler.AllowUserToDeleteRows = false;
             this.dgv_musteriler.AllowUserToOrderColumns = true;
             this.dgv_musteriler.AllowUserToResizeRows = false;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_musteriler.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_musteriler.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_musteriler.AutoGenerateColumns = false;
             this.dgv_musteriler.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgv_musteriler.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_musteriler.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Tahoma", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_musteriler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_musteriler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_musteriler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_musteriler.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -214,6 +214,108 @@
             this.dgv_musteriler.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_musteriler_CellContentClick);
             this.dgv_musteriler.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_musteriler_CellDoubleClick);
             this.dgv_musteriler.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgv_musteriler_CellFormatting);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // isletmenoDataGridViewTextBoxColumn
+            // 
+            this.isletmenoDataGridViewTextBoxColumn.DataPropertyName = "isletmeno";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.isletmenoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.isletmenoDataGridViewTextBoxColumn.HeaderText = "İŞLETME NO";
+            this.isletmenoDataGridViewTextBoxColumn.MinimumWidth = 130;
+            this.isletmenoDataGridViewTextBoxColumn.Name = "isletmenoDataGridViewTextBoxColumn";
+            this.isletmenoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.isletmenoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.isletmenoDataGridViewTextBoxColumn.Width = 130;
+            // 
+            // adiDataGridViewTextBoxColumn
+            // 
+            this.adiDataGridViewTextBoxColumn.DataPropertyName = "adi";
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.adiDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.adiDataGridViewTextBoxColumn.HeaderText = "ADI - SOYADI";
+            this.adiDataGridViewTextBoxColumn.MinimumWidth = 250;
+            this.adiDataGridViewTextBoxColumn.Name = "adiDataGridViewTextBoxColumn";
+            this.adiDataGridViewTextBoxColumn.ReadOnly = true;
+            this.adiDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.adiDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // telDataGridViewTextBoxColumn
+            // 
+            this.telDataGridViewTextBoxColumn.DataPropertyName = "tel";
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.telDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            this.telDataGridViewTextBoxColumn.HeaderText = "TELEFON";
+            this.telDataGridViewTextBoxColumn.MinimumWidth = 117;
+            this.telDataGridViewTextBoxColumn.Name = "telDataGridViewTextBoxColumn";
+            this.telDataGridViewTextBoxColumn.ReadOnly = true;
+            this.telDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.telDataGridViewTextBoxColumn.Width = 117;
+            // 
+            // tel2DataGridViewTextBoxColumn
+            // 
+            this.tel2DataGridViewTextBoxColumn.DataPropertyName = "tel2";
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.tel2DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            this.tel2DataGridViewTextBoxColumn.HeaderText = "TELEFON(2)";
+            this.tel2DataGridViewTextBoxColumn.MinimumWidth = 119;
+            this.tel2DataGridViewTextBoxColumn.Name = "tel2DataGridViewTextBoxColumn";
+            this.tel2DataGridViewTextBoxColumn.ReadOnly = true;
+            this.tel2DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.tel2DataGridViewTextBoxColumn.Width = 119;
+            // 
+            // ilDataGridViewTextBoxColumn
+            // 
+            this.ilDataGridViewTextBoxColumn.DataPropertyName = "il";
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.ilDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            this.ilDataGridViewTextBoxColumn.HeaderText = "İL";
+            this.ilDataGridViewTextBoxColumn.MinimumWidth = 125;
+            this.ilDataGridViewTextBoxColumn.Name = "ilDataGridViewTextBoxColumn";
+            this.ilDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ilDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ilDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // ilceDataGridViewTextBoxColumn
+            // 
+            this.ilceDataGridViewTextBoxColumn.DataPropertyName = "ilce";
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.ilceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            this.ilceDataGridViewTextBoxColumn.HeaderText = "İLÇE";
+            this.ilceDataGridViewTextBoxColumn.MinimumWidth = 125;
+            this.ilceDataGridViewTextBoxColumn.Name = "ilceDataGridViewTextBoxColumn";
+            this.ilceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ilceDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ilceDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // koyDataGridViewTextBoxColumn
+            // 
+            this.koyDataGridViewTextBoxColumn.DataPropertyName = "koy";
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.koyDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
+            this.koyDataGridViewTextBoxColumn.HeaderText = "KÖY";
+            this.koyDataGridViewTextBoxColumn.MinimumWidth = 177;
+            this.koyDataGridViewTextBoxColumn.Name = "koyDataGridViewTextBoxColumn";
+            this.koyDataGridViewTextBoxColumn.ReadOnly = true;
+            this.koyDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.koyDataGridViewTextBoxColumn.Width = 177;
+            // 
+            // musterilertblBindingSource
+            // 
+            this.musterilertblBindingSource.DataMember = "musterilertbl";
+            this.musterilertblBindingSource.DataSource = this.tdbDataSet;
+            // 
+            // tdbDataSet
+            // 
+            this.tdbDataSet.DataSetName = "tdbDataSet";
+            this.tdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Gb_musteriekle
             // 
@@ -245,11 +347,11 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(17, 173);
+            this.label9.Location = new System.Drawing.Point(90, 175);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(123, 19);
+            this.label9.Size = new System.Drawing.Size(50, 19);
             this.label9.TabIndex = 24;
-            this.label9.Text = "Köy/Mahalle :";
+            this.label9.Text = "Köy :";
             // 
             // cb_koy
             // 
@@ -388,6 +490,7 @@
             this.Cb_sil.Size = new System.Drawing.Size(191, 21);
             this.Cb_sil.TabIndex = 12;
             this.Cb_sil.TabStop = false;
+            this.Cb_sil.SelectedIndexChanged += new System.EventHandler(this.Cb_sil_SelectedIndexChanged);
             // 
             // btn_sil
             // 
@@ -472,11 +575,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(5, 185);
+            this.label6.Location = new System.Drawing.Point(78, 185);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(123, 19);
+            this.label6.Size = new System.Drawing.Size(50, 19);
             this.label6.TabIndex = 30;
-            this.label6.Text = "Köy/Mahalle :";
+            this.label6.Text = "Köy :";
             // 
             // mskd_guncelle_tel2
             // 
@@ -491,6 +594,7 @@
             // 
             this.cb_guncelle_koy.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.cb_guncelle_koy.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cb_guncelle_koy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_guncelle_koy.FormattingEnabled = true;
             this.cb_guncelle_koy.Location = new System.Drawing.Point(128, 185);
             this.cb_guncelle_koy.Name = "cb_guncelle_koy";
@@ -499,6 +603,7 @@
             this.cb_guncelle_koy.TabStop = false;
             this.cb_guncelle_koy.Visible = false;
             this.cb_guncelle_koy.SelectedIndexChanged += new System.EventHandler(this.cb_guncelle_koy_SelectedIndexChanged);
+            this.cb_guncelle_koy.TextChanged += new System.EventHandler(this.cb_guncelle_koy_TextChanged);
             // 
             // mskd_guncelle_tel
             // 
@@ -534,6 +639,7 @@
             this.cb_guncelle_ilce.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.cb_guncelle_ilce.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cb_guncelle_ilce.DisplayMember = "ilce";
+            this.cb_guncelle_ilce.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_guncelle_ilce.FormattingEnabled = true;
             this.cb_guncelle_ilce.Location = new System.Drawing.Point(128, 158);
             this.cb_guncelle_ilce.Name = "cb_guncelle_ilce";
@@ -571,12 +677,14 @@
             this.tb_id.Size = new System.Drawing.Size(31, 20);
             this.tb_id.TabIndex = 17;
             this.tb_id.TabStop = false;
+            this.tb_id.Text = "19231923";
             this.tb_id.Visible = false;
             // 
             // cb_guncelle_il
             // 
             this.cb_guncelle_il.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.cb_guncelle_il.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cb_guncelle_il.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_guncelle_il.FormattingEnabled = true;
             this.cb_guncelle_il.Location = new System.Drawing.Point(128, 131);
             this.cb_guncelle_il.Name = "cb_guncelle_il";
@@ -695,111 +803,9 @@
             this.cb_arama.TabIndex = 13;
             this.cb_arama.TextChanged += new System.EventHandler(this.cb_arama_TextChanged);
             // 
-            // tdbDataSet
-            // 
-            this.tdbDataSet.DataSetName = "tdbDataSet";
-            this.tdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // musterilertblTableAdapter
             // 
             this.musterilertblTableAdapter.ClearBeforeFill = true;
-            // 
-            // musterilertblBindingSource
-            // 
-            this.musterilertblBindingSource.DataMember = "musterilertbl";
-            this.musterilertblBindingSource.DataSource = this.tdbDataSet;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // isletmenoDataGridViewTextBoxColumn
-            // 
-            this.isletmenoDataGridViewTextBoxColumn.DataPropertyName = "isletmeno";
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.isletmenoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle30;
-            this.isletmenoDataGridViewTextBoxColumn.HeaderText = "İŞLETME NO";
-            this.isletmenoDataGridViewTextBoxColumn.MinimumWidth = 130;
-            this.isletmenoDataGridViewTextBoxColumn.Name = "isletmenoDataGridViewTextBoxColumn";
-            this.isletmenoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.isletmenoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.isletmenoDataGridViewTextBoxColumn.Width = 130;
-            // 
-            // adiDataGridViewTextBoxColumn
-            // 
-            this.adiDataGridViewTextBoxColumn.DataPropertyName = "adi";
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.adiDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle31;
-            this.adiDataGridViewTextBoxColumn.HeaderText = "ADI - SOYADI";
-            this.adiDataGridViewTextBoxColumn.MinimumWidth = 250;
-            this.adiDataGridViewTextBoxColumn.Name = "adiDataGridViewTextBoxColumn";
-            this.adiDataGridViewTextBoxColumn.ReadOnly = true;
-            this.adiDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.adiDataGridViewTextBoxColumn.Width = 250;
-            // 
-            // telDataGridViewTextBoxColumn
-            // 
-            this.telDataGridViewTextBoxColumn.DataPropertyName = "tel";
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.telDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle32;
-            this.telDataGridViewTextBoxColumn.HeaderText = "TELEFON";
-            this.telDataGridViewTextBoxColumn.MinimumWidth = 117;
-            this.telDataGridViewTextBoxColumn.Name = "telDataGridViewTextBoxColumn";
-            this.telDataGridViewTextBoxColumn.ReadOnly = true;
-            this.telDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.telDataGridViewTextBoxColumn.Width = 117;
-            // 
-            // tel2DataGridViewTextBoxColumn
-            // 
-            this.tel2DataGridViewTextBoxColumn.DataPropertyName = "tel2";
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.tel2DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle33;
-            this.tel2DataGridViewTextBoxColumn.HeaderText = "TELEFON(2)";
-            this.tel2DataGridViewTextBoxColumn.MinimumWidth = 119;
-            this.tel2DataGridViewTextBoxColumn.Name = "tel2DataGridViewTextBoxColumn";
-            this.tel2DataGridViewTextBoxColumn.ReadOnly = true;
-            this.tel2DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.tel2DataGridViewTextBoxColumn.Width = 119;
-            // 
-            // ilDataGridViewTextBoxColumn
-            // 
-            this.ilDataGridViewTextBoxColumn.DataPropertyName = "il";
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.ilDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle34;
-            this.ilDataGridViewTextBoxColumn.HeaderText = "İL";
-            this.ilDataGridViewTextBoxColumn.MinimumWidth = 125;
-            this.ilDataGridViewTextBoxColumn.Name = "ilDataGridViewTextBoxColumn";
-            this.ilDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ilDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ilDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // ilceDataGridViewTextBoxColumn
-            // 
-            this.ilceDataGridViewTextBoxColumn.DataPropertyName = "ilce";
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.ilceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle35;
-            this.ilceDataGridViewTextBoxColumn.HeaderText = "İLÇE";
-            this.ilceDataGridViewTextBoxColumn.MinimumWidth = 125;
-            this.ilceDataGridViewTextBoxColumn.Name = "ilceDataGridViewTextBoxColumn";
-            this.ilceDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ilceDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ilceDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // koyDataGridViewTextBoxColumn
-            // 
-            this.koyDataGridViewTextBoxColumn.DataPropertyName = "koy";
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.koyDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle36;
-            this.koyDataGridViewTextBoxColumn.HeaderText = "KÖY/MAHALLE";
-            this.koyDataGridViewTextBoxColumn.MinimumWidth = 177;
-            this.koyDataGridViewTextBoxColumn.Name = "koyDataGridViewTextBoxColumn";
-            this.koyDataGridViewTextBoxColumn.ReadOnly = true;
-            this.koyDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.koyDataGridViewTextBoxColumn.Width = 177;
             // 
             // cb_arama_koy
             // 
@@ -856,14 +862,14 @@
             this.TopMost = true;
             this.Load += new System.EventHandler(this.MusterilerFormu_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_musteriler)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.musterilertblBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tdbDataSet)).EndInit();
             this.Gb_musteriekle.ResumeLayout(false);
             this.Gb_musteriekle.PerformLayout();
             this.Gb_musterisil.ResumeLayout(false);
             this.Gb_musterisil.PerformLayout();
             this.Gb_Guncelle.ResumeLayout(false);
             this.Gb_Guncelle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tdbDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.musterilertblBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -920,6 +926,9 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cb_guncelle_il;
         private System.Windows.Forms.BindingSource musterilertblBindingSource;
+        private System.Windows.Forms.ComboBox cb_arama_koy;
+        private System.Windows.Forms.ComboBox cb_arama_ilce;
+        private System.Windows.Forms.ComboBox cb_arama_il;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn isletmenoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adiDataGridViewTextBoxColumn;
@@ -928,8 +937,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ilDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ilceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn koyDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ComboBox cb_arama_koy;
-        private System.Windows.Forms.ComboBox cb_arama_ilce;
-        private System.Windows.Forms.ComboBox cb_arama_il;
     }
 }
