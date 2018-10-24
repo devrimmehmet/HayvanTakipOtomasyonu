@@ -29,23 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Gb_musteriekle = new System.Windows.Forms.GroupBox();
-            this.cbox_sahibi = new System.Windows.Forms.CheckBox();
-            this.tb_sahibi = new System.Windows.Forms.TextBox();
             this.btn_sil = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cb_durum = new System.Windows.Forms.ComboBox();
-            this.dtp_stt = new System.Windows.Forms.DateTimePicker();
-            this.dtp_buzagilama = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.cb_ls = new System.Windows.Forms.ComboBox();
             this.dtp_dt = new System.Windows.Forms.DateTimePicker();
             this.rb_dişi = new System.Windows.Forms.RadioButton();
             this.rb_erkek = new System.Windows.Forms.RadioButton();
             this.lbl_cinsiyet = new System.Windows.Forms.Label();
-            this.lbl_sahibi = new System.Windows.Forms.Label();
             this.msk_kupeno = new System.Windows.Forms.MaskedTextBox();
             this.msk_tanim = new System.Windows.Forms.MaskedTextBox();
             this.lbl_kupeno = new System.Windows.Forms.Label();
@@ -84,21 +75,12 @@
             // Gb_musteriekle
             // 
             this.Gb_musteriekle.BackColor = System.Drawing.Color.Goldenrod;
-            this.Gb_musteriekle.Controls.Add(this.cbox_sahibi);
-            this.Gb_musteriekle.Controls.Add(this.tb_sahibi);
             this.Gb_musteriekle.Controls.Add(this.btn_sil);
-            this.Gb_musteriekle.Controls.Add(this.label4);
-            this.Gb_musteriekle.Controls.Add(this.cb_durum);
-            this.Gb_musteriekle.Controls.Add(this.dtp_stt);
-            this.Gb_musteriekle.Controls.Add(this.dtp_buzagilama);
-            this.Gb_musteriekle.Controls.Add(this.label3);
-            this.Gb_musteriekle.Controls.Add(this.label1);
             this.Gb_musteriekle.Controls.Add(this.cb_ls);
             this.Gb_musteriekle.Controls.Add(this.dtp_dt);
             this.Gb_musteriekle.Controls.Add(this.rb_dişi);
             this.Gb_musteriekle.Controls.Add(this.rb_erkek);
             this.Gb_musteriekle.Controls.Add(this.lbl_cinsiyet);
-            this.Gb_musteriekle.Controls.Add(this.lbl_sahibi);
             this.Gb_musteriekle.Controls.Add(this.msk_kupeno);
             this.Gb_musteriekle.Controls.Add(this.msk_tanim);
             this.Gb_musteriekle.Controls.Add(this.lbl_kupeno);
@@ -113,26 +95,6 @@
             this.Gb_musteriekle.TabStop = false;
             this.Gb_musteriekle.Text = "Hayvan Ekle";
             // 
-            // cbox_sahibi
-            // 
-            this.cbox_sahibi.AutoSize = true;
-            this.cbox_sahibi.Location = new System.Drawing.Point(235, 456);
-            this.cbox_sahibi.Name = "cbox_sahibi";
-            this.cbox_sahibi.Size = new System.Drawing.Size(15, 14);
-            this.cbox_sahibi.TabIndex = 36;
-            this.cbox_sahibi.UseVisualStyleBackColor = true;
-            this.cbox_sahibi.Visible = false;
-            this.cbox_sahibi.CheckStateChanged += new System.EventHandler(this.cbox_sahibi_CheckStateChanged);
-            // 
-            // tb_sahibi
-            // 
-            this.tb_sahibi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tb_sahibi.Location = new System.Drawing.Point(86, 448);
-            this.tb_sahibi.Name = "tb_sahibi";
-            this.tb_sahibi.Size = new System.Drawing.Size(135, 27);
-            this.tb_sahibi.TabIndex = 35;
-            this.tb_sahibi.Visible = false;
-            // 
             // btn_sil
             // 
             this.btn_sil.BackgroundImage = global::Hayvan_Takip_Otomasyonu.Properties.Resources.silicon;
@@ -143,71 +105,6 @@
             this.btn_sil.TabIndex = 34;
             this.btn_sil.UseVisualStyleBackColor = true;
             this.btn_sil.Click += new System.EventHandler(this.btn_sil_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(58, 393);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(159, 19);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Uygulama Durumu";
-            // 
-            // cb_durum
-            // 
-            this.cb_durum.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.cb_durum.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cb_durum.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cb_durum.FormattingEnabled = true;
-            this.cb_durum.Items.AddRange(new object[] {
-            "TOHUMLANMIŞ"});
-            this.cb_durum.Location = new System.Drawing.Point(38, 415);
-            this.cb_durum.Name = "cb_durum";
-            this.cb_durum.Size = new System.Drawing.Size(180, 27);
-            this.cb_durum.TabIndex = 32;
-            // 
-            // dtp_stt
-            // 
-            this.dtp_stt.CustomFormat = "DD/MM/YYYY";
-            this.dtp_stt.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dtp_stt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_stt.Location = new System.Drawing.Point(76, 347);
-            this.dtp_stt.Name = "dtp_stt";
-            this.dtp_stt.Size = new System.Drawing.Size(110, 27);
-            this.dtp_stt.TabIndex = 31;
-            this.dtp_stt.Value = new System.DateTime(2018, 10, 22, 0, 0, 0, 0);
-            // 
-            // dtp_buzagilama
-            // 
-            this.dtp_buzagilama.CustomFormat = "DD/MM/YYYY";
-            this.dtp_buzagilama.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dtp_buzagilama.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_buzagilama.Location = new System.Drawing.Point(76, 284);
-            this.dtp_buzagilama.Name = "dtp_buzagilama";
-            this.dtp_buzagilama.Size = new System.Drawing.Size(110, 27);
-            this.dtp_buzagilama.TabIndex = 30;
-            this.dtp_buzagilama.Value = new System.DateTime(2018, 10, 22, 0, 0, 0, 0);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(23, 325);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(203, 19);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "Son Tohumlanma Tarihi";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(34, 262);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 19);
-            this.label1.TabIndex = 28;
-            this.label1.Text = "Son Buzağılama Tarihi";
             // 
             // cb_ls
             // 
@@ -231,22 +128,7 @@
             "12",
             "13",
             "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30"});
+            "15"});
             this.cb_ls.Location = new System.Drawing.Point(101, 222);
             this.cb_ls.Name = "cb_ls";
             this.cb_ls.Size = new System.Drawing.Size(50, 27);
@@ -298,17 +180,6 @@
             this.lbl_cinsiyet.Size = new System.Drawing.Size(90, 19);
             this.lbl_cinsiyet.TabIndex = 23;
             this.lbl_cinsiyet.Text = "Cinsiyeti :";
-            // 
-            // lbl_sahibi
-            // 
-            this.lbl_sahibi.AutoSize = true;
-            this.lbl_sahibi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_sahibi.Location = new System.Drawing.Point(16, 451);
-            this.lbl_sahibi.Name = "lbl_sahibi";
-            this.lbl_sahibi.Size = new System.Drawing.Size(70, 19);
-            this.lbl_sahibi.TabIndex = 21;
-            this.lbl_sahibi.Text = "Sahibi :";
-            this.lbl_sahibi.Visible = false;
             // 
             // msk_kupeno
             // 
@@ -422,12 +293,12 @@
             this.dgv_hayvanlar.AllowUserToAddRows = false;
             this.dgv_hayvanlar.AllowUserToDeleteRows = false;
             this.dgv_hayvanlar.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_hayvanlar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_hayvanlar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_hayvanlar.AutoGenerateColumns = false;
             this.dgv_hayvanlar.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgv_hayvanlar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -639,22 +510,13 @@
         private System.Windows.Forms.RadioButton rb_dişi;
         private System.Windows.Forms.RadioButton rb_erkek;
         private System.Windows.Forms.Label lbl_cinsiyet;
-        private System.Windows.Forms.Label lbl_sahibi;
         private System.Windows.Forms.MaskedTextBox msk_kupeno;
         private System.Windows.Forms.MaskedTextBox msk_tanim;
         private System.Windows.Forms.Label lbl_kupeno;
         private System.Windows.Forms.Label lbl_tanim;
         private System.Windows.Forms.DataGridView dgv_hayvanlar;
         public System.Windows.Forms.DateTimePicker dtp_dt;
-        private System.Windows.Forms.Label label4;
-        public System.Windows.Forms.ComboBox cb_durum;
-        public System.Windows.Forms.DateTimePicker dtp_stt;
-        public System.Windows.Forms.DateTimePicker dtp_buzagilama;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_sil;
-        private System.Windows.Forms.TextBox tb_sahibi;
-        private System.Windows.Forms.CheckBox cbox_sahibi;
         private System.Windows.Forms.DataGridViewTextBoxColumn sahibi;
         private System.Windows.Forms.DataGridViewTextBoxColumn dogumtarihiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tanımDataGridViewTextBoxColumn;

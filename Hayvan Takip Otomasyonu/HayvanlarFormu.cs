@@ -22,9 +22,9 @@ namespace Hayvan_Takip_Otomasyonu
         private sqlbaglantisi bgl = new sqlbaglantisi();
         string cinsiyetkontrol;
         string cinsiyet;
-        string sgssonucu;
-        string bkgsonucu;
-        int bkgsonucu1;
+      //  string sgssonucu;
+    //    string bkgsonucu;
+    //    int bkgsonucu1;
         private void listele()
         {
             DataTable dt = new DataTable();
@@ -46,7 +46,7 @@ namespace Hayvan_Takip_Otomasyonu
         }
         private void HayvanlarFormu_Load(object sender, EventArgs e)
         {
-            tb_sahibi.ReadOnly = true;
+            //tb_sahibi.ReadOnly = true;
          
             listele();
             
@@ -57,19 +57,19 @@ namespace Hayvan_Takip_Otomasyonu
             cb_ls.Text = "0";
             cinsiyet = "Erkek";
             cb_ls.Visible = false;
-            dtp_buzagilama.Visible = false;
-            dtp_stt.Visible = false;
-            cb_durum.Visible = false;
-            cb_durum.Text = null;
+      //      dtp_buzagilama.Visible = false;
+      //      dtp_stt.Visible = false;
+     //       cb_durum.Visible = false;
+     //       cb_durum.Text = null;
         }
 
         private void rb_dişi_CheckedChanged(object sender, EventArgs e)
         {
             cinsiyet = "Dişi";
             cb_ls.Visible = true;
-            dtp_buzagilama.Visible = true;
-            dtp_stt.Visible = true;
-            cb_durum.Visible = true;
+    //        dtp_buzagilama.Visible = true;
+     //       dtp_stt.Visible = true;
+    //        cb_durum.Visible = true;
         }
 
         private void btn_kaydet_Click(object sender, EventArgs e)
@@ -100,16 +100,16 @@ namespace Hayvan_Takip_Otomasyonu
                 {
                     if (cinsiyet == "Erkek")
                     {
-                        SqlCommand komut = new SqlCommand("insert into hayvanlartbl (Tanım,TR,UD,Durum,Senkronizasyon,cinsiyet,dogumtarihi,sahibi) values (@p1,@p2,@p6,@p9,@p10,@p11,@p12,@p14)", bgl.baglanti());
+                        SqlCommand komut = new SqlCommand("insert into hayvanlartbl (Tanım,TR,cinsiyet,dogumtarihi,sahibi) values (@p1,@p2,@p11,@p12,@p14)", bgl.baglanti());
 
                         komut.Parameters.AddWithValue("@p1", msk_tanim.Text);
                         komut.Parameters.AddWithValue("@p2", msk_kupeno.Text);
-                        komut.Parameters.AddWithValue("@p6", cb_durum.Text);
-                        komut.Parameters.AddWithValue("@p9", "");
-                        komut.Parameters.AddWithValue("@p10", "");
+                     //   komut.Parameters.AddWithValue("@p6", cb_durum.Text);
+                      //  komut.Parameters.AddWithValue("@p9", "");
+                     //   komut.Parameters.AddWithValue("@p10", "");
                         komut.Parameters.AddWithValue("@p11", cinsiyet);
                         komut.Parameters.AddWithValue("@p12", dtp_dt.Value);
-                        komut.Parameters.AddWithValue("@p14", tb_sahibi.Text);
+                        komut.Parameters.AddWithValue("@p14", Cb_sahibi.Text);
                         komut.ExecuteNonQuery();
                         bgl.baglanti().Close();
                         MessageBox.Show("Hayvan Bilgileri Sisteme Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -119,8 +119,8 @@ namespace Hayvan_Takip_Otomasyonu
                     }
                     else
                     {
-                        SqlCommand komut = new SqlCommand("insert into hayvanlartbl (Tanım,TR,LS,SGS,TT,UD,BKG,buzagilama,Durum,Senkronizasyon,cinsiyet,dogumtarihi,sahibi) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,@p12,@p14)", bgl.baglanti());
-                        DateTime dt = DateTime.Parse(dtp_buzagilama.Text);
+                        SqlCommand komut = new SqlCommand("insert into hayvanlartbl (Tanım,TR,LS,cinsiyet,dogumtarihi,sahibi) values (@p1,@p2,@p3,@p11,@p12,@p14)", bgl.baglanti());
+                      /*  DateTime dt = DateTime.Parse(dtp_buzagilama.Text);
                         TimeSpan fark = DateTime.Today - dt;
                         sgssonucu = fark.TotalDays.ToString();
                         DateTime dt1 = DateTime.Parse(dtp_stt.Text);
@@ -129,20 +129,20 @@ namespace Hayvan_Takip_Otomasyonu
                         bkgsonucu1 = Convert.ToInt32(bkgsonucu);
 
                         bkgsonucu1 = 280 - bkgsonucu1;
-
+*/
                         komut.Parameters.AddWithValue("@p1", msk_tanim.Text);
                         komut.Parameters.AddWithValue("@p2", msk_kupeno.Text);
                         komut.Parameters.AddWithValue("@p3", cb_ls.Text);
-                        komut.Parameters.AddWithValue("@p4", sgssonucu);
-                        komut.Parameters.AddWithValue("@p5", dtp_stt.Value);
-                        komut.Parameters.AddWithValue("@p6", cb_durum.Text);
-                        komut.Parameters.AddWithValue("@p7", bkgsonucu1);
-                        komut.Parameters.AddWithValue("@p8", dtp_buzagilama.Value);
-                        komut.Parameters.AddWithValue("@p9", "");
-                        komut.Parameters.AddWithValue("@p10", "");
+                      //  komut.Parameters.AddWithValue("@p4", sgssonucu);
+                      //  komut.Parameters.AddWithValue("@p5", dtp_stt.Value);
+                   //     komut.Parameters.AddWithValue("@p6", cb_durum.Text);
+                     //   komut.Parameters.AddWithValue("@p7", bkgsonucu1);
+                //      komut.Parameters.AddWithValue("@p8", dtp_buzagilama.Value);
+                   //     komut.Parameters.AddWithValue("@p9", "");
+                    //    komut.Parameters.AddWithValue("@p10", "");
                         komut.Parameters.AddWithValue("@p11", cinsiyet);
                         komut.Parameters.AddWithValue("@p12", dtp_dt.Value);
-                        komut.Parameters.AddWithValue("@p14", tb_sahibi.Text);
+                        komut.Parameters.AddWithValue("@p14", Cb_sahibi.Text);
                         komut.ExecuteNonQuery();
                         bgl.baglanti().Close();
                         MessageBox.Show("Hayvan Bilgileri Sisteme Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -202,15 +202,15 @@ namespace Hayvan_Takip_Otomasyonu
             {
                 dgv_hayvanlar.Rows[e.RowIndex].Selected = true;//satır  seçimini true yapıyoruz.
                 msk_kupeno.Text = dgv_hayvanlar.Rows[e.RowIndex].Cells[3].Value.ToString();
-                cb_durum.Text = dgv_hayvanlar.Rows[e.RowIndex].Cells[10].Value.ToString();
-                cb_durum.Text = dgv_hayvanlar.Rows[e.RowIndex].Cells[10].Value.ToString();
+           //     cb_durum.Text = dgv_hayvanlar.Rows[e.RowIndex].Cells[10].Value.ToString();
+         //       cb_durum.Text = dgv_hayvanlar.Rows[e.RowIndex].Cells[10].Value.ToString();
                 msk_tanim.Text = dgv_hayvanlar.Rows[e.RowIndex].Cells[2].Value.ToString();
-                tb_sahibi.Text = dgv_hayvanlar.Rows[e.RowIndex].Cells[0].Value.ToString();
+          //      tb_sahibi.Text = dgv_hayvanlar.Rows[e.RowIndex].Cells[0].Value.ToString();
               cinsiyetkontrol= dgv_hayvanlar.Rows[e.RowIndex].Cells[4].Value.ToString();
                 cb_ls.Text= dgv_hayvanlar.Rows[e.RowIndex].Cells[5].Value.ToString();
                 cb_ls.Text = dgv_hayvanlar.Rows[e.RowIndex].Cells[5].Value.ToString();
-                dtp_stt.Text = dgv_hayvanlar.Rows[e.RowIndex].Cells[8].Value.ToString();
-                dtp_buzagilama.Text = dgv_hayvanlar.Rows[e.RowIndex].Cells[9].Value.ToString();
+                //dtp_stt.Text = dgv_hayvanlar.Rows[e.RowIndex].Cells[8].Value.ToString();
+          //      dtp_buzagilama.Text = dgv_hayvanlar.Rows[e.RowIndex].Cells[9].Value.ToString();
                 dtp_dt.Text = dgv_hayvanlar.Rows[e.RowIndex].Cells[1].Value.ToString();
                 if (cinsiyetkontrol == "Erkek")
                 {
@@ -252,14 +252,14 @@ namespace Hayvan_Takip_Otomasyonu
             DataView dv = dt.DefaultView;
             dv.RowFilter = "sahibi Like '" + Cb_sahibi.Text + "%'";
             dgv_hayvanlar.DataSource = dv;
-            tb_sahibi.Text = (Cb_sahibi.Text);
+     //       tb_sahibi.Text = (Cb_sahibi.Text);
             msk_kupeno.Text = "TR";
         }
         
         private void cbox_sahibi_CheckStateChanged(object sender, EventArgs e)
         {
-            if (cbox_sahibi.Checked == true) { tb_sahibi.ReadOnly = false; }
-            if (cbox_sahibi.Checked == false) { tb_sahibi.ReadOnly = true; }
+      //      if (cbox_sahibi.Checked == true) { tb_sahibi.ReadOnly = false; }
+     //       if (cbox_sahibi.Checked == false) { tb_sahibi.ReadOnly = true; }
         }
     }
     }
