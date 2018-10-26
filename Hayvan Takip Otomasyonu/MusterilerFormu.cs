@@ -17,7 +17,7 @@ namespace Hayvan_Takip_Otomasyonu
         {
             InitializeComponent();
         }
-
+      
         private sqlbaglantisi bgl = new sqlbaglantisi();
 
         private void listele()
@@ -123,7 +123,14 @@ namespace Hayvan_Takip_Otomasyonu
             listele();
             }
 
-
+        string musteriadi1="";
+        string musteriteli1="";
+        string musteriteli2="";
+        string musteriili1="";
+        string musterilcesi1="";
+      //  string musterikoyu1="";
+        string musteriisletmeno1="";
+        string koy = "";
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
            // cb_ilce.Items.Clear();
@@ -134,18 +141,25 @@ namespace Hayvan_Takip_Otomasyonu
 
              //  string il="";
             //   string ilce="";
-                string koy="";
+              
             if (e.RowIndex > -1 && e.ColumnIndex > -1)
 
             {
+                
                 dgv_musteriler.Rows[e.RowIndex].Selected = true;//satır  seçimini true yapıyoruz.
-                msk_guncelle_isletmeno.Text = dgv_musteriler.Rows[e.RowIndex].Cells[1].Value.ToString();
-                tb_guncelle_adi.Text = dgv_musteriler.Rows[e.RowIndex].Cells[2].Value.ToString();
-                mskd_guncelle_tel.Text = dgv_musteriler.Rows[e.RowIndex].Cells[3].Value.ToString();
-                mskd_guncelle_tel2.Text = dgv_musteriler.Rows[e.RowIndex].Cells[4].Value.ToString();
-                cb_guncelle_il.Text = dgv_musteriler.Rows[e.RowIndex].Cells[5].Value.ToString();
-                cb_guncelle_ilce.Text = dgv_musteriler.Rows[e.RowIndex].Cells[6].Value.ToString();
-                koy = dgv_musteriler.Rows[e.RowIndex].Cells[7].Value.ToString();
+               musteriisletmeno1 = dgv_musteriler.Rows[e.RowIndex].Cells[1].Value.ToString();
+                msk_guncelle_isletmeno.Text = musteriisletmeno1.ToString();
+                musteriadi1 = dgv_musteriler.Rows[e.RowIndex].Cells[2].Value.ToString();
+                tb_guncelle_adi.Text = musteriadi1.ToString();
+               musteriteli1 = dgv_musteriler.Rows[e.RowIndex].Cells[3].Value.ToString();
+                mskd_guncelle_tel.Text = musteriteli1.ToString();
+                musteriteli2 = dgv_musteriler.Rows[e.RowIndex].Cells[4].Value.ToString();
+                mskd_guncelle_tel2.Text = musteriteli2.ToString();
+               musteriili1 = dgv_musteriler.Rows[e.RowIndex].Cells[5].Value.ToString();
+                cb_guncelle_il.Text = musteriili1.ToString();   
+                musterilcesi1 = dgv_musteriler.Rows[e.RowIndex].Cells[6].Value.ToString();
+                cb_guncelle_ilce.Text = musterilcesi1.ToString();
+               koy = dgv_musteriler.Rows[e.RowIndex].Cells[7].Value.ToString();
                 cb_guncelle_koy.Items.Clear();
                 //    cb_guncelle_koy.SelectedIndex = koy;
                 string[] koyversiyon = {koy };
@@ -216,15 +230,17 @@ namespace Hayvan_Takip_Otomasyonu
             tb_id.Text = "19231923";
             if (Cb_sil.Text == "")
             {
-                MessageBox.Show("Lütfen Silmek istediğiniz müşteriyi seçiniz yada müşterinin adını giriniz !", "Uyarı !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            
+
+                MessageBox.Show("Lütfen Silmek istediğiniz müşteriyi tablodan seçiniz !", "Uyarı !", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
             else
             {
-
+                
                 string musteriadi = Cb_sil.Text;
-
+                
                     DialogResult cikis = new DialogResult();
-                    cikis = MessageBox.Show(musteriadi+" ait bilgiler silinecek devam etmek istiyor musun ?", "Uyarı", MessageBoxButtons.YesNo);
+                    cikis = MessageBox.Show("\n" + " Müşteri Adı: " + musteriadi + "\n\n İşletme No: " + musteriisletmeno1 + "\n\n Telefon No: " + musteriteli1 + "\n\n Telefon2 No: " + musteriteli2 + "\n\n İl: " + musteriili1 + "\n\n İlçe: " + musterilcesi1 + "\n\n Köy/Mahalle: " + koy + "\n\n\n Yukarıdaki bilgilere ait müşteriyi sistemden silmek istiyor musunuz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
                     if (cikis == DialogResult.Yes)
                     {
                         SqlCommand komutsil = new SqlCommand("Delete From musterilertbl where adi=@p1", bgl.baglanti());
@@ -236,7 +252,7 @@ namespace Hayvan_Takip_Otomasyonu
                     }
                     if (cikis == DialogResult.No)
                     {
-                        MessageBox.Show("İşlem İptal Edildi.");
+                        MessageBox.Show("Silme İşlemi İptal Edildi.");
 
                     }
 
@@ -307,11 +323,11 @@ namespace Hayvan_Takip_Otomasyonu
         private void Btn_guncelle_Click(object sender, EventArgs e)
         {
             
-            if (tb_id.Text == "19231923") { MessageBox.Show("Lütfen Müşteri Seçiniz !", "Uyarı !", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            if (tb_id.Text == "19231923") { MessageBox.Show("Lütfen Müşteri Seçiniz !", "Uyarı !", MessageBoxButtons.OK, MessageBoxIcon.Stop); }
             else {
             if (tb_guncelle_adi.Text == "")
             {
-                MessageBox.Show("Lütfen Müşterinin Adını Giriniz !", "Uyarı !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Lütfen Müşterinin Adını Giriniz !", "Uyarı !", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
             else
             {
@@ -375,7 +391,7 @@ namespace Hayvan_Takip_Otomasyonu
        
       
         private AnaMenu f5 = new AnaMenu();
-        private HayvanlarFormu f6 = new HayvanlarFormu();
+       
         public void dgv_musteriler_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             
@@ -569,6 +585,11 @@ namespace Hayvan_Takip_Otomasyonu
         }
 
         private void Cb_sil_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cb_arama_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

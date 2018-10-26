@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnaMenu));
             this.pnl_topbar = new System.Windows.Forms.Panel();
-            this.pnl_islem = new System.Windows.Forms.Panel();
+            this.btn_raporlar = new System.Windows.Forms.Button();
             this.btn_islemler = new System.Windows.Forms.Button();
             this.btn_hayvanlar = new System.Windows.Forms.Button();
             this.btn_musteriler = new System.Windows.Forms.Button();
             this.btn_anasayfa = new System.Windows.Forms.Button();
-            this.btn_raporlar = new System.Windows.Forms.Button();
+            this.pnl_islem = new System.Windows.Forms.Panel();
             this.pnl_topbar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,13 +49,14 @@
             this.pnl_topbar.Controls.Add(this.btn_anasayfa);
             resources.ApplyResources(this.pnl_topbar, "pnl_topbar");
             this.pnl_topbar.Name = "pnl_topbar";
-          //  this.pnl_topbar.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_topbar_Paint);
             // 
-            // pnl_islem
+            // btn_raporlar
             // 
-            resources.ApplyResources(this.pnl_islem, "pnl_islem");
-            this.pnl_islem.Name = "pnl_islem";
-         // this.pnl_islem.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_islem_Paint);
+            this.btn_raporlar.BackgroundImage = global::Hayvan_Takip_Otomasyonu.Properties.Resources.raporlar;
+            resources.ApplyResources(this.btn_raporlar, "btn_raporlar");
+            this.btn_raporlar.Name = "btn_raporlar";
+            this.btn_raporlar.UseVisualStyleBackColor = true;
+            this.btn_raporlar.Click += new System.EventHandler(this.btn_raporlar_Click);
             // 
             // btn_islemler
             // 
@@ -63,6 +64,7 @@
             resources.ApplyResources(this.btn_islemler, "btn_islemler");
             this.btn_islemler.Name = "btn_islemler";
             this.btn_islemler.UseVisualStyleBackColor = true;
+            this.btn_islemler.Click += new System.EventHandler(this.btn_islemler_Click);
             // 
             // btn_hayvanlar
             // 
@@ -88,12 +90,11 @@
             this.btn_anasayfa.UseVisualStyleBackColor = true;
             this.btn_anasayfa.Click += new System.EventHandler(this.btn_anasayfa_Click);
             // 
-            // btn_raporlar
+            // pnl_islem
             // 
-            this.btn_raporlar.BackgroundImage = global::Hayvan_Takip_Otomasyonu.Properties.Resources.raporlar;
-            resources.ApplyResources(this.btn_raporlar, "btn_raporlar");
-            this.btn_raporlar.Name = "btn_raporlar";
-            this.btn_raporlar.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.pnl_islem, "pnl_islem");
+            this.pnl_islem.Name = "pnl_islem";
+            this.pnl_islem.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_islem_Paint);
             // 
             // AnaMenu
             // 

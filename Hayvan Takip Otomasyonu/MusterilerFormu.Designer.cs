@@ -67,9 +67,9 @@
             this.lbltel2 = new System.Windows.Forms.Label();
             this.btn_kaydet = new System.Windows.Forms.Button();
             this.Gb_musterisil = new System.Windows.Forms.GroupBox();
+            this.btn_sil = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Cb_sil = new System.Windows.Forms.ComboBox();
-            this.btn_sil = new System.Windows.Forms.Button();
             this.Gb_Guncelle = new System.Windows.Forms.GroupBox();
             this.chck_guncelle_adi = new System.Windows.Forms.CheckBox();
             this.chck_guncelle_koy = new System.Windows.Forms.CheckBox();
@@ -459,9 +459,9 @@
             // Gb_musterisil
             // 
             this.Gb_musterisil.BackColor = System.Drawing.Color.Red;
+            this.Gb_musterisil.Controls.Add(this.btn_sil);
             this.Gb_musterisil.Controls.Add(this.label1);
             this.Gb_musterisil.Controls.Add(this.Cb_sil);
-            this.Gb_musterisil.Controls.Add(this.btn_sil);
             this.Gb_musterisil.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Gb_musterisil.Location = new System.Drawing.Point(2, 269);
             this.Gb_musterisil.Name = "Gb_musterisil";
@@ -470,40 +470,41 @@
             this.Gb_musterisil.TabStop = false;
             this.Gb_musterisil.Text = "Müşteri Sil";
             // 
+            // btn_sil
+            // 
+            this.btn_sil.BackgroundImage = global::Hayvan_Takip_Otomasyonu.Properties.Resources.silicon;
+            this.btn_sil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_sil.Location = new System.Drawing.Point(168, 36);
+            this.btn_sil.Name = "btn_sil";
+            this.btn_sil.Size = new System.Drawing.Size(96, 48);
+            this.btn_sil.TabIndex = 11;
+            this.btn_sil.TabStop = false;
+            this.btn_sil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_sil.UseVisualStyleBackColor = true;
+            this.btn_sil.Click += new System.EventHandler(this.btn_sil_Click);
+            // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(6, 21);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(6, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 18);
+            this.label1.Size = new System.Drawing.Size(277, 41);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Ad Soyad :";
+            this.label1.Text = "Silmek İstediğiniz Müşteriyi Tablodan Seçiniz";
             // 
             // Cb_sil
             // 
             this.Cb_sil.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.Cb_sil.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.Cb_sil.FormattingEnabled = true;
-            this.Cb_sil.Location = new System.Drawing.Point(94, 21);
+            this.Cb_sil.Location = new System.Drawing.Point(261, 9);
             this.Cb_sil.Name = "Cb_sil";
-            this.Cb_sil.Size = new System.Drawing.Size(191, 21);
+            this.Cb_sil.Size = new System.Drawing.Size(24, 21);
             this.Cb_sil.TabIndex = 12;
             this.Cb_sil.TabStop = false;
+            this.Cb_sil.Visible = false;
             this.Cb_sil.SelectedIndexChanged += new System.EventHandler(this.Cb_sil_SelectedIndexChanged);
-            // 
-            // btn_sil
-            // 
-            this.btn_sil.BackgroundImage = global::Hayvan_Takip_Otomasyonu.Properties.Resources.silicon;
-            this.btn_sil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_sil.Location = new System.Drawing.Point(204, 46);
-            this.btn_sil.Name = "btn_sil";
-            this.btn_sil.Size = new System.Drawing.Size(79, 38);
-            this.btn_sil.TabIndex = 11;
-            this.btn_sil.TabStop = false;
-            this.btn_sil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_sil.UseVisualStyleBackColor = true;
-            this.btn_sil.Click += new System.EventHandler(this.btn_sil_Click);
             // 
             // Gb_Guncelle
             // 
@@ -801,6 +802,7 @@
             this.cb_arama.Name = "cb_arama";
             this.cb_arama.Size = new System.Drawing.Size(244, 21);
             this.cb_arama.TabIndex = 13;
+            this.cb_arama.SelectedIndexChanged += new System.EventHandler(this.cb_arama_SelectedIndexChanged);
             this.cb_arama.TextChanged += new System.EventHandler(this.cb_arama_TextChanged);
             // 
             // musterilertblTableAdapter
@@ -867,7 +869,6 @@
             this.Gb_musteriekle.ResumeLayout(false);
             this.Gb_musteriekle.PerformLayout();
             this.Gb_musterisil.ResumeLayout(false);
-            this.Gb_musterisil.PerformLayout();
             this.Gb_Guncelle.ResumeLayout(false);
             this.Gb_Guncelle.PerformLayout();
             this.ResumeLayout(false);

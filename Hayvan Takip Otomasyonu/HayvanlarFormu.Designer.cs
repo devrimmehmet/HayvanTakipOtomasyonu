@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Gb_musteriekle = new System.Windows.Forms.GroupBox();
-            this.Gb_musterisil = new System.Windows.Forms.GroupBox();
-            this.cb_silhayvan = new System.Windows.Forms.ComboBox();
-            this.btn_sil = new System.Windows.Forms.Button();
+            this.mskd_annekupeno = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.cb_ls = new System.Windows.Forms.ComboBox();
             this.dtp_dt = new System.Windows.Forms.DateTimePicker();
             this.rb_dişi = new System.Windows.Forms.RadioButton();
@@ -46,6 +45,9 @@
             this.btn_kaydet = new System.Windows.Forms.Button();
             this.lbl_ls = new System.Windows.Forms.Label();
             this.lbl_hdt = new System.Windows.Forms.Label();
+            this.Gb_musterisil = new System.Windows.Forms.GroupBox();
+            this.cb_silhayvan = new System.Windows.Forms.ComboBox();
+            this.btn_sil = new System.Windows.Forms.Button();
             this.Gb_Guncelle = new System.Windows.Forms.GroupBox();
             this.Cb_sahibi = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -67,18 +69,23 @@
             this.hayvanlartblBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tdbDataSet = new Hayvan_Takip_Otomasyonu.tdbDataSet();
             this.hayvanlartblTableAdapter = new Hayvan_Takip_Otomasyonu.tdbDataSetTableAdapters.hayvanlartblTableAdapter();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.GroupBox();
+            this.cb_arama = new System.Windows.Forms.ComboBox();
             this.Gb_musteriekle.SuspendLayout();
             this.Gb_musterisil.SuspendLayout();
             this.Gb_Guncelle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_hayvanlar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hayvanlartblBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tdbDataSet)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Gb_musteriekle
             // 
             this.Gb_musteriekle.BackColor = System.Drawing.Color.Goldenrod;
-            this.Gb_musteriekle.Controls.Add(this.Gb_musterisil);
+            this.Gb_musteriekle.Controls.Add(this.mskd_annekupeno);
+            this.Gb_musteriekle.Controls.Add(this.label1);
             this.Gb_musteriekle.Controls.Add(this.cb_ls);
             this.Gb_musteriekle.Controls.Add(this.dtp_dt);
             this.Gb_musteriekle.Controls.Add(this.rb_dişi);
@@ -93,47 +100,29 @@
             this.Gb_musteriekle.Controls.Add(this.lbl_hdt);
             this.Gb_musteriekle.Location = new System.Drawing.Point(3, 81);
             this.Gb_musteriekle.Name = "Gb_musteriekle";
-            this.Gb_musteriekle.Size = new System.Drawing.Size(270, 548);
+            this.Gb_musteriekle.Size = new System.Drawing.Size(270, 375);
             this.Gb_musteriekle.TabIndex = 18;
             this.Gb_musteriekle.TabStop = false;
             this.Gb_musteriekle.Text = "Hayvan Ekle";
             // 
-            // Gb_musterisil
+            // mskd_annekupeno
             // 
-            this.Gb_musterisil.BackColor = System.Drawing.Color.Red;
-            this.Gb_musterisil.Controls.Add(this.cb_silhayvan);
-            this.Gb_musterisil.Controls.Add(this.btn_sil);
-            this.Gb_musterisil.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Gb_musterisil.Location = new System.Drawing.Point(1, 427);
-            this.Gb_musterisil.Name = "Gb_musterisil";
-            this.Gb_musterisil.Size = new System.Drawing.Size(269, 115);
-            this.Gb_musterisil.TabIndex = 35;
-            this.Gb_musterisil.TabStop = false;
-            this.Gb_musterisil.Text = "Müşteri Sil";
+            this.mskd_annekupeno.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.mskd_annekupeno.Location = new System.Drawing.Point(159, 82);
+            this.mskd_annekupeno.Mask = "TR000000000";
+            this.mskd_annekupeno.Name = "mskd_annekupeno";
+            this.mskd_annekupeno.Size = new System.Drawing.Size(108, 27);
+            this.mskd_annekupeno.TabIndex = 37;
             // 
-            // cb_silhayvan
+            // label1
             // 
-            this.cb_silhayvan.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.cb_silhayvan.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cb_silhayvan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_silhayvan.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cb_silhayvan.FormattingEnabled = true;
-            this.cb_silhayvan.Location = new System.Drawing.Point(31, 19);
-            this.cb_silhayvan.Name = "cb_silhayvan";
-            this.cb_silhayvan.Size = new System.Drawing.Size(212, 27);
-            this.cb_silhayvan.TabIndex = 21;
-            this.cb_silhayvan.SelectedIndexChanged += new System.EventHandler(this.cb_silhayvan_SelectedIndexChanged);
-            // 
-            // btn_sil
-            // 
-            this.btn_sil.BackgroundImage = global::Hayvan_Takip_Otomasyonu.Properties.Resources.silicon;
-            this.btn_sil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_sil.Location = new System.Drawing.Point(106, 47);
-            this.btn_sil.Name = "btn_sil";
-            this.btn_sil.Size = new System.Drawing.Size(74, 62);
-            this.btn_sil.TabIndex = 34;
-            this.btn_sil.UseVisualStyleBackColor = true;
-            this.btn_sil.Click += new System.EventHandler(this.btn_sil_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(18, 85);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(135, 19);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Anne Küpe No :";
             // 
             // cb_ls
             // 
@@ -158,7 +147,7 @@
             "13",
             "14",
             "15"});
-            this.cb_ls.Location = new System.Drawing.Point(101, 222);
+            this.cb_ls.Location = new System.Drawing.Point(101, 253);
             this.cb_ls.Name = "cb_ls";
             this.cb_ls.Size = new System.Drawing.Size(50, 27);
             this.cb_ls.TabIndex = 27;
@@ -168,7 +157,7 @@
             this.dtp_dt.CustomFormat = "DD/MM/YYYY";
             this.dtp_dt.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dtp_dt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_dt.Location = new System.Drawing.Point(77, 150);
+            this.dtp_dt.Location = new System.Drawing.Point(77, 190);
             this.dtp_dt.Name = "dtp_dt";
             this.dtp_dt.Size = new System.Drawing.Size(110, 27);
             this.dtp_dt.TabIndex = 26;
@@ -178,7 +167,7 @@
             // 
             this.rb_dişi.AutoSize = true;
             this.rb_dişi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rb_dişi.Location = new System.Drawing.Point(187, 84);
+            this.rb_dişi.Location = new System.Drawing.Point(187, 124);
             this.rb_dişi.Name = "rb_dişi";
             this.rb_dişi.Size = new System.Drawing.Size(57, 23);
             this.rb_dişi.TabIndex = 25;
@@ -191,7 +180,7 @@
             // 
             this.rb_erkek.AutoSize = true;
             this.rb_erkek.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rb_erkek.Location = new System.Drawing.Point(107, 84);
+            this.rb_erkek.Location = new System.Drawing.Point(107, 124);
             this.rb_erkek.Name = "rb_erkek";
             this.rb_erkek.Size = new System.Drawing.Size(74, 23);
             this.rb_erkek.TabIndex = 24;
@@ -204,7 +193,7 @@
             // 
             this.lbl_cinsiyet.AutoSize = true;
             this.lbl_cinsiyet.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_cinsiyet.Location = new System.Drawing.Point(6, 86);
+            this.lbl_cinsiyet.Location = new System.Drawing.Point(6, 126);
             this.lbl_cinsiyet.Name = "lbl_cinsiyet";
             this.lbl_cinsiyet.Size = new System.Drawing.Size(90, 19);
             this.lbl_cinsiyet.TabIndex = 23;
@@ -213,7 +202,7 @@
             // msk_kupeno
             // 
             this.msk_kupeno.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.msk_kupeno.Location = new System.Drawing.Point(147, 49);
+            this.msk_kupeno.Location = new System.Drawing.Point(159, 49);
             this.msk_kupeno.Mask = "TR000000000";
             this.msk_kupeno.Name = "msk_kupeno";
             this.msk_kupeno.Size = new System.Drawing.Size(108, 27);
@@ -236,7 +225,7 @@
             this.lbl_kupeno.Name = "lbl_kupeno";
             this.lbl_kupeno.Size = new System.Drawing.Size(153, 19);
             this.lbl_kupeno.TabIndex = 12;
-            this.lbl_kupeno.Text = "Hayvan Küpe No :";
+            this.lbl_kupeno.Text = "Hayvan Küpe No :\r\n";
             // 
             // lbl_tanim
             // 
@@ -254,7 +243,7 @@
             this.btn_kaydet.BackgroundImage = global::Hayvan_Takip_Otomasyonu.Properties.Resources.kaydetbutton;
             this.btn_kaydet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_kaydet.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_kaydet.Location = new System.Drawing.Point(134, 268);
+            this.btn_kaydet.Location = new System.Drawing.Point(136, 290);
             this.btn_kaydet.Name = "btn_kaydet";
             this.btn_kaydet.Size = new System.Drawing.Size(125, 70);
             this.btn_kaydet.TabIndex = 10;
@@ -266,7 +255,7 @@
             // 
             this.lbl_ls.AutoSize = true;
             this.lbl_ls.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_ls.Location = new System.Drawing.Point(0, 200);
+            this.lbl_ls.Location = new System.Drawing.Point(0, 231);
             this.lbl_ls.Name = "lbl_ls";
             this.lbl_ls.Size = new System.Drawing.Size(261, 19);
             this.lbl_ls.TabIndex = 0;
@@ -276,18 +265,56 @@
             // 
             this.lbl_hdt.AutoSize = true;
             this.lbl_hdt.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_hdt.Location = new System.Drawing.Point(28, 128);
+            this.lbl_hdt.Location = new System.Drawing.Point(28, 168);
             this.lbl_hdt.Name = "lbl_hdt";
             this.lbl_hdt.Size = new System.Drawing.Size(199, 19);
             this.lbl_hdt.TabIndex = 1;
             this.lbl_hdt.Text = "Hayvanın Doğum Tarihi";
+            // 
+            // Gb_musterisil
+            // 
+            this.Gb_musterisil.BackColor = System.Drawing.Color.Red;
+            this.Gb_musterisil.Controls.Add(this.cb_silhayvan);
+            this.Gb_musterisil.Controls.Add(this.btn_sil);
+            this.Gb_musterisil.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Gb_musterisil.Location = new System.Drawing.Point(4, 462);
+            this.Gb_musterisil.Name = "Gb_musterisil";
+            this.Gb_musterisil.Size = new System.Drawing.Size(269, 166);
+            this.Gb_musterisil.TabIndex = 35;
+            this.Gb_musterisil.TabStop = false;
+            this.Gb_musterisil.Text = "ı";
+            this.Gb_musterisil.Visible = false;
+            // 
+            // cb_silhayvan
+            // 
+            this.cb_silhayvan.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cb_silhayvan.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cb_silhayvan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_silhayvan.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cb_silhayvan.FormattingEnabled = true;
+            this.cb_silhayvan.Location = new System.Drawing.Point(31, 19);
+            this.cb_silhayvan.Name = "cb_silhayvan";
+            this.cb_silhayvan.Size = new System.Drawing.Size(212, 27);
+            this.cb_silhayvan.TabIndex = 21;
+            this.cb_silhayvan.SelectedIndexChanged += new System.EventHandler(this.cb_silhayvan_SelectedIndexChanged);
+            // 
+            // btn_sil
+            // 
+            this.btn_sil.BackgroundImage = global::Hayvan_Takip_Otomasyonu.Properties.Resources.silicon;
+            this.btn_sil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_sil.Location = new System.Drawing.Point(89, 60);
+            this.btn_sil.Name = "btn_sil";
+            this.btn_sil.Size = new System.Drawing.Size(97, 81);
+            this.btn_sil.TabIndex = 34;
+            this.btn_sil.UseVisualStyleBackColor = true;
+            this.btn_sil.Click += new System.EventHandler(this.btn_sil_Click);
             // 
             // Gb_Guncelle
             // 
             this.Gb_Guncelle.BackColor = System.Drawing.Color.GreenYellow;
             this.Gb_Guncelle.Controls.Add(this.Cb_sahibi);
             this.Gb_Guncelle.Controls.Add(this.label2);
-            this.Gb_Guncelle.Location = new System.Drawing.Point(3, 3);
+            this.Gb_Guncelle.Location = new System.Drawing.Point(540, 240);
             this.Gb_Guncelle.Name = "Gb_Guncelle";
             this.Gb_Guncelle.Size = new System.Drawing.Size(270, 72);
             this.Gb_Guncelle.TabIndex = 19;
@@ -323,12 +350,12 @@
             this.dgv_hayvanlar.AllowUserToAddRows = false;
             this.dgv_hayvanlar.AllowUserToDeleteRows = false;
             this.dgv_hayvanlar.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_hayvanlar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_hayvanlar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgv_hayvanlar.AutoGenerateColumns = false;
             this.dgv_hayvanlar.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgv_hayvanlar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -351,15 +378,16 @@
             this.detay});
             this.dgv_hayvanlar.DataSource = this.hayvanlartblBindingSource;
             this.dgv_hayvanlar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dgv_hayvanlar.Location = new System.Drawing.Point(279, 3);
+            this.dgv_hayvanlar.Location = new System.Drawing.Point(279, 34);
             this.dgv_hayvanlar.MultiSelect = false;
             this.dgv_hayvanlar.Name = "dgv_hayvanlar";
             this.dgv_hayvanlar.ReadOnly = true;
             this.dgv_hayvanlar.RowHeadersVisible = false;
             this.dgv_hayvanlar.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dgv_hayvanlar.Size = new System.Drawing.Size(1065, 626);
+            this.dgv_hayvanlar.Size = new System.Drawing.Size(1065, 595);
             this.dgv_hayvanlar.TabIndex = 20;
             this.dgv_hayvanlar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_hayvanlar_CellClick);
+            this.dgv_hayvanlar.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_hayvanlar_CellDoubleClick);
             this.dgv_hayvanlar.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgv_hayvanlar_CellFormatting);
             // 
             // sahibi
@@ -499,6 +527,42 @@
             // 
             this.hayvanlartblTableAdapter.ClearBeforeFill = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(206, 202);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(920, 25);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Hayvan Ekleyebilmek için Sistemden Hayvan Eklemek istediğiniz Müşteriyi Seçmelisi" +
+    "niz";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.RosyBrown;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.cb_arama);
+            this.panel1.Location = new System.Drawing.Point(3, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1341, 628);
+            this.panel1.TabIndex = 36;
+            this.panel1.TabStop = false;
+            this.panel1.Text = "Müşteri Seçme Ekranı";
+            // 
+            // cb_arama
+            // 
+            this.cb_arama.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cb_arama.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cb_arama.FormattingEnabled = true;
+            this.cb_arama.Location = new System.Drawing.Point(315, 11);
+            this.cb_arama.Name = "cb_arama";
+            this.cb_arama.Size = new System.Drawing.Size(84, 21);
+            this.cb_arama.TabIndex = 38;
+            this.cb_arama.Visible = false;
+            this.cb_arama.TextChanged += new System.EventHandler(this.cb_arama_TextChanged_1);
+            // 
             // HayvanlarFormu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -506,9 +570,11 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Tomato;
             this.ClientSize = new System.Drawing.Size(1350, 631);
-            this.Controls.Add(this.dgv_hayvanlar);
             this.Controls.Add(this.Gb_Guncelle);
+            this.Controls.Add(this.Gb_musterisil);
             this.Controls.Add(this.Gb_musteriekle);
+            this.Controls.Add(this.dgv_hayvanlar);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HayvanlarFormu";
             this.Text = "HayvanlarFormu";
@@ -522,6 +588,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_hayvanlar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hayvanlartblBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tdbDataSet)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -564,5 +632,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn detay;
         private System.Windows.Forms.GroupBox Gb_musterisil;
         public System.Windows.Forms.ComboBox cb_silhayvan;
+        private System.Windows.Forms.MaskedTextBox mskd_annekupeno;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox panel1;
+        private System.Windows.Forms.ComboBox cb_arama;
     }
 }

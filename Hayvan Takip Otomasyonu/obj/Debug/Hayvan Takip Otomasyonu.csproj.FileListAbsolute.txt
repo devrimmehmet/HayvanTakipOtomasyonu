@@ -39,17 +39,102 @@ C:\Users\DMP\Desktop\HayvanTakipOtomasyonu-master\HayvanTakipOtomasyonu-master\H
 C:\Users\DMP\Desktop\HayvanTakipOtomasyonu-master\HayvanTakipOtomasyonu-master\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.application
 C:\Users\DMP\Desktop\HayvanTakipOtomasyonu-master\HayvanTakipOtomasyonu-master\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.exe
 C:\Users\DMP\Desktop\HayvanTakipOtomasyonu-master\HayvanTakipOtomasyonu-master\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.pdb
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Hayvan Takip Otomasyonu.exe.config
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Hayvan Takip Otomasyonu.exe.manifest
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Hayvan Takip Otomasyonu.application
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Hayvan Takip Otomasyonu.exe
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Hayvan Takip Otomasyonu.pdb
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\tr-TR\Hayvan Takip Otomasyonu.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.ReportViewer.Common.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.ReportViewer.Design.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.SqlServer.Types.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\EnvDTE.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\stdole.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.VisualStudio.VSHelp.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.VisualStudio.Shell.Interop.9.0.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.VisualStudio.ProjectAggregator.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.VisualStudio.ComponentModelHost.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.VisualStudio.Debugger.InteropA.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\EnvDTE80.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.Build.Tasks.Core.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.VisualStudio.Data.Services.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\VSLangProj.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.VisualStudio.Shell.Interop.11.0.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.VisualStudio.Data.Core.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.VisualStudio.Shell.Interop.10.0.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\VSLangProj80.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.VisualStudio.ManagedInterfaces.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.VisualStudio.Debugger.Interop.11.0.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\System.Threading.Tasks.Dataflow.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.VisualStudio.GraphModel.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.MSXML.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.Build.Utilities.Core.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.10.0.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.Build.Framework.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\VSLangProj2.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.xml
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\tr\Microsoft.VisualStudio.Data.Services.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\bin\Debug\tr\Microsoft.VisualStudio.Data.Core.resources.dll
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.exe.config
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\obj\Debug\Hayvan_Takip_Otomasyonu.AnaMenu.resources
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\obj\Debug\Hayvan_Takip_Otomasyonu.GirisFormu.resources
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\obj\Debug\Hayvan_Takip_Otomasyonu.HayvanlarFormu.resources
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\obj\Debug\Hayvan_Takip_Otomasyonu.MusterilerFormu.resources
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\obj\Debug\Hayvan_Takip_Otomasyonu.Properties.Resources.resources
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\obj\Debug\Hayvan_Takip_Otomasyonu.RaporlarFormu.resources
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\obj\Debug\Hayvan_Takip_Otomasyonu.TedavilerFormu.resources
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\obj\Debug\Hayvan_Takip_Otomasyonu.AnaMenu.tr-TR.resources
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.csproj.GenerateResource.cache
@@ -58,6 +143,7 @@ Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.TrustInfo.xml
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.exe.manifest
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.application
+Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.csproj.CopyComplete
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.exe
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.pdb
 Z:\Tayfun ünal\soncsharpdosyasi\Hayvan Takip Otomasyonu\Hayvan Takip Otomasyonu\obj\Debug\Hayvan Takip Otomasyonu.csprojAssemblyReference.cache
