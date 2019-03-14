@@ -1,5 +1,5 @@
 # HayvanTakipOtomasyonu
-# Bu  Proje 13.03.2019 Tarihinde, sonlandırılmıştır.Dosyalar kullanılabilir olmadığı için indirmenizin ve üzerinde çalşmanızın faydalı olmayacağını açıkça beyan ederim.
+# Bu  Proje 13.03.2019 Tarihinde, sonlandırılmıştır.Dosyalar kullanılabilir olmadığı için indirmenizin ve üzerinde çalışmanızın faydalı olmayacağını açıkça beyan ederim.
 # Havuzdan kaldırılmamıştır çünkü gerekli bazı kısımları projenin devamlılığı için ihtiyaç durumundadır dönüşüm gerçekleştirildiğinde kaldırılacaktır.
 
 # PROJENİN AKIBETİ #
